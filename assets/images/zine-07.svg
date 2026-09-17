@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" role="img" aria-label="Estudo de grade editorial monocromática">
+  <defs>
+    <linearGradient id="z7bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.02"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="500" rx="18" fill="#0A0A0A"/>
+  <rect x="8" y="8" width="584" height="484" rx="12" fill="url(#z7bg)" stroke="#222222"/>
+  <!-- página de estudo -->
+  <rect x="90" y="56" width="420" height="392" rx="8" fill="#F4F4F4" stroke="#2A2A2A"/>
+  <!-- colunas da grade -->
+  <g fill="#1A1A1A">
+    <rect x="112" y="80" width="24" height="344" opacity="0.05"/>
+    <rect x="146" y="80" width="24" height="344" opacity="0.05"/>
+    <rect x="180" y="80" width="24" height="344" opacity="0.05"/>
+    <rect x="214" y="80" width="24" height="344" opacity="0.05"/>
+    <rect x="248" y="80" width="24" height="344" opacity="0.05"/>
+    <rect x="282" y="80" width="24" height="344" opacity="0.05"/>
+    <rect x="316" y="80" width="24" height="344" opacity="0.05"/>
+    <rect x="350" y="80" width="24" height="344" opacity="0.05"/>
+    <rect x="384" y="80" width="24" height="344" opacity="0.05"/>
+    <rect x="418" y="80" width="24" height="344" opacity="0.05"/>
+    <rect x="452" y="80" width="24" height="344" opacity="0.05"/>
+  </g>
+  <!-- margens -->
+  <rect x="104" y="72" width="392" height="360" fill="none" stroke="#8A8A8A" stroke-dasharray="6 6"/>
+  <!-- linhas de base -->
+  <g stroke="#C9C9C9" stroke-width="1">
+    <path d="M104 132h392M104 146h392M104 160h392M104 174h392M104 188h392M104 202h392M104 216h392"/>
+  </g>
+  <!-- headline ocupando colunas -->
+  <rect x="112" y="84" width="180" height="26" rx="3" fill="#111111"/>
+  <rect x="112" y="118" width="120" height="12" rx="3" fill="#B0B0B0"/>
+  <!-- corpo em duas colunas -->
+  <g fill="#8F8F8F">
+    <rect x="112" y="230" width="118" height="8" rx="4"/>
+    <rect x="112" y="244" width="118" height="8" rx="4"/>
+    <rect x="112" y="258" width="96" height="8" rx="4"/>
+    <rect x="112" y="272" width="118" height="8" rx="4"/>
+    <rect x="112" y="286" width="80" height="8" rx="4"/>
+    <rect x="240" y="230" width="118" height="8" rx="4"/>
+    <rect x="240" y="244" width="118" height="8" rx="4"/>
+    <rect x="240" y="258" width="104" height="8" rx="4"/>
+    <rect x="240" y="272" width="118" height="8" rx="4"/>
+    <rect x="240" y="286" width="64" height="8" rx="4"/>
+  </g>
+  <!-- imagem dentro da grade -->
+  <rect x="368" y="230" width="128" height="96" rx="4" fill="#161616"/>
+  <path d="M380 312l24-28 18 18 16-20 22 28z" fill="#5E5E5E"/>
+  <circle cx="392" cy="252" r="8" fill="#6E6E6E"/>
+  <!-- numeração e folio -->
+  <text x="112" y="404" font-family="Arial, sans-serif" font-size="10" letter-spacing="2" fill="#777777">GRADE 12 COLUNAS</text>
+  <text x="470" y="404" font-family="Arial, sans-serif" font-size="10" fill="#777777" text-anchor="end">PÁG. 12</text>
+  <!-- cota lateral -->
+  <path d="M66 56v392M58 56h16M58 448h16" stroke="#3A3A3A" stroke-width="2"/>
+  <text x="44" y="256" font-family="Arial, sans-serif" font-size="11" fill="#666666" transform="rotate(-90 44 256)" text-anchor="middle">A5 · MARGENS 15MM</text>
+</svg>

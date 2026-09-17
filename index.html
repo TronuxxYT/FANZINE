@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#000000">
+
+  <title>Fanzine — Manual Prático de Guerrilha para Criação de Fanzines</title>
+  <meta name="description" content="Aprenda a transformar ideias, histórias e ilustrações em fanzines reais com o Manual Prático de Guerrilha para Criação de Fanzines: método testado ao longo de mais de 20 anos.">
+  <meta name="keywords" content="fanzine, zine, manual de fanzine, como fazer um fanzine, publicação independente, zine artesanal, diagramação, impressão caseira, cultura independente, fanzine pocket">
+  <meta name="author" content="Fanzine">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://fanzine.com.br/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fanzine">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Fanzine — Transforme Suas Ideias em um Fanzine Real">
+  <meta property="og:description" content="Manual Prático de Guerrilha para Criação de Fanzines: o método completo, passo a passo, para criar publicações independentes com identidade própria.">
+  <meta property="og:url" content="https://fanzine.com.br/">
+  <meta property="og:image" content="https://fanzine.com.br/assets/images/manual-hero.svg">
+  <meta property="og:image:alt" content="Manual Prático de Guerrilha para Criação de Fanzines ao lado de protótipos de zines">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fanzine — Transforme Suas Ideias em um Fanzine Real">
+  <meta name="twitter:description" content="O método prático para criar fanzines autorais, do conceito à publicação impressa ou digital.">
+  <meta name="twitter:image" content="https://fanzine.com.br/assets/images/manual-hero.svg">
+
+  <!-- Ícones -->
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/logos/fanzine-mark.svg">
+
+  <!-- Tipografia -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Dados estruturados -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Fanzine",
+    "url": "https://fanzine.com.br/",
+    "logo": "https://fanzine.com.br/assets/logos/fanzine-logo.svg",
+    "description": "Plataforma dedicada ao ensino da criação de fanzines artesanais e publicações independentes.",
+    "foundingDate": "2004",
+    "email": "contato@fanzine.com.br",
+    "sameAs": [
+      "https://www.linkedin.com/company/fanzine",
+      "https://github.com/fanzine",
+      "https://www.instagram.com/fanzine"
+    ],
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Book",
+          "name": "Manual Prático de Guerrilha para Criação de Fanzines",
+          "bookFormat": "https://schema.org/EBook",
+          "inLanguage": "pt-BR",
+          "numberOfPages": 178,
+          "author": { "@type": "Organization", "name": "Fanzine" }
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Sprite de ícones (embutido para funcionar também via file://;
+       mesmo conjunto disponível externamente em assets/icons/sprite.svg) -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-strategy" viewBox="0 0 24 24">
+        <path d="M12 3v4M12 17v4M3 12h4M17 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="12" cy="12" r="1.2" fill="currentColor"/>
+      </symbol>
+      <symbol id="i-interface" viewBox="0 0 24 24">
+        <rect x="3" y="4" width="18" height="16" rx="4" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M3 9h18M9 9v11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M12.5 12.5h5M12.5 15.5h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="i-code" viewBox="0 0 24 24">
+        <path d="M9 8.5 5.5 12 9 15.5M15 8.5 18.5 12 15 15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13.2 6.5l-2.4 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="i-system" viewBox="0 0 24 24">
+        <rect x="3.5" y="3.5" width="7" height="7" rx="2.2" stroke="currentColor" stroke-width="1.5"/>
+        <rect x="13.5" y="3.5" width="7" height="7" rx="2.2" stroke="currentColor" stroke-width="1.5"/>
+        <rect x="3.5" y="13.5" width="7" height="7" rx="2.2" stroke="currentColor" stroke-width="1.5"/>
+        <rect x="13.5" y="13.5" width="7" height="7" rx="3.5" stroke="currentColor" stroke-width="1.5"/>
+      </symbol>
+      <symbol id="i-data" viewBox="0 0 24 24">
+        <ellipse cx="12" cy="6.5" rx="7" ry="3" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M5 6.5v11c0 1.66 3.13 3 7 3s7-1.34 7-3v-11" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M5 12c0 1.66 3.13 3 7 3s7-1.34 7-3" stroke="currentColor" stroke-width="1.5"/>
+      </symbol>
+      <symbol id="i-evolve" viewBox="0 0 24 24">
+        <path d="M20 12a8 8 0 1 1-2.6-5.9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M20 3.5V8h-4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="12" cy="12" r="2.1" stroke="currentColor" stroke-width="1.5"/>
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path d="m5 12.5 4.2 4.2L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24">
+        <path d="M4 12h15M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="i-arrow-up" viewBox="0 0 24 24">
+        <path d="M12 20V5M6 11l6-6 6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="i-close" viewBox="0 0 24 24">
+        <path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24">
+        <path d="M4 8h16M4 16h16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24">
+        <path d="m6 9.5 6 6 6-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="i-quote" viewBox="0 0 24 24">
+        <path d="M9.5 6.5c-3 1.4-4.5 3.7-4.5 6.9v3.1h4.6v-4.6H7.3c.1-1.7.9-2.9 2.6-3.7zM19 6.5c-3 1.4-4.5 3.7-4.5 6.9v3.1h4.6v-4.6h-2.3c.1-1.7.9-2.9 2.6-3.7z" fill="currentColor"/>
+      </symbol>
+      <symbol id="i-spark" viewBox="0 0 24 24">
+        <path d="M12 3.5 13.9 10 20.5 12l-6.6 2L12 20.5 10.1 14 3.5 12l6.6-2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24">
+        <path d="M12 3.5 19 6v6c0 4.2-2.9 7.1-7 8.5-4.1-1.4-7-4.3-7-8.5V6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="m9.2 12.2 2 2 3.6-3.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="i-gauge" viewBox="0 0 24 24">
+        <path d="M4 17a8 8 0 1 1 16 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="m12 13.5 3.6-3.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="12" cy="17" r="1.4" fill="currentColor"/>
+      </symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24">
+        <path d="m12 4 8 4-8 4-8-4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="m4.5 12.5 7.5 3.8 7.5-3.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="m4.5 16.5 7.5 3.8 7.5-3.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="i-users" viewBox="0 0 24 24">
+        <circle cx="9.5" cy="9" r="3.2" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M4 19c0-2.9 2.5-4.8 5.5-4.8S15 16.1 15 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M15.5 6.4a3 3 0 0 1 0 5.6M17 14.6c2.1.5 3.5 2.1 3.5 4.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M12 7.6V12l3.2 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24">
+        <rect x="3.5" y="3.5" width="17" height="17" rx="4" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M8 10.4V16.5M8 7.8v.1M11.6 16.5v-3.4a2.1 2.1 0 0 1 4.2 0v3.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="i-github" viewBox="0 0 24 24">
+        <path d="M15 20.5v-2.7c0-.9-.3-1.5-.7-1.9 2.3-.3 4.4-1.2 4.4-5a3.9 3.9 0 0 0-1.1-2.7 3.6 3.6 0 0 0-.1-2.7s-.9-.3-3 1.1a10.4 10.4 0 0 0-5.4 0C7 5.2 6.1 5.5 6.1 5.5a3.6 3.6 0 0 0-.1 2.7A3.9 3.9 0 0 0 4.9 11c0 3.7 2.1 4.6 4.4 5-.3.3-.6.8-.7 1.5-1.3.6-2.9.2-3.6-1.2 0 0-.6-1.3-1.9-1.4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24">
+        <rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.4"/>
+        <circle cx="12" cy="12" r="3.8" stroke="currentColor" stroke-width="1.4"/>
+        <circle cx="16.8" cy="7.2" r="1" fill="currentColor"/>
+      </symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24">
+        <rect x="3" y="5.5" width="18" height="13" rx="3.5" stroke="currentColor" stroke-width="1.5"/>
+        <path d="m4.5 8 6.4 4.4a2 2 0 0 0 2.2 0L19.5 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24">
+        <path d="M12 21c4-4.3 6-7.4 6-10a6 6 0 1 0-12 0c0 2.6 2 5.7 6 10z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        <circle cx="12" cy="11" r="2.2" stroke="currentColor" stroke-width="1.5"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#hero">Ir para o conteúdo principal</a>
+
+  <!-- Barra de progresso de leitura -->
+  <div class="scroll-progress" aria-hidden="true">
+    <span class="scroll-progress__bar" id="scrollProgress"></span>
+  </div>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="brand" href="#hero" aria-label="Fanzine — página inicial">
+        <img class="brand__mark" src="assets/logos/fanzine-mark.svg" alt="" width="40" height="40" decoding="async">
+        <span class="brand__name">Fanzine</span>
+        <span class="brand__tag">zine</span>
+      </a>
+
+      <nav class="nav" id="primaryNav" aria-label="Navegação principal">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#sobre">Sobre</a></li>
+          <li><a class="nav__link" href="#beneficios">Benefícios</a></li>
+          <li><a class="nav__link" href="#aprender">O que você aprende</a></li>
+          <li><a class="nav__link" href="#metodo">Como funciona</a></li>
+          <li><a class="nav__link" href="#galeria">Galeria</a></li>
+          <li><a class="nav__link" href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--ghost btn--sm header__login" href="#comunidade">Comunidade</a>
+        <a class="btn btn--primary btn--sm" href="#manual">Quero meu manual</a>
+      </div>
+
+      <button class="nav__toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menu de navegação">
+        <svg class="icon icon--burger" aria-hidden="true"><use href="#i-menu"></use></svg>
+        <svg class="icon icon--dismiss" aria-hidden="true"><use href="#i-close"></use></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Menu mobile -->
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <div class="mobile-menu__backdrop" data-menu-close></div>
+    <div class="mobile-menu__panel glass" role="dialog" aria-modal="true" aria-label="Menu de navegação">
+      <p class="mobile-menu__label">Navegação</p>
+      <ul class="mobile-menu__list">
+        <li><a class="mobile-menu__link" href="#sobre"><span>Sobre</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li>
+        <li><a class="mobile-menu__link" href="#beneficios"><span>Benefícios</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li>
+        <li><a class="mobile-menu__link" href="#aprender"><span>O que você aprende</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li>
+        <li><a class="mobile-menu__link" href="#metodo"><span>Como funciona</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li>
+        <li><a class="mobile-menu__link" href="#diferenciais"><span>Diferenciais</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li>
+        <li><a class="mobile-menu__link" href="#galeria"><span>Galeria</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li>
+        <li><a class="mobile-menu__link" href="#depoimentos"><span>Depoimentos</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li>
+        <li><a class="mobile-menu__link" href="#comunidade"><span>Comunidade</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li>
+        <li><a class="mobile-menu__link" href="#faq"><span>FAQ</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a></li>
+      </ul>
+      <div class="mobile-menu__footer">
+        <a class="btn btn--primary btn--block" href="#manual">Quero meu manual</a>
+        <a class="mobile-menu__mail" href="mailto:contato@fanzine.com.br">contato@fanzine.com.br</a>
+      </div>
+    </div>
+  </div>
+  <main id="main">
+    <!-- ============================ HERO ============================ -->
+    <section class="hero" id="hero" aria-labelledby="heroTitle">
+      <div class="hero__bg" aria-hidden="true">
+        <span class="glow glow--top"></span>
+        <span class="grid-overlay"></span>
+        <span class="noise"></span>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="badge reveal" data-reveal="fade-up">
+            <span class="badge__dot" aria-hidden="true"></span>
+            Manual Prático de Guerrilha · método com mais de 20 anos
+          </span>
+
+          <h1 class="hero__title reveal" data-reveal="fade-up" data-delay="80" id="heroTitle">
+            Transforme suas ideias em
+            <span class="hero__title-strong">um fanzine real</span>
+          </h1>
+
+          <p class="hero__subtitle reveal" data-reveal="fade-up" data-delay="160">
+            Aprenda o método desenvolvido ao longo de mais de 20 anos de experiências, testes e
+            aperfeiçoamentos para criar fanzines únicos, criativos e totalmente autorais.
+          </p>
+
+          <div class="hero__actions reveal" data-reveal="fade-up" data-delay="240">
+            <a class="btn btn--primary btn--lg" href="#manual">
+              Quero Meu Manual
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+            </a>
+            <a class="btn btn--glass btn--lg" href="#metodo">Ver Como Funciona</a>
+          </div>
+
+          <ul class="hero__meta reveal" data-reveal="fade-up" data-delay="320">
+            <li class="hero__meta-item">
+              <strong>20+ anos</strong>
+              <span>de pesquisa e prática</span>
+            </li>
+            <li class="hero__meta-item">
+              <strong>300+</strong>
+              <span>protótipos e zines produzidos</span>
+            </li>
+            <li class="hero__meta-item">
+              <strong>3.500+</strong>
+              <span>criadores na comunidade</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero__visual reveal" data-reveal="zoom-in" data-delay="200">
+          <div class="hero__visual-frame glass">
+            <img src="assets/images/manual-hero.svg" alt="Manual Prático de Guerrilha para Criação de Fanzines ao lado de protótipos de zines montados à mão" width="720" height="560" decoding="async" fetchpriority="high">
+          </div>
+          <div class="floating-card floating-card--one glass">
+            <svg class="icon icon--accent" aria-hidden="true"><use href="#i-layers"></use></svg>
+            <div>
+              <strong>Passo a passo ilustrado</strong>
+              <span>do conceito à impressão</span>
+            </div>
+          </div>
+          <div class="floating-card floating-card--two glass">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <div>
+              <strong>Versão pocket inclusa</strong>
+              <span>formato de bolso</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="logo-strip reveal" data-reveal="fade-up">
+        <div class="container">
+          <p class="logo-strip__label">O que você encontra dentro do manual</p>
+          <ul class="logo-strip__list">
+            <li>PROTÓTIPOS</li>
+            <li>POCKET ZINE</li>
+            <li>DIAGRAMAÇÃO</li>
+            <li>IMPRESSÃO CASEIRA</li>
+            <li>TIRAGEM CURTA</li>
+            <li>COMUNIDADE</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- ============================ SOBRE ============================ -->
+    <section class="section about" id="sobre" aria-labelledby="sobreTitle">
+      <div class="container">
+        <header class="section-head reveal" data-reveal="fade-up">
+          <span class="section-eyebrow">Sobre a Fanzine</span>
+          <h2 class="section-title" id="sobreTitle">
+            Uma vida dedicada à <span class="highlight">cultura dos fanzines</span>
+          </h2>
+          <p class="section-desc">
+            Depois de décadas explorando o universo dos fanzines, surgiu um método prático capaz de
+            ajudar qualquer pessoa a criar publicações independentes com identidade própria.
+          </p>
+        </header>
+
+        <div class="about__grid">
+          <article class="about__story card reveal" data-reveal="fade-left">
+            <span class="card__eyebrow">A origem</span>
+            <h3 class="card__title">Décadas cortando, colando, imprimindo e publicando</h3>
+            <p>
+              Tudo começou como começam os fanzines: com curiosidade, poucos recursos e muita
+              vontade de publicar. Foram anos de feiras, trocas pelo correio, fotocópias em tiragens
+              minúsculas, erros de impressão e aprendizados que nenhum curso ensinava — apenas a
+              prática repetida milhares de vezes.
+            </p>
+            <p>
+              O manual reúne técnicas, processos e orientações que simplificam a criação de fanzines
+              para artistas, escritores, ilustradores, estudantes e criadores em geral. É o
+              conhecimento de duas décadas organizado de forma direta, para que você não precise
+              repetir os mesmos erros.
+            </p>
+            <div class="about__signature">
+              <div class="about__avatars" aria-hidden="true">
+                <span class="avatar">FZ</span>
+                <span class="avatar">20</span>
+                <span class="avatar">+</span>
+              </div>
+              <p>Pesquisa contínua em fanzines, zines e publicações independentes</p>
+            </div>
+          </article>
+
+          <div class="about__pillars">
+            <article class="pillar card card--glass reveal" data-reveal="fade-up" data-delay="60">
+              <span class="card__icon" aria-hidden="true">
+                <svg class="icon" aria-hidden="true"><use href="#i-spark"></use></svg>
+              </span>
+              <h3 class="card__title">Missão</h3>
+              <p>
+                Democratizar a publicação independente, mostrando que qualquer pessoa com uma ideia
+                e um método simples é capaz de produzir seu próprio fanzine.
+              </p>
+            </article>
+
+            <article class="pillar card card--glass reveal" data-reveal="fade-up" data-delay="120">
+              <span class="card__icon" aria-hidden="true">
+                <svg class="icon" aria-hidden="true"><use href="#i-users"></use></svg>
+              </span>
+              <h3 class="card__title">Visão</h3>
+              <p>
+                Ser a principal referência em criação de fanzines no país, formando uma comunidade
+                ativa de criadores que publicam, trocam e se apoiam.
+              </p>
+            </article>
+
+            <article class="pillar card card--glass reveal" data-reveal="fade-up" data-delay="180">
+              <span class="card__icon" aria-hidden="true">
+                <svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg>
+              </span>
+              <h3 class="card__title">Valores</h3>
+              <ul class="check-list">
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Cultura independente em primeiro lugar</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Autoria e expressão sem filtro</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Prática acima da teoria</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Compartilhar o que se aprende</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ============================ BENEFÍCIOS ============================ -->
+    <section class="section benefits" id="beneficios" aria-labelledby="beneficiosTitle">
+      <div class="container">
+        <header class="section-head reveal" data-reveal="fade-up">
+          <span class="section-eyebrow">Benefícios</span>
+          <h2 class="section-title" id="beneficiosTitle">
+            O que muda quando você tem <span class="highlight">um método na mão</span>
+          </h2>
+          <p class="section-desc">
+            A diferença entre ter uma ideia e ter um fanzine impresso nas mãos está na prática
+            organizada em etapas simples e repetíveis.
+          </p>
+        </header>
+
+        <div class="benefits__grid">
+          <article class="benefit-card card card--glass reveal" data-reveal="fade-up" data-delay="0">
+            <span class="card__icon" aria-hidden="true">
+              <svg class="icon" aria-hidden="true"><use href="#i-spark"></use></svg>
+            </span>
+            <h3 class="card__title">Transforme ideias em publicações reais</h3>
+            <p>
+              Um caminho claro para sair do bloco de notas e chegar ao fanzine montado, impresso e
+              pronto para circular.
+            </p>
+            <ul class="tag-list">
+              <li>Ideia</li>
+              <li>Projeto</li>
+              <li>Publicação</li>
+            </ul>
+          </article>
+
+          <article class="benefit-card card card--glass reveal" data-reveal="fade-up" data-delay="60">
+            <span class="card__icon" aria-hidden="true">
+              <svg class="icon" aria-hidden="true"><use href="#i-layers"></use></svg>
+            </span>
+            <h3 class="card__title">Aprenda passo a passo</h3>
+            <p>
+              Cada etapa explicada na ordem em que acontece, da escolha do tema ao acabamento final
+              das páginas.
+            </p>
+            <ul class="tag-list">
+              <li>Etapas</li>
+              <li>Exemplos</li>
+              <li>Checklist</li>
+            </ul>
+          </article>
+
+          <article class="benefit-card card card--glass reveal" data-reveal="fade-up" data-delay="120">
+            <span class="card__icon" aria-hidden="true">
+              <svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg>
+            </span>
+            <h3 class="card__title">Método testado durante anos</h3>
+            <p>
+              Todo o conteúdo nasceu de protótipos reais, tiragens curtas, erros corrigidos e
+              soluções que funcionaram na prática.
+            </p>
+            <ul class="tag-list">
+              <li>20+ anos</li>
+              <li>Validação</li>
+              <li>Provas</li>
+            </ul>
+          </article>
+
+          <article class="benefit-card card card--glass reveal" data-reveal="fade-up" data-delay="0">
+            <span class="card__icon" aria-hidden="true">
+              <svg class="icon" aria-hidden="true"><use href="#i-strategy"></use></svg>
+            </span>
+            <h3 class="card__title">Desenvolva sua criatividade</h3>
+            <p>
+              Exercícios de composição, colagem e narrativa visual para destravar ideias e criar
+              suas próprias linguagens.
+            </p>
+            <ul class="tag-list">
+              <li>Exercícios</li>
+              <li>Colagem</li>
+              <li>Narrativa</li>
+            </ul>
+          </article>
+
+          <article class="benefit-card card card--glass reveal" data-reveal="fade-up" data-delay="60">
+            <span class="card__icon" aria-hidden="true">
+              <svg class="icon" aria-hidden="true"><use href="#i-system"></use></svg>
+            </span>
+            <h3 class="card__title">Produza materiais únicos</h3>
+            <p>
+              Formatos, paginação e acabamentos que fazem seu fanzine ser reconhecido como seu — e
+              não como mais um modelo igual.
+            </p>
+            <ul class="tag-list">
+              <li>Formatos</li>
+              <li>Acabamento</li>
+              <li>Identidade</li>
+            </ul>
+          </article>
+
+          <article class="benefit-card card card--glass reveal" data-reveal="fade-up" data-delay="120">
+            <span class="card__icon" aria-hidden="true">
+              <svg class="icon" aria-hidden="true"><use href="#i-interface"></use></svg>
+            </span>
+            <h3 class="card__title">Crie seu próprio estilo editorial</h3>
+            <p>
+              Defina tipografia, ritmo de leitura e identidade visual para que seus próximos
+              fanzines tenham coerência e personalidade.
+            </p>
+            <ul class="tag-list">
+              <li>Tipografia</li>
+              <li>Ritmo</li>
+              <li>Estilo</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ============================ APRENDIZADO ============================ -->
+    <section class="section learn" id="aprender" aria-labelledby="aprenderTitle">
+      <div class="container">
+        <header class="section-head reveal" data-reveal="fade-up">
+          <span class="section-eyebrow">Conteúdo do manual</span>
+          <h2 class="section-title" id="aprenderTitle">
+            O que você vai <span class="highlight">aprender</span>
+          </h2>
+          <p class="section-desc">
+            Oito blocos práticos que cobrem tudo o que é necessário para publicar o seu primeiro
+            fanzine — e todos os que vierem depois.
+          </p>
+        </header>
+
+        <ol class="learn__grid">
+          <li class="learn-item reveal" data-reveal="fade-up" data-delay="0">
+            <span class="learn-item__number">01</span>
+            <h3 class="learn-item__title">Conceitos fundamentais dos fanzines</h3>
+            <p class="learn-item__text">
+              O que é — e o que não é — um fanzine, sua história, seus formatos e por que ele
+              continua relevante na era digital.
+            </p>
+          </li>
+
+          <li class="learn-item reveal" data-reveal="fade-up" data-delay="60">
+            <span class="learn-item__number">02</span>
+            <h3 class="learn-item__title">Planejamento de conteúdo</h3>
+            <p class="learn-item__text">
+              Como definir o tema, organizar textos e imagens, estimar páginas e montar um roteiro
+              antes de começar a desenhar.
+            </p>
+          </li>
+
+          <li class="learn-item reveal" data-reveal="fade-up" data-delay="120">
+            <span class="learn-item__number">03</span>
+            <h3 class="learn-item__title">Organização de páginas</h3>
+            <p class="learn-item__text">
+              Sequência, paginação, imposição e o mapa dobrado que evita o clássico erro de páginas
+              fora de ordem na hora de imprimir.
+            </p>
+          </li>
+
+          <li class="learn-item reveal" data-reveal="fade-up" data-delay="0">
+            <span class="learn-item__number">04</span>
+            <h3 class="learn-item__title">Técnicas de montagem</h3>
+            <p class="learn-item__text">
+              Corte, dobra, encarte, grampo e costura: procedimentos manuais explicados passo a
+              passo, com medidas e alternativas simples.
+            </p>
+          </li>
+
+          <li class="learn-item reveal" data-reveal="fade-up" data-delay="60">
+            <span class="learn-item__number">05</span>
+            <h3 class="learn-item__title">Uso de cores e contrastes</h3>
+            <p class="learn-item__text">
+              Escolha de paleta, contraste para leitura confortável e como o preto e o branco podem
+              trabalhar a seu favor.
+            </p>
+          </li>
+
+          <li class="learn-item reveal" data-reveal="fade-up" data-delay="120">
+            <span class="learn-item__number">06</span>
+            <h3 class="learn-item__title">Preparação para impressão</h3>
+            <p class="learn-item__text">
+              Arquivos, margens de segurança, sangria, resolução e cuidados para que o teste de
+              impressão não vire surpresa.
+            </p>
+          </li>
+
+          <li class="learn-item reveal" data-reveal="fade-up" data-delay="0">
+            <span class="learn-item__number">07</span>
+            <h3 class="learn-item__title">Criação de versões pocket</h3>
+            <p class="learn-item__text">
+              Adaptação do projeto para formatos de bolso, com redução inteligente de texto e
+              diagramação pensada para páginas pequenas.
+            </p>
+          </li>
+
+          <li class="learn-item reveal" data-reveal="fade-up" data-delay="60">
+            <span class="learn-item__number">08</span>
+            <h3 class="learn-item__title">Produção artesanal independente</h3>
+            <p class="learn-item__text">
+              Tiragens curtas, controle de custos, montagem em série, acabamentos manuais e
+              circulação fora dos canais tradicionais.
+            </p>
+          </li>
+        </ol>
+
+        <p class="learn__note reveal" data-reveal="fade-up">
+          Tudo pode ser reproduzido com folha A4, tesoura, cola e grampeador — sem equipamento
+          profissional.
+        </p>
+      </div>
+    </section>
+    <!-- ============================ MÉTODO ============================ -->
+    <section class="section process" id="metodo" aria-labelledby="metodoTitle">
+      <div class="container">
+        <header class="section-head reveal" data-reveal="fade-up">
+          <span class="section-eyebrow">Como funciona</span>
+          <h2 class="section-title" id="metodoTitle">
+            O método de guerrilha em <span class="highlight">cinco etapas</span>
+          </h2>
+          <p class="section-desc">
+            Um fluxo direto, sem burocracia: você aprende fazendo, na mesma ordem em que as coisas
+            acontecem na prática.
+          </p>
+        </header>
+
+        <ol class="process__flow">
+          <li class="step reveal" data-reveal="fade-up" data-delay="0">
+            <span class="step__number">01</span>
+            <h3 class="step__title">Ideia e tema</h3>
+            <p class="step__text">
+              Descubra o que você quer dizer e para quem. Exercícios rápidos transformam um
+              pensamento solto em tema de fanzine.
+            </p>
+            <span class="step__meta">primeiras horas</span>
+          </li>
+
+          <li class="step reveal" data-reveal="fade-up" data-delay="80">
+            <span class="step__number">02</span>
+            <h3 class="step__title">Planejamento</h3>
+            <p class="step__text">
+              Roteiro de páginas, textos, imagens e formato definidos antes de cortar qualquer
+              folha.
+            </p>
+            <span class="step__meta">1 dia</span>
+          </li>
+
+          <li class="step reveal" data-reveal="fade-up" data-delay="160">
+            <span class="step__number">03</span>
+            <h3 class="step__title">Montagem e diagramação</h3>
+            <p class="step__text">
+              Composição, colagem, tipografia e organização visual das páginas seguindo os modelos
+              do manual.
+            </p>
+            <span class="step__meta">2 a 3 dias</span>
+          </li>
+
+          <li class="step reveal" data-reveal="fade-up" data-delay="240">
+            <span class="step__number">04</span>
+            <h3 class="step__title">Impressão e acabamento</h3>
+            <p class="step__text">
+              Teste de impressão, ajustes finos, tiragem curta, corte, dobra e finalização
+              artesanal.
+            </p>
+            <span class="step__meta">1 dia</span>
+          </li>
+
+          <li class="step reveal" data-reveal="fade-up" data-delay="320">
+            <span class="step__number">05</span>
+            <h3 class="step__title">Publicação e comunidade</h3>
+            <p class="step__text">
+              Divulgação, trocas, feiras, envio pelo correio e publicação do seu trabalho na
+              comunidade Fanzine.
+            </p>
+            <span class="step__meta">contínuo</span>
+          </li>
+        </ol>
+
+        <div class="process__cta reveal" data-reveal="fade-up">
+          <a class="btn btn--glass btn--lg" href="#manual">
+            Quero Meu Manual
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- ============================ DIFERENCIAIS ============================ -->
+    <section class="section differentials" id="diferenciais" aria-labelledby="diferenciaisTitle">
+      <div class="container">
+        <div class="differentials__layout">
+          <div class="differentials__intro">
+            <header class="section-head section-head--left reveal" data-reveal="fade-right">
+              <span class="section-eyebrow">Diferenciais</span>
+              <h2 class="section-title" id="diferenciaisTitle">
+                Por que este manual é <span class="highlight">diferente de qualquer tutorial</span>
+              </h2>
+              <p class="section-desc">
+                Não é um compilado de dicas soltas: é um processo construído na prática, revisado a
+                cada nova tiragem e organizado para ser aplicado imediatamente.
+              </p>
+            </header>
+
+            <ul class="highlight-list reveal" data-reveal="fade-right" data-delay="80">
+              <li>
+                <span class="highlight-list__icon"><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg></span>
+                <div>
+                  <strong>Método desenvolvido em mais de 20 anos</strong>
+                  <p>Duas décadas de experimentação condensadas em um processo direto e testado.</p>
+                </div>
+              </li>
+              <li>
+                <span class="highlight-list__icon"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span>
+                <div>
+                  <strong>Linguagem simples e prática</strong>
+                  <p>Sem jargão técnico: você entende o que fazer e por que fazer em cada etapa.</p>
+                </div>
+              </li>
+              <li>
+                <span class="highlight-list__icon"><svg class="icon" aria-hidden="true"><use href="#i-spark"></use></svg></span>
+                <div>
+                  <strong>Aplicação imediata</strong>
+                  <p>Abra o manual e comece a produzir no mesmo dia, com material que já existe em casa.</p>
+                </div>
+              </li>
+              <li>
+                <span class="highlight-list__icon"><svg class="icon" aria-hidden="true"><use href="#i-users"></use></svg></span>
+                <div>
+                  <strong>Ideal para iniciantes</strong>
+                  <p>Nenhuma experiência anterior em edição, desenho ou diagramação é exigida.</p>
+                </div>
+              </li>
+              <li>
+                <span class="highlight-list__icon"><svg class="icon" aria-hidden="true"><use href="#i-layers"></use></svg></span>
+                <div>
+                  <strong>Baseado em experiências reais</strong>
+                  <p>Cada orientação nasceu de uma tentativa concreta — inclusive dos erros que custaram tiragens.</p>
+                </div>
+              </li>
+              <li>
+                <span class="highlight-list__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg></span>
+                <div>
+                  <strong>Processo validado através de protótipos e publicações</strong>
+                  <p>Formatos, dobras e diagramações testados em zines reais antes de virarem conteúdo.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <ol class="timeline reveal" data-reveal="fade-left" data-delay="120">
+            <li class="timeline__item">
+              <span class="timeline__year">2004</span>
+              <div class="timeline__content card card--glass">
+                <h3 class="card__title">Primeiros fanzines</h3>
+                <p>Publicações artesanais, tiragens fotocopiadas e trocas pelo correio entre criadores.</p>
+              </div>
+            </li>
+            <li class="timeline__item">
+              <span class="timeline__year">2011</span>
+              <div class="timeline__content card card--glass">
+                <h3 class="card__title">Sistematização das técnicas</h3>
+                <p>As anotações soltas viram um roteiro de montagem replicável, testado em oficinas.</p>
+              </div>
+            </li>
+            <li class="timeline__item">
+              <span class="timeline__year">2018</span>
+              <div class="timeline__content card card--glass">
+                <h3 class="card__title">Protótipos e validação</h3>
+                <p>Centenas de protótipos, formatos pocket e ajustes de diagramação validados com alunos.</p>
+              </div>
+            </li>
+            <li class="timeline__item">
+              <span class="timeline__year">2024</span>
+              <div class="timeline__content card card--glass">
+                <h3 class="card__title">Manual publicado</h3>
+                <p>Todo o método reunido em um guia completo, do conceito à publicação final.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <!-- ============================ NÚMEROS ============================ -->
+    <section class="section stats" id="resultados" aria-labelledby="resultadosTitle">
+      <div class="container">
+        <header class="section-head section-head--compact reveal" data-reveal="fade-up">
+          <span class="section-eyebrow">Números e provas</span>
+          <h2 class="section-title" id="resultadosTitle">
+            Duas décadas de trabalho reunidas em resultados concretos
+          </h2>
+        </header>
+
+        <div class="stats__grid">
+          <article class="stat-card card reveal" data-reveal="fade-up" data-delay="0">
+            <p class="stat-card__value" data-count="20" data-suffix="+" aria-label="Mais de 20 anos de pesquisa e prática">0</p>
+            <h3 class="stat-card__label">Anos de pesquisa e prática</h3>
+            <p class="stat-card__note">Experimentação contínua em formatos, tiragens e acabamentos artesanais.</p>
+          </article>
+
+          <article class="stat-card card reveal" data-reveal="fade-up" data-delay="80">
+            <p class="stat-card__value" data-count="8" aria-label="Oito módulos práticos">0</p>
+            <h3 class="stat-card__label">Módulos práticos no manual</h3>
+            <p class="stat-card__note">Do conceito fundamental à produção artesanal independente.</p>
+          </article>
+
+          <article class="stat-card card reveal" data-reveal="fade-up" data-delay="160">
+            <p class="stat-card__value" data-count="3500" data-suffix="+" aria-label="Mais de 3.500 criadores na comunidade">0</p>
+            <h3 class="stat-card__label">Criadores na comunidade</h3>
+            <p class="stat-card__note">Pessoas que publicaram, trocaram ou compartilharam seus fanzines.</p>
+          </article>
+
+          <article class="stat-card card reveal" data-reveal="fade-up" data-delay="240">
+            <p class="stat-card__value" data-count="4.9" data-decimals="1" aria-label="Avaliação média de 4,9">0</p>
+            <h3 class="stat-card__label">Avaliação média do manual</h3>
+            <p class="stat-card__note">Leitura considerada clara, aplicável e direta por quem começou do zero.</p>
+          </article>
+        </div>
+
+        <div class="stats__bars reveal" data-reveal="fade-up" data-delay="120">
+          <div class="stat-bar">
+            <div class="stat-bar__head"><span>Iniciantes que concluem o primeiro fanzine</span><strong>92%</strong></div>
+            <div class="stat-bar__track"><span class="stat-bar__fill" data-fill="92"></span></div>
+          </div>
+          <div class="stat-bar">
+            <div class="stat-bar__head"><span>Conteúdo aplicado em oficinas e salas de aula</span><strong>78%</strong></div>
+            <div class="stat-bar__track"><span class="stat-bar__fill" data-fill="78"></span></div>
+          </div>
+          <div class="stat-bar">
+            <div class="stat-bar__head"><span>Criadores que recomendam o manual</span><strong>96%</strong></div>
+            <div class="stat-bar__track"><span class="stat-bar__fill" data-fill="96"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ============================ GALERIA ============================ -->
+    <section class="section gallery" id="galeria" aria-labelledby="galeriaTitle">
+      <div class="container">
+        <header class="section-head reveal" data-reveal="fade-up">
+          <span class="section-eyebrow">Galeria</span>
+          <h2 class="section-title" id="galeriaTitle">
+            Protótipos, pockets e páginas <span class="highlight">feitos com o método</span>
+          </h2>
+          <p class="section-desc">
+            Protótipos de fanzines, modelos pocket, páginas internas, estudos de diagramação e
+            trabalhos produzidos por alunos. Clique em qualquer item para ver os detalhes.
+          </p>
+        </header>
+
+        <div class="filters reveal" data-reveal="fade-up" data-delay="80" role="tablist" aria-label="Filtros da galeria">
+          <button class="filter-btn is-active" type="button" data-filter="all" role="tab" aria-selected="true">Todos</button>
+          <button class="filter-btn" type="button" data-filter="prototipos" role="tab" aria-selected="false">Protótipos</button>
+          <button class="filter-btn" type="button" data-filter="pocket" role="tab" aria-selected="false">Pocket</button>
+          <button class="filter-btn" type="button" data-filter="paginas" role="tab" aria-selected="false">Páginas internas</button>
+          <button class="filter-btn" type="button" data-filter="diagramacao" role="tab" aria-selected="false">Diagramação</button>
+          <button class="filter-btn" type="button" data-filter="alunos" role="tab" aria-selected="false">Trabalhos de alunos</button>
+        </div>
+
+        <div class="masonry" id="galeriaGrid">
+          <article class="zine-card reveal" data-reveal="fade-up" data-category="prototipos diagramacao" data-delay="0">
+            <figure class="zine-card__media">
+              <img src="assets/images/zine-01.svg" alt="Protótipo de fanzine dobrado a partir de uma folha A4" width="600" height="420" loading="lazy" decoding="async">
+            </figure>
+            <div class="zine-card__body">
+              <span class="zine-card__tag">Protótipos</span>
+              <h3 class="zine-card__title">Zine dobrado A4</h3>
+              <p class="zine-card__meta">Protótipo · 8 páginas</p>
+              <button class="zine-card__cta" type="button" data-modal-open
+                aria-label="Ver detalhes do protótipo Zine dobrado A4"
+                data-modal-title="Zine dobrado A4"
+                data-modal-subtitle="Protótipo de fanzine · 8 páginas"
+                data-modal-category="Protótipos"
+                data-modal-image="assets/images/zine-01.svg"
+                data-modal-summary="Exemplo clássico do manual: uma única folha A4 dobrada e cortada estrategicamente para gerar oito páginas, com capa, miolo e contracapa definidos página por página."
+                data-modal-results="Dobra e corte explicados com medidas|Mapa de páginas que evita inversões|Produção com impressão caseira simples">
+                Ver detalhes
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="zine-card reveal" data-reveal="fade-up" data-category="prototipos" data-delay="60">
+            <figure class="zine-card__media">
+              <img src="assets/images/zine-02.svg" alt="Zine de colagem experimental com recortes e sobreposições" width="600" height="360" loading="lazy" decoding="async">
+            </figure>
+            <div class="zine-card__body">
+              <span class="zine-card__tag">Protótipos</span>
+              <h3 class="zine-card__title">Colagem experimental</h3>
+              <p class="zine-card__meta">Protótipo · 12 páginas</p>
+              <button class="zine-card__cta" type="button" data-modal-open
+                aria-label="Ver detalhes do protótipo Colagem experimental"
+                data-modal-title="Colagem experimental"
+                data-modal-subtitle="Protótipo de fanzine · 12 páginas"
+                data-modal-category="Protótipos"
+                data-modal-image="assets/images/zine-02.svg"
+                data-modal-summary="Composição feita com recortes, textos datilografados e sobreposições — o exercício central do módulo de criatividade, feito sem computador e sem programa de edição."
+                data-modal-results="Contraste e sobreposição como recurso|Exercício de composição 100% manual|Acabamento com fita, cola e grampo">
+                Ver detalhes
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="zine-card reveal" data-reveal="fade-up" data-category="pocket" data-delay="120">
+            <figure class="zine-card__media">
+              <img src="assets/images/zine-03.svg" alt="Modelo pocket de fanzine de bolso com oito páginas" width="600" height="470" loading="lazy" decoding="async">
+            </figure>
+            <div class="zine-card__body">
+              <span class="zine-card__tag">Pocket</span>
+              <h3 class="zine-card__title">Zine de bolso</h3>
+              <p class="zine-card__meta">Pocket · 8 páginas</p>
+              <button class="zine-card__cta" type="button" data-modal-open
+                aria-label="Ver detalhes do modelo Zine de bolso"
+                data-modal-title="Zine de bolso"
+                data-modal-subtitle="Modelo pocket · 8 páginas"
+                data-modal-category="Pocket"
+                data-modal-image="assets/images/zine-03.svg"
+                data-modal-summary="Versão pocket do projeto: a página cai para um quarto de folha A4 e a diagramação é recalibrada para manter a leitura confortável em espaço mínimo."
+                data-modal-results="Formato que cabe no bolso e na mochila|Texto enxuto sem perder o sentido|Uma folha por exemplar na tiragem">
+                Ver detalhes
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="zine-card reveal" data-reveal="fade-up" data-category="pocket prototipos" data-delay="180">
+            <figure class="zine-card__media">
+              <img src="assets/images/zine-04.svg" alt="Pocket zine duplo com dois cadernos encartados" width="600" height="400" loading="lazy" decoding="async">
+            </figure>
+            <div class="zine-card__body">
+              <span class="zine-card__tag">Pocket</span>
+              <h3 class="zine-card__title">Pocket zine duplo</h3>
+              <p class="zine-card__meta">Pocket · 16 páginas</p>
+              <button class="zine-card__cta" type="button" data-modal-open
+                aria-label="Ver detalhes do modelo Pocket zine duplo"
+                data-modal-title="Pocket zine duplo"
+                data-modal-subtitle="Modelo pocket · 16 páginas"
+                data-modal-category="Pocket"
+                data-modal-image="assets/images/zine-04.svg"
+                data-modal-summary="Dois cadernos pocket encartados que formam dezesseis páginas — solução ideal para séries, edições numeradas e coleções de pequeno formato."
+                data-modal-results="Encarte de dois cadernos no mesmo exemplar|Numeração e série para coleção|Capa finalizada com carimbo artesanal">
+                Ver detalhes
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="zine-card reveal" data-reveal="fade-up" data-category="paginas" data-delay="0">
+            <figure class="zine-card__media">
+              <img src="assets/images/zine-05.svg" alt="Páginas internas de um caderno de ilustrações em fanzine" width="600" height="440" loading="lazy" decoding="async">
+            </figure>
+            <div class="zine-card__body">
+              <span class="zine-card__tag">Páginas internas</span>
+              <h3 class="zine-card__title">Caderno de ilustrações</h3>
+              <p class="zine-card__meta">Páginas internas · 20 páginas</p>
+              <button class="zine-card__cta" type="button" data-modal-open
+                aria-label="Ver detalhes do caderno de ilustrações"
+                data-modal-title="Caderno de ilustrações"
+                data-modal-subtitle="Páginas internas · 20 páginas"
+                data-modal-category="Páginas internas"
+                data-modal-image="assets/images/zine-05.svg"
+                data-modal-summary="Sequência interna dedicada a desenhos, com páginas de respiro entre os trabalhos e ritmo visual construído no módulo de organização de páginas."
+                data-modal-results="Ritmo visual entre páginas abertas|Páginas de respiro e de impacto|Diagramação que valoriza o traço">
+                Ver detalhes
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="zine-card reveal" data-reveal="fade-up" data-category="paginas diagramacao" data-delay="60">
+            <figure class="zine-card__media">
+              <img src="assets/images/zine-06.svg" alt="Páginas internas de um fanzine narrativo de diário de viagem" width="600" height="380" loading="lazy" decoding="async">
+            </figure>
+            <div class="zine-card__body">
+              <span class="zine-card__tag">Páginas internas</span>
+              <h3 class="zine-card__title">Diário de viagem</h3>
+              <p class="zine-card__meta">Páginas internas · 24 páginas</p>
+              <button class="zine-card__cta" type="button" data-modal-open
+                aria-label="Ver detalhes do fanzine Diário de viagem"
+                data-modal-title="Diário de viagem"
+                data-modal-subtitle="Páginas internas · 24 páginas"
+                data-modal-category="Páginas internas"
+                data-modal-image="assets/images/zine-06.svg"
+                data-modal-summary="Fanzine narrativo com textos curtos, anotações e imagens, mostrando como manter coerência visual em publicações com mais páginas."
+                data-modal-results="Narrativa construída em páginas duplas|Texto curto com imagem de apoio|Coerência visual do início ao fim">
+                Ver detalhes
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="zine-card reveal" data-reveal="fade-up" data-category="diagramacao" data-delay="120">
+            <figure class="zine-card__media">
+              <img src="assets/images/zine-07.svg" alt="Estudo de grade editorial monocromática para fanzine" width="600" height="500" loading="lazy" decoding="async">
+            </figure>
+            <div class="zine-card__body">
+              <span class="zine-card__tag">Diagramação</span>
+              <h3 class="zine-card__title">Grade editorial monocromática</h3>
+              <p class="zine-card__meta">Diagramação · estudo</p>
+              <button class="zine-card__cta" type="button" data-modal-open
+                aria-label="Ver detalhes do estudo Grade editorial monocromática"
+                data-modal-title="Grade editorial monocromática"
+                data-modal-subtitle="Estudo de diagramação"
+                data-modal-category="Diagramação"
+                data-modal-image="assets/images/zine-07.svg"
+                data-modal-summary="Estudo de grade com margens, colunas e hierarquia tipográfica, pensado para impressão em preto e branco e para leitura em papel comum."
+                data-modal-results="Margens e linhas de base definidas|Hierarquia tipográfica forte|Contraste garantido no preto e branco">
+                Ver detalhes
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="zine-card reveal" data-reveal="fade-up" data-category="alunos paginas" data-delay="180">
+            <figure class="zine-card__media">
+              <img src="assets/images/zine-08.svg" alt="Primeiro fanzine produzido por aluno do curso" width="600" height="420" loading="lazy" decoding="async">
+            </figure>
+            <div class="zine-card__body">
+              <span class="zine-card__tag">Trabalhos de alunos</span>
+              <h3 class="zine-card__title">Primeiro fanzine da turma</h3>
+              <p class="zine-card__meta">Trabalho de aluno · 8 páginas</p>
+              <button class="zine-card__cta" type="button" data-modal-open
+                aria-label="Ver detalhes do trabalho Primeiro fanzine da turma"
+                data-modal-title="Primeiro fanzine da turma"
+                data-modal-subtitle="Trabalho de aluno · 8 páginas"
+                data-modal-category="Trabalhos de alunos"
+                data-modal-image="assets/images/zine-08.svg"
+                data-modal-summary="Resultado de um aluno iniciante logo após a primeira leitura do manual: tema próprio, montagem totalmente manual e tiragem de trinta exemplares."
+                data-modal-results="Do zero ao impresso em poucos dias|Tiragem curta de 30 exemplares|Distribuição em feira local de publicações">
+                Ver detalhes
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ============================ DEPOIMENTOS ============================ -->
+    <section class="section testimonials" id="depoimentos" aria-labelledby="depoimentosTitle">
+      <div class="container">
+        <header class="section-head reveal" data-reveal="fade-up">
+          <span class="section-eyebrow">Depoimentos</span>
+          <h2 class="section-title" id="depoimentosTitle">
+            Quem leu, imprimiu e <span class="highlight">publicou de verdade</span>
+          </h2>
+        </header>
+
+        <div class="carousel reveal" data-reveal="fade-up" data-delay="80" id="testimonialCarousel">
+          <div class="carousel__viewport">
+            <ul class="carousel__track" id="carouselTrack">
+              <li class="carousel__slide">
+                <figure class="testimonial-card card card--glass">
+                  <svg class="icon testimonial-card__quote" aria-hidden="true"><use href="#i-quote"></use></svg>
+                  <blockquote>
+                    <p>
+                      “Finalmente consegui tirar minhas ideias do papel.” Passei anos desenhando em
+                      cadernos sem nunca publicar nada. Segui as etapas do manual e, em duas semanas,
+                      tinha meu primeiro fanzine impresso na mão.
+                    </p>
+                  </blockquote>
+                  <figcaption class="testimonial-card__author">
+                    <span class="avatar" aria-hidden="true">MA</span>
+                    <span>
+                      <strong>Marina Alves</strong>
+                      <small>Ilustradora</small>
+                    </span>
+                  </figcaption>
+                </figure>
+              </li>
+
+              <li class="carousel__slide">
+                <figure class="testimonial-card card card--glass">
+                  <svg class="icon testimonial-card__quote" aria-hidden="true"><use href="#i-quote"></use></svg>
+                  <blockquote>
+                    <p>
+                      “O manual tornou simples algo que parecia complicado.” Eu achava que diagramar
+                      e preparar arquivo para impressão exigia equipamento profissional. Não exige.
+                    </p>
+                  </blockquote>
+                  <figcaption class="testimonial-card__author">
+                    <span class="avatar" aria-hidden="true">RP</span>
+                    <span>
+                      <strong>Rafael Prado</strong>
+                      <small>Professor de artes</small>
+                    </span>
+                  </figcaption>
+                </figure>
+              </li>
+
+              <li class="carousel__slide">
+                <figure class="testimonial-card card card--glass">
+                  <svg class="icon testimonial-card__quote" aria-hidden="true"><use href="#i-quote"></use></svg>
+                  <blockquote>
+                    <p>
+                      “Produzi meu primeiro fanzine em poucos dias.” Usei somente folhas sulfite,
+                      tesoura e o material que já tinha em casa. Foi mais rápido do que eu imaginava.
+                    </p>
+                  </blockquote>
+                  <figcaption class="testimonial-card__author">
+                    <span class="avatar" aria-hidden="true">CR</span>
+                    <span>
+                      <strong>Camila Reis</strong>
+                      <small>Estudante</small>
+                    </span>
+                  </figcaption>
+                </figure>
+              </li>
+            </ul>
+          </div>
+
+          <div class="carousel__controls">
+            <div class="carousel__dots" id="carouselDots" role="tablist" aria-label="Selecionar depoimento"></div>
+            <div class="carousel__buttons">
+              <button class="carousel__btn carousel__btn--prev" type="button" id="carouselPrev" aria-label="Depoimento anterior">
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+              </button>
+              <button class="carousel__btn" type="button" id="carouselNext" aria-label="Próximo depoimento">
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ COMUNIDADE ============================ -->
+    <section class="section community" id="comunidade" aria-labelledby="comunidadeTitle">
+      <div class="container">
+        <div class="community__panel card reveal" data-reveal="zoom-in">
+          <div class="community__content">
+            <header class="section-head section-head--left">
+              <span class="section-eyebrow">Comunidade</span>
+              <h2 class="section-title" id="comunidadeTitle">
+                Mostre seu trabalho <span class="highlight">ao mundo</span>
+              </h2>
+              <p class="section-desc">
+                Compartilhe seus projetos, publique seus resultados e marque a comunidade para
+                inspirar novos criadores. Os melhores fanzines ganham destaque na galeria.
+              </p>
+            </header>
+            <div class="community__actions">
+              <a class="btn btn--primary btn--lg" href="mailto:contato@fanzine.com.br?subject=Meu%20fanzine%20para%20a%20galeria">
+                Enviar Meu Fanzine
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+              </a>
+              <a class="btn btn--glass btn--lg" href="https://www.instagram.com/fanzine" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg>
+                Seguir a comunidade
+              </a>
+            </div>
+          </div>
+
+          <ul class="community__steps" aria-label="Como participar">
+            <li class="community__step reveal" data-reveal="fade-up" data-delay="80">
+              <span class="community__step-number">01</span>
+              <div>
+                <h3>Produza com o método</h3>
+                <p>Crie seu fanzine seguindo as etapas do manual, do rascunho à tiragem.</p>
+              </div>
+            </li>
+            <li class="community__step reveal" data-reveal="fade-up" data-delay="160">
+              <span class="community__step-number">02</span>
+              <div>
+                <h3>Fotografe e envie</h3>
+                <p>Mande fotos do exemplar pronto, das páginas internas e dos detalhes do acabamento.</p>
+              </div>
+            </li>
+            <li class="community__step reveal" data-reveal="fade-up" data-delay="240">
+              <span class="community__step-number">03</span>
+              <div>
+                <h3>Inspire novos criadores</h3>
+                <p>Seu trabalho entra na galeria e inspira a próxima leva de editoras independentes.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- ============================ FAQ ============================ -->
+    <section class="section faq" id="faq" aria-labelledby="faqTitle">
+      <div class="container">
+        <div class="faq__layout">
+          <header class="section-head section-head--left reveal" data-reveal="fade-right">
+            <span class="section-eyebrow">Perguntas frequentes</span>
+            <h2 class="section-title" id="faqTitle">
+              Antes de criar o <span class="highlight">seu primeiro zine</span>
+            </h2>
+            <p class="section-desc">
+              As dúvidas mais comuns de quem está começando — respondidas de forma direta.
+            </p>
+          </header>
+
+          <div class="faq__list">
+            <article class="faq-item reveal" data-reveal="fade-up" data-delay="0">
+              <h3 class="faq-item__heading">
+                <button class="faq-item__question" type="button" aria-expanded="false" aria-controls="faqA1">
+                  Nunca fiz nada parecido. O manual serve para iniciantes?
+                  <svg class="icon faq-item__icon" aria-hidden="true"><use href="#i-chevron"></use></svg>
+                </button>
+              </h3>
+              <div class="faq-item__answer" id="faqA1" role="region">
+                <p>Sim. O método foi escrito exatamente para quem nunca publicou nada: cada etapa parte do zero, com folha A4, tesoura, cola e grampeador. Nenhum equipamento profissional é necessário.</p>
+              </div>
+            </article>
+
+            <article class="faq-item reveal" data-reveal="fade-up" data-delay="60">
+              <h3 class="faq-item__heading">
+                <button class="faq-item__question" type="button" aria-expanded="false" aria-controls="faqA2">
+                  Preciso saber desenhar ou escrever bem?
+                  <svg class="icon faq-item__icon" aria-hidden="true"><use href="#i-chevron"></use></svg>
+                </button>
+              </h3>
+              <div class="faq-item__answer" id="faqA2" role="region">
+                <p>Não. Fanzine é expressão autoral: textos curtos, colagens, rabiscos e fotos servem. O manual ensina a organizar o que você já tem e transformar em publicação com identidade própria.</p>
+              </div>
+            </article>
+
+            <article class="faq-item reveal" data-reveal="fade-up" data-delay="120">
+              <h3 class="faq-item__heading">
+                <button class="faq-item__question" type="button" aria-expanded="false" aria-controls="faqA3">
+                  Quanto tempo leva para produzir o primeiro fanzine?
+                  <svg class="icon faq-item__icon" aria-hidden="true"><use href="#i-chevron"></use></svg>
+                </button>
+              </h3>
+              <div class="faq-item__answer" id="faqA3" role="region">
+                <p>Seguindo o passo a passo, a maioria das pessoas conclui um zine de 8 páginas em poucos dias — alguns em uma única tarde. O método prioriza protótipos rápidos antes da versão final.</p>
+              </div>
+            </article>
+
+            <article class="faq-item reveal" data-reveal="fade-up" data-delay="180">
+              <h3 class="faq-item__heading">
+                <button class="faq-item__question" type="button" aria-expanded="false" aria-controls="faqA4">
+                  O manual serve para versão digital também?
+                  <svg class="icon faq-item__icon" aria-hidden="true"><use href="#i-chevron"></use></svg>
+                </button>
+              </h3>
+              <div class="faq-item__answer" id="faqA4" role="region">
+                <p>Sim. Além de todo o processo artesanal impresso, o manual mostra como digitalizar e preparar o seu fanzine para distribuição em PDF, preservando a estética do papel.</p>
+              </div>
+            </article>
+
+            <article class="faq-item reveal" data-reveal="fade-up" data-delay="240">
+              <h3 class="faq-item__heading">
+                <button class="faq-item__question" type="button" aria-expanded="false" aria-controls="faqA5">
+                  Como recebo o manual após a compra?
+                  <svg class="icon faq-item__icon" aria-hidden="true"><use href="#i-chevron"></use></svg>
+                </button>
+              </h3>
+              <div class="faq-item__answer" id="faqA5" role="region">
+                <p>Imediatamente após a confirmação, você recebe por e-mail o acesso ao Manual Prático de Guerrilha para Criação de Fanzines em PDF, com atualizações futuras incluídas.</p>
+              </div>
+            </article>
+
+            <article class="faq-item reveal" data-reveal="fade-up" data-delay="300">
+              <h3 class="faq-item__heading">
+                <button class="faq-item__question" type="button" aria-expanded="false" aria-controls="faqA6">
+                  E se eu não gostar? Posso pedir reembolso?
+                  <svg class="icon faq-item__icon" aria-hidden="true"><use href="#i-chevron"></use></svg>
+                </button>
+              </h3>
+              <div class="faq-item__answer" id="faqA6" role="region">
+                <p>Sim. Você tem 7 dias para avaliar o material. Se não fizer sentido para você, devolvemos 100% do valor — sem perguntas e sem burocracia.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ CTA FINAL ============================ -->
+    <section class="section cta" id="manual" aria-labelledby="ctaTitle">
+      <div class="container">
+        <div class="cta__panel glass reveal" data-reveal="zoom-in">
+          <span class="cta__glow" aria-hidden="true"></span>
+          <div class="cta__content">
+            <span class="badge">
+              <span class="badge__dot" aria-hidden="true"></span>
+              Acesso imediato ao método completo
+            </span>
+            <h2 class="cta__title" id="ctaTitle">
+              Seu próximo fanzine começa hoje.
+            </h2>
+            <p class="cta__subtitle">
+              Receba o Manual Prático de Guerrilha para Criação de Fanzines e descubra como
+              transformar criatividade em publicação — do primeiro rascunho à tiragem impressa.
+            </p>
+
+            <form class="cta__form" id="ctaForm" novalidate>
+              <label class="sr-only" for="ctaEmail">Seu melhor e-mail</label>
+              <div class="field">
+                <svg class="icon field__icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+                <input class="field__input" type="email" id="ctaEmail" name="email" placeholder="seu@email.com" autocomplete="email" required>
+              </div>
+              <button class="btn btn--primary btn--lg" type="submit">
+                Receber Meu Manual
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+              </button>
+            </form>
+            <p class="cta__feedback" id="ctaFeedback" role="status" aria-live="polite"></p>
+
+            <ul class="cta__trust">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Entrega imediata por e-mail</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> 7 dias de garantia total</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Atualizações futuras inclusas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="#hero" aria-label="Fanzine — página inicial">
+            <img class="brand__mark" src="assets/logos/fanzine-mark.svg" alt="" width="40" height="40" loading="lazy" decoding="async">
+            <span class="brand__name">Fanzine</span>
+          </a>
+          <p class="footer__about">
+            Criatividade independente, cultura e expressão autoral. Ensinamos qualquer pessoa
+            a transformar ideias em publicações independentes há mais de duas décadas.
+          </p>
+          <ul class="footer__contact">
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+              <a href="mailto:contato@fanzine.com.br">contato@fanzine.com.br</a>
+            </li>
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg>
+              <span>Brasil — comunidade global de criadores</span>
+            </li>
+          </ul>
+        </div>
+
+        <nav class="footer__col" aria-labelledby="footerNav1">
+          <h3 class="footer__title" id="footerNav1">Navegação</h3>
+          <ul class="footer__list">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#beneficios">Benefícios</a></li>
+            <li><a href="#aprender">O que você vai aprender</a></li>
+            <li><a href="#diferenciais">Diferenciais</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__col" aria-labelledby="footerNav2">
+          <h3 class="footer__title" id="footerNav2">O manual</h3>
+          <ul class="footer__list">
+            <li><a href="#aprender">Conteúdo do manual</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#comunidade">Comunidade</a></li>
+            <li><a href="#faq">Perguntas frequentes</a></li>
+            <li><a href="#manual">Receber o manual</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__col">
+          <h3 class="footer__title" id="footerSocial">Redes sociais</h3>
+          <ul class="footer__social" aria-labelledby="footerSocial">
+            <li>
+              <a href="https://www.instagram.com/fanzine" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Fanzine">
+                <svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/fanzine" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Fanzine">
+                <svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:contato@fanzine.com.br" aria-label="E-mail da Fanzine">
+                <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+              </a>
+            </li>
+          </ul>
+          <p class="footer__note">Compartilhe seu fanzine e inspire novos criadores na comunidade.</p>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">© <span id="currentYear">2026</span> Fanzine — Criatividade Independente, Cultura e Expressão Autoral.</p>
+        <ul class="footer__legal">
+          <li><a href="#manual">Termos de uso</a></li>
+          <li><a href="#manual">Privacidade</a></li>
+          <li><a href="#manual">Garantia</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Voltar ao topo -->
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Voltar ao topo da página">
+    <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+  </button>
+
+  <!-- Modal da galeria -->
+  <div class="modal" id="galeriaModal" hidden>
+    <div class="modal__backdrop" data-modal-close></div>
+    <div class="modal__dialog glass" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" type="button" data-modal-close aria-label="Fechar detalhes do item">
+        <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+      </button>
+      <figure class="modal__media">
+        <img src="assets/images/zine-01.svg" alt="" id="modalImage" width="720" height="480" loading="lazy" decoding="async">
+      </figure>
+      <div class="modal__body">
+        <span class="zine-card__tag" id="modalCategory">Protótipos</span>
+        <h2 class="modal__title" id="modalTitle">Item da galeria</h2>
+        <p class="modal__subtitle" id="modalSubtitle"></p>
+        <p class="modal__summary" id="modalSummary"></p>
+        <h3 class="modal__section-title">O que você encontra neste exemplo</h3>
+        <ul class="check-list check-list--light" id="modalResults"></ul>
+        <a class="btn btn--primary btn--block" href="#manual" data-modal-close>Quero meu manual</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
+
+
+
+
+
