@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Cortejo cultural de rua com faixa pintada à mão e estandarte coletivo">
+  <defs>
+    <pattern id="o8Dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.4" fill="#050505"/>
+    </pattern>
+    <linearGradient id="o8Sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#050505"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#o8Sky)"/>
+  <g fill="#D1D5DB" opacity="0.28">
+    <rect x="30" y="90" width="110" height="260"/>
+    <rect x="150" y="40" width="90" height="310"/>
+    <rect x="560" y="70" width="120" height="280"/>
+    <rect x="690" y="120" width="80" height="230"/>
+  </g>
+  <g fill="#FACC15" opacity="0.5">
+    <rect x="42" y="110" width="16" height="16"/><rect x="76" y="150" width="16" height="16"/>
+    <rect x="118" y="120" width="16" height="16"/><rect x="160" y="80" width="16" height="16"/>
+    <rect x="200" y="140" width="16" height="16"/><rect x="580" y="110" width="16" height="16"/>
+    <rect x="620" y="170" width="16" height="16"/><rect x="700" y="160" width="16" height="16"/>
+  </g>
+  <rect x="0" y="470" width="800" height="130" fill="#050505"/>
+  <g fill="#FFFFFF">
+    <path d="M0 470h800v18H0z" opacity="0.35"/>
+    <g stroke="#D1D5DB" stroke-width="2" opacity="0.5">
+      <path d="M40 520h120M200 520h120M360 520h120M520 520h120M680 520h100"/>
+    </g>
+  </g>
+  <g transform="rotate(-3 400 200)">
+    <rect x="60" y="120" width="680" height="130" rx="6" fill="#FFFFFF" stroke="#050505" stroke-width="5"/>
+    <text x="400" y="200" font-family="'Arial Black', Impact, sans-serif" font-size="52" fill="#22C55E" text-anchor="middle">CULTURA NÃO É CRIME</text>
+    <g stroke="#050505" stroke-width="3" opacity="0.5"><path d="M80 170h80M640 170h80"/></g>
+  </g>
+  <g fill="#050505">
+    <circle cx="180" cy="360" r="30"/><path d="M138 470c0-46 18-94 42-94s42 48 42 94z"/>
+    <circle cx="300" cy="346" r="28"/><path d="M258 470c0-46 18-92 42-92s42 46 42 92z"/>
+    <circle cx="440" cy="356" r="30"/><path d="M398 470c0-48 18-96 42-96s42 48 42 96z"/>
+    <circle cx="600" cy="344" r="28"/><path d="M558 470c0-46 18-92 42-92s42 46 42 92z"/>
+  </g>
+  <g stroke="#050505" stroke-width="5" fill="none">
+    <path d="M150 400h60M270 388h60M410 396h60M570 386h60"/>
+  </g>
+  <g fill="none" stroke="#D1D5DB" stroke-width="3" opacity="0.75">
+    <path d="M690 300v170M690 300l60 40-60 40"/>
+  </g>
+  <rect x="60" y="56" width="240" height="46" fill="#FACC15" stroke="#050505" stroke-width="4" transform="rotate(-2 180 80)"/>
+  <text x="76" y="88" font-family="'Courier New', monospace" font-size="20" fill="#050505">MANIFESTO ITINERANTE</text>
+  <rect width="800" height="600" fill="url(#o8Dots)" opacity="0.1"/>
+</svg>

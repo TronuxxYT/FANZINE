@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Mural urbano de lambe-lambe com cartazes e páginas de fanzine colados na parede">
+  <defs>
+    <pattern id="o6Dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.5" fill="#050505"/>
+    </pattern>
+    <pattern id="o6Brick" width="80" height="40" patternUnits="userSpaceOnUse">
+      <rect width="80" height="40" fill="#D1D5DB"/>
+      <path d="M0 39h80M40 0v20M0 20v20" stroke="#050505" stroke-width="1.4" opacity="0.35"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#o6Brick)"/>
+  <rect width="800" height="600" fill="url(#o6Dots)" opacity="0.12"/>
+  <g transform="rotate(-3 200 200)">
+    <rect x="60" y="60" width="280" height="360" fill="#FFFFFF" stroke="#050505" stroke-width="4"/>
+    <rect x="60" y="60" width="280" height="360" fill="url(#o6Dots)" opacity="0.5"/>
+    <circle cx="200" cy="180" r="66" fill="#050505"/>
+    <path d="M120 420c0-56 36-96 80-96s80 40 80 96z" fill="#050505"/>
+    <rect x="84" y="88" width="180" height="22" fill="#FACC15"/>
+    <text x="92" y="105" font-family="'Arial Black', Impact, sans-serif" font-size="17" fill="#050505">ZINE Nº 12</text>
+    <text x="90" y="398" font-family="'Courier New', monospace" font-size="17" fill="#050505">cole na sua rua</text>
+  </g>
+  <g transform="rotate(5 460 180)">
+    <rect x="350" y="70" width="250" height="300" fill="#FACC15" stroke="#050505" stroke-width="4"/>
+    <text x="372" y="150" font-family="'Arial Black', Impact, sans-serif" font-size="40" fill="#050505">FAÇA</text>
+    <text x="372" y="200" font-family="'Arial Black', Impact, sans-serif" font-size="40" fill="#050505">VOCÊ</text>
+    <text x="372" y="250" font-family="'Arial Black', Impact, sans-serif" font-size="40" fill="#050505">MESMO</text>
+    <rect x="372" y="272" width="200" height="14" fill="#050505"/>
+    <rect x="372" y="300" width="160" height="14" fill="#22C55E"/>
+    <circle cx="560" cy="330" r="22" fill="#2563EB"/>
+  </g>
+  <g transform="rotate(-7 620 420)">
+    <rect x="520" y="300" width="230" height="250" fill="#2563EB" stroke="#050505" stroke-width="4"/>
+    <text x="540" y="356" font-family="'Arial Black', Impact, sans-serif" font-size="26" fill="#FFFFFF">CULTURA</text>
+    <text x="540" y="392" font-family="'Arial Black', Impact, sans-serif" font-size="26" fill="#FACC15">INDEPENDENTE</text>
+    <g fill="#FFFFFF" opacity="0.9">
+      <rect x="540" y="416" width="190" height="6"/>
+      <rect x="540" y="434" width="150" height="6"/>
+      <rect x="540" y="452" width="170" height="6"/>
+      <rect x="540" y="470" width="120" height="6"/>
+    </g>
+  </g>
+  <g fill="#FFFFFF" opacity="0.75">
+    <path d="M300 480l40-30 60 10-30 40z"/>
+    <path d="M470 60l50 20-20 40-50-20z"/>
+  </g>
+  <g transform="rotate(-2 400 560)">
+    <rect x="70" y="530" width="660" height="46" fill="#050505"/>
+    <text x="90" y="562" font-family="'Courier New', monospace" font-size="19" letter-spacing="2" fill="#FACC15">PROJETO CULTURAL · OFICINA ITINERANTE · 12 CIDADES</text>
+  </g>
+</svg>

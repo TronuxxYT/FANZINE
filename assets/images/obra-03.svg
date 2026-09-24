@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Pilha de fanzines produzidos artesanalmente com grampos e costura aparente">
+  <defs>
+    <pattern id="o3Dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.5" fill="#050505"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="#FACC15"/>
+  <rect x="0" y="0" width="800" height="600" fill="url(#o3Dots)" opacity="0.16"/>
+  <g transform="rotate(-3 400 300)">
+    <rect x="96" y="392" width="608" height="34" rx="3" fill="#050505"/>
+    <rect x="112" y="356" width="576" height="38" rx="3" fill="#D1D5DB" stroke="#050505" stroke-width="3"/>
+    <rect x="104" y="314" width="592" height="44" rx="3" fill="#FFFFFF" stroke="#050505" stroke-width="3"/>
+    <rect x="120" y="266" width="560" height="50" rx="3" fill="#2563EB" stroke="#050505" stroke-width="3"/>
+    <rect x="112" y="212" width="576" height="56" rx="3" fill="#FFFFFF" stroke="#050505" stroke-width="3"/>
+    <rect x="128" y="156" width="544" height="58" rx="3" fill="#22C55E" stroke="#050505" stroke-width="3"/>
+    <rect x="136" y="96" width="528" height="62" rx="3" fill="#050505"/>
+    <text x="400" y="140" font-family="'Arial Black', Impact, sans-serif" font-size="34" fill="#FACC15" text-anchor="middle">ZINE Nº 07</text>
+    <text x="400" y="200" font-family="'Courier New', monospace" font-size="22" fill="#050505" text-anchor="middle">tiragem de 30 exemplares</text>
+    <text x="400" y="252" font-family="'Arial Black', Impact, sans-serif" font-size="28" fill="#FFFFFF" text-anchor="middle">SARAU COMICS</text>
+    <g stroke="#FFFFFF" stroke-width="3" opacity="0.85">
+      <path d="M160 300h180M160 316h120"/>
+    </g>
+    <g stroke="#050505" stroke-width="3" opacity="0.7">
+      <path d="M470 288h140M470 304h96"/>
+    </g>
+    <text x="400" y="382" font-family="'Courier New', monospace" font-size="20" fill="#050505" text-anchor="middle">capa recortada · miolo grampeado</text>
+  </g>
+  <g stroke="#050505" stroke-width="3">
+    <path d="M300 156v50M420 96v62" opacity="0.8"/>
+    <circle cx="300" cy="152" r="4" fill="#050505"/>
+    <circle cx="420" cy="92" r="4" fill="#050505"/>
+  </g>
+  <g transform="rotate(-16 140 300)">
+    <rect x="60" y="240" width="140" height="120" rx="3" fill="#FFFFFF" stroke="#050505" stroke-width="3"/>
+    <rect x="60" y="240" width="140" height="120" fill="url(#o3Dots)" opacity="0.4"/>
+    <text x="130" y="310" font-family="'Arial Black', Impact, sans-serif" font-size="26" fill="#050505" text-anchor="middle">#1</text>
+  </g>
+  <g transform="rotate(14 660 320)">
+    <rect x="600" y="260" width="130" height="110" rx="3" fill="#2563EB" stroke="#050505" stroke-width="3"/>
+    <text x="665" y="326" font-family="'Arial Black', Impact, sans-serif" font-size="24" fill="#FFFFFF" text-anchor="middle">#2</text>
+  </g>
+  <circle cx="60" cy="560" r="20" fill="#22C55E" stroke="#050505" stroke-width="3"/>
+  <text x="740" y="570" font-family="'Courier New', monospace" font-size="16" fill="#050505" text-anchor="end">produção artesanal</text>
+</svg>

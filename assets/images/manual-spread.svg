@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" width="900" height="700" role="img" aria-label="Páginas internas do manual abertas com etapas numeradas, diagramas e anotações">
+  <defs>
+    <pattern id="msDots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.4" fill="#050505"/>
+    </pattern>
+    <linearGradient id="msFold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#050505" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#050505" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#050505" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="700" fill="#D1D5DB"/>
+  <rect width="900" height="700" fill="url(#msDots)" opacity="0.18"/>
+  <g>
+    <rect x="40" y="60" width="400" height="580" fill="#FFFFFF" stroke="#050505" stroke-width="5"/>
+    <rect x="460" y="60" width="400" height="580" fill="#FFFFFF" stroke="#050505" stroke-width="5"/>
+    <rect x="440" y="60" width="20" height="580" fill="url(#msFold)"/>
+    <text x="70" y="112" font-family="'Arial Black', Impact, sans-serif" font-size="26" fill="#050505">COMO FAZER</text>
+    <text x="70" y="146" font-family="'Arial Black', Impact, sans-serif" font-size="26" fill="#050505">CONTEÚDO PARA</text>
+    <text x="70" y="180" font-family="'Arial Black', Impact, sans-serif" font-size="26" fill="#050505">MEU MINI ZINE</text>
+    <rect x="70" y="196" width="220" height="14" fill="#FACC15"/>
+    <g font-family="'Courier New', monospace" font-size="17" fill="#050505">
+      <text x="70" y="252">01 · pegue duas folhas A4</text>
+      <text x="70" y="286">02 · desenhe 8 retângulos</text>
+      <text x="70" y="320">03 · numere as páginas</text>
+      <text x="70" y="354">04 · escreva frases diretas</text>
+      <text x="70" y="388">05 · xerox · dobra · grampo</text>
+    </g>
+    <g fill="none" stroke="#050505" stroke-width="3">
+      <rect x="70" y="410" width="340" height="180" stroke-dasharray="9 7"/>
+      <path d="M240 410v180M70 500h340"/>
+    </g>
+    <g font-family="'Courier New', monospace" font-size="14" fill="#050505">
+      <text x="84" y="436">CAPA</text><text x="254" y="436">pág 2</text>
+      <text x="84" y="526">pág 7</text><text x="254" y="526">pág 4</text>
+      <text x="84" y="574">pág 3</text><text x="254" y="574">CONTRA</text>
+    </g>
+    <rect x="70" y="606" width="180" height="20" fill="#050505"/>
+    <text x="82" y="621" font-family="'Courier New', monospace" font-size="14" fill="#FACC15">NÃO TENHA MEDO DE ERRAR</text>
+    <text x="500" y="112" font-family="'Arial Black', Impact, sans-serif" font-size="26" fill="#050505">A ESCOLHA DO TEMA</text>
+    <rect x="500" y="128" width="160" height="12" fill="#22C55E"/>
+    <g font-family="'Courier New', monospace" font-size="16" fill="#050505">
+      <text x="500" y="176">qual assunto vai abordar?</text>
+      <text x="500" y="212">quem vai ler isso?</text>
+      <text x="500" y="248">que tamanho terá?</text>
+    </g>
+    <g transform="translate(500 274)">
+      <rect x="0" y="0" width="330" height="200" fill="#FFFFFF" stroke="#050505" stroke-width="3"/>
+      <rect x="0" y="0" width="330" height="200" fill="url(#msDots)" opacity="0.45"/>
+      <circle cx="120" cy="90" r="52" fill="#050505"/>
+      <path d="M60 200c0-42 26-74 60-74s60 32 60 74z" fill="#050505"/>
+      <rect x="200" y="50" width="100" height="14" fill="#FACC15"/>
+      <path d="M200 84h100M200 104h70M200 124h90" stroke="#050505" stroke-width="5"/>
+    </g>
+    <g stroke="#050505" stroke-width="3" fill="none">
+      <path d="M500 512h300M500 540h240M500 568h280M500 596h180"/>
+    </g>
+    <rect x="500" y="616" width="130" height="18" fill="#2563EB"/>
+    <text x="500" y="646" font-family="'Courier New', monospace" font-size="15" fill="#050505">pág 34 · MÓDULO 03</text>
+  </g>
+  <g transform="rotate(-6 830 120)">
+    <rect x="770" y="80" width="120" height="70" fill="#FACC15" stroke="#050505" stroke-width="3"/>
+    <text x="786" y="112" font-family="'Arial Black', Impact, sans-serif" font-size="16" fill="#050505">DICA</text>
+    <rect x="786" y="124" width="80" height="8" fill="#050505"/>
+  </g>
+</svg>

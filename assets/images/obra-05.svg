@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Encadernação artesanal com costura aparente em linha verde, azul e amarela sobre capa kraft">
+  <defs>
+    <pattern id="o5Dots" width="7" height="7" patternUnits="userSpaceOnUse">
+      <circle cx="3.5" cy="3.5" r="1.6" fill="#050505"/>
+    </pattern>
+    <linearGradient id="o5Kraft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D1D5DB"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="#2563EB"/>
+  <rect width="800" height="600" fill="url(#o5Dots)" opacity="0.2"/>
+  <g transform="rotate(-4 400 300)">
+    <rect x="120" y="70" width="560" height="470" rx="8" fill="url(#o5Kraft)" stroke="#050505" stroke-width="5"/>
+    <rect x="120" y="70" width="560" height="470" fill="url(#o5Dots)" opacity="0.18"/>
+    <text x="400" y="140" font-family="'Arial Black', Impact, sans-serif" font-size="36" fill="#050505" text-anchor="middle">COSTURA APARENTE</text>
+    <text x="400" y="176" font-family="'Courier New', monospace" font-size="18" letter-spacing="3" fill="#050505" text-anchor="middle">AGULHA · LINHA · PAPELÃO</text>
+    <g stroke="#050505" stroke-width="3" fill="none">
+      <path d="M180 210v290M240 210v290M300 210v290M360 210v290M420 210v290M480 210v290M540 210v290M600 210v290M660 210v290" opacity="0.35"/>
+      <path d="M180 200h480"/>
+    </g>
+    <g fill="none" stroke-linecap="round" stroke-width="7">
+      <path d="M180 240c30-26 30 26 60 0s30 26 60 0 30 26 60 0 30 26 60 0 30 26 60 0 30 26 60 0 30 26 60 0 30 26 60 0" stroke="#22C55E"/>
+      <path d="M180 320c30-26 30 26 60 0s30 26 60 0 30 26 60 0 30 26 60 0 30 26 60 0 30 26 60 0 30 26 60 0 30 26 60 0" stroke="#FACC15"/>
+      <path d="M180 400c30-26 30 26 60 0s30 26 60 0 30 26 60 0 30 26 60 0 30 26 60 0 30 26 60 0 30 26 60 0 30 26 60 0" stroke="#FFFFFF"/>
+    </g>
+    <g fill="#050505">
+      <circle cx="180" cy="240" r="5"/><circle cx="240" cy="240" r="5"/><circle cx="300" cy="240" r="5"/>
+      <circle cx="360" cy="240" r="5"/><circle cx="420" cy="240" r="5"/><circle cx="480" cy="240" r="5"/>
+      <circle cx="540" cy="240" r="5"/><circle cx="600" cy="240" r="5"/><circle cx="660" cy="240" r="5"/>
+      <circle cx="180" cy="320" r="5"/><circle cx="240" cy="320" r="5"/><circle cx="300" cy="320" r="5"/>
+      <circle cx="360" cy="320" r="5"/><circle cx="420" cy="320" r="5"/><circle cx="480" cy="320" r="5"/>
+      <circle cx="540" cy="320" r="5"/><circle cx="600" cy="320" r="5"/><circle cx="660" cy="320" r="5"/>
+    </g>
+    <rect x="180" y="450" width="300" height="54" fill="#050505"/>
+    <text x="198" y="486" font-family="'Arial Black', Impact, sans-serif" font-size="24" fill="#FACC15">MÓDULO 05</text>
+    <circle cx="620" cy="478" r="34" fill="#22C55E" stroke="#050505" stroke-width="4"/>
+    <path d="M606 478l10 12 20-24" stroke="#050505" stroke-width="6" fill="none" stroke-linecap="round"/>
+  </g>
+  <g transform="rotate(18 700 120)">
+    <rect x="640" y="60" width="14" height="150" rx="7" fill="#FFFFFF" stroke="#050505" stroke-width="3"/>
+    <circle cx="647" cy="62" r="10" fill="#FACC15" stroke="#050505" stroke-width="3"/>
+  </g>
+</svg>

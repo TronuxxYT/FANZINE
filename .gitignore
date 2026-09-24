@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Local build / cache
+.vercel
+.cache/
+dist/
+build/
+
+# Local media / external raw dumps
+imagens/
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+*.log

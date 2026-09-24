@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Capa de fanzine fotocopiado em preto e branco com retrato em meio-tom e letras recortadas">
+  <defs>
+    <pattern id="o4Dots" width="5" height="5" patternUnits="userSpaceOnUse">
+      <circle cx="2.5" cy="2.5" r="1.35" fill="#050505"/>
+    </pattern>
+    <pattern id="o4DotsL" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="5" r="3.4" fill="#050505"/>
+    </pattern>
+    <linearGradient id="o4Fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#D1D5DB"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="#D1D5DB"/>
+  <g transform="rotate(-2 400 300)">
+    <rect x="70" y="40" width="660" height="520" rx="4" fill="#FFFFFF" stroke="#050505" stroke-width="5"/>
+    <rect x="70" y="40" width="660" height="120" fill="#050505"/>
+    <text x="94" y="106" font-family="'Arial Black', Impact, sans-serif" font-size="46" fill="#FFFFFF">O ANTÍDOTO</text>
+    <text x="94" y="148" font-family="'Arial Black', Impact, sans-serif" font-size="36" fill="#FACC15">DO SILÊNCIO</text>
+    <rect x="96" y="176" width="330" height="24" fill="#22C55E"/>
+    <text x="104" y="195" font-family="'Courier New', monospace" font-size="17" fill="#050505">um zine sobre fazer zines</text>
+    <g transform="translate(430 186)">
+      <rect x="0" y="0" width="270" height="330" fill="url(#o4DotsL)"/>
+      <rect x="0" y="0" width="270" height="330" fill="url(#o4Fade)" opacity="0.35"/>
+      <circle cx="140" cy="120" r="76" fill="#050505"/>
+      <path d="M40 330c0-58 44-104 100-104s100 46 100 104z" fill="#050505"/>
+      <circle cx="116" cy="110" r="9" fill="#FFFFFF"/>
+      <circle cx="166" cy="110" r="9" fill="#FFFFFF"/>
+      <path d="M112 152c18 16 40 16 58 0" stroke="#FFFFFF" stroke-width="5" fill="none"/>
+      <path d="M96 88c26-22 62-22 88-2" stroke="#FFFFFF" stroke-width="6" fill="none"/>
+    </g>
+    <g font-family="'Courier New', monospace" font-size="16" fill="#050505">
+      <text x="100" y="240">1. escolher o tema</text>
+      <text x="100" y="272">2. riscar as páginas</text>
+      <text x="100" y="304">3. montar a sequência</text>
+      <text x="100" y="336">4. xerocar e grampear</text>
+      <text x="100" y="368">5. distribuir na rua</text>
+    </g>
+    <rect x="100" y="392" width="250" height="16" fill="#FFFFFF" stroke="#050505" stroke-width="2"/>
+    <rect x="100" y="392" width="180" height="16" fill="#FACC15"/>
+    <rect x="70" y="470" width="660" height="90" fill="url(#o4Dots)" opacity="0.55"/>
+    <text x="400" y="528" font-family="'Arial Black', Impact, sans-serif" font-size="30" fill="#050505" text-anchor="middle">SARAU COMICS EDIÇÃO</text>
+  </g>
+  <g stroke="#050505" stroke-width="4">
+    <path d="M96 60v-22M718 60v-22" opacity="0.5"/>
+  </g>
+</svg>

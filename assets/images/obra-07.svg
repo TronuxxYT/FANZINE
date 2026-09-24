@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Fanzines de bolso montados em leque com esquema de dobra e corte de uma folha A4">
+  <defs>
+    <pattern id="o7Dots" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.4" fill="#050505"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="#FFFFFF"/>
+  <rect width="800" height="600" fill="url(#o7Dots)" opacity="0.28"/>
+  <g transform="translate(40 40)">
+    <rect x="0" y="0" width="380" height="520" fill="#FFFFFF" stroke="#050505" stroke-width="4"/>
+    <g stroke="#050505" stroke-width="2.4" stroke-dasharray="10 8">
+      <path d="M190 0v520M0 260h380"/>
+    </g>
+    <g fill="#050505" font-family="'Courier New', monospace" font-size="15">
+      <text x="20" y="30">CAPA</text><text x="210" y="30">pág 2</text>
+      <text x="20" y="160">pág 7</text><text x="210" y="160">pág 4</text>
+      <text x="20" y="300">pág 5</text><text x="210" y="300">pág 6</text>
+      <text x="20" y="430">pág 3</text><text x="210" y="430">CONTRACAPA</text>
+    </g>
+    <g fill="none" stroke="#050505" stroke-width="2.6">
+      <rect x="16" y="40" width="156" height="200" stroke-dasharray="6 6" opacity="0.6"/>
+      <rect x="206" y="40" width="156" height="200" stroke-dasharray="6 6" opacity="0.6"/>
+    </g>
+    <circle cx="190" cy="60" r="6" fill="#FACC15"/>
+    <circle cx="190" cy="460" r="6" fill="#22C55E"/>
+    <text x="20" y="498" font-family="'Courier New', monospace" font-size="14" fill="#050505">1 folha A4 · dobra · 1 corte só</text>
+    <rect x="240" y="330" width="120" height="150" fill="#FFFFFF" stroke="#050505" stroke-width="3" transform="rotate(6 300 405)"/>
+    <path d="M252 400h96M252 420h70M252 440h86" stroke="#050505" stroke-width="3" transform="rotate(6 300 405)"/>
+  </g>
+  <g transform="translate(430 0)">
+    <g transform="rotate(-12 200 240)">
+      <rect x="20" y="60" width="200" height="280" fill="#FACC15" stroke="#050505" stroke-width="4"/>
+      <text x="44" y="130" font-family="'Arial Black', Impact, sans-serif" font-size="26" fill="#050505">MINI</text>
+      <text x="44" y="164" font-family="'Arial Black', Impact, sans-serif" font-size="26" fill="#050505">ZINE</text>
+      <g fill="#050505"><rect x="44" y="190" width="120" height="6"/><rect x="44" y="210" width="90" height="6"/></g>
+    </g>
+    <g transform="rotate(4 200 300)">
+      <rect x="60" y="120" width="200" height="280" fill="#2563EB" stroke="#050505" stroke-width="4"/>
+      <text x="84" y="190" font-family="'Arial Black', Impact, sans-serif" font-size="24" fill="#FFFFFF">BOLSO</text>
+      <circle cx="160" cy="280" r="52" fill="#FFFFFF"/>
+      <path d="M126 280h68M160 246v68" stroke="#050505" stroke-width="6"/>
+    </g>
+    <g transform="rotate(20 200 360)">
+      <rect x="100" y="180" width="200" height="280" fill="#FFFFFF" stroke="#050505" stroke-width="4"/>
+      <rect x="100" y="180" width="200" height="280" fill="url(#o7Dots)" opacity="0.45"/>
+      <text x="124" y="250" font-family="'Arial Black', Impact, sans-serif" font-size="24" fill="#050505">DOBRA</text>
+      <rect x="124" y="268" width="70" height="16" fill="#22C55E"/>
+      <path d="M124 320h150M124 344h110M124 368h140" stroke="#050505" stroke-width="5"/>
+    </g>
+  </g>
+  <g transform="translate(60 572)">
+    <rect x="0" y="-10" width="220" height="26" fill="#050505"/>
+    <text x="12" y="9" font-family="'Courier New', monospace" font-size="15" fill="#FACC15">8 PÁGINAS POR EXEMPLAR</text>
+  </g>
+</svg>

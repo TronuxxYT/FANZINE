@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Feira de zines na rua com faixa pintada à mão e pessoas trocando publicações">
+  <defs>
+    <pattern id="o2Ray" width="34" height="34" patternUnits="userSpaceOnUse" patternTransform="rotate(-18)">
+      <rect width="34" height="34" fill="#2563EB"/>
+      <rect width="17" height="34" fill="#FFFFFF"/>
+    </pattern>
+    <pattern id="o2Dots" width="8" height="8" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="2" fill="#050505"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#o2Ray)"/>
+  <rect x="0" y="330" width="800" height="270" fill="#050505"/>
+  <rect x="0" y="322" width="800" height="10" fill="#FACC15"/>
+  <g transform="rotate(-2 400 120)">
+    <rect x="70" y="60" width="660" height="120" rx="8" fill="#050505" stroke="#FACC15" stroke-width="6"/>
+    <text x="400" y="122" font-family="'Arial Black', Impact, sans-serif" font-size="54" fill="#FFFFFF" text-anchor="middle">FEIRA DE ZINES</text>
+    <text x="400" y="158" font-family="'Courier New', monospace" font-size="20" letter-spacing="4" fill="#FACC15" text-anchor="middle">TROCA · VENDA · SARAU · OFICINA</text>
+  </g>
+  <g transform="translate(0 20)">
+    <g fill="#D1D5DB" opacity="0.35">
+      <rect x="60" y="230" width="120" height="110" rx="4"/>
+      <rect x="200" y="200" width="90" height="140" rx="4"/>
+      <rect x="530" y="215" width="110" height="125" rx="4"/>
+      <rect x="660" y="240" width="80" height="100" rx="4"/>
+    </g>
+  </g>
+  <g>
+    <rect x="90" y="400" width="620" height="26" rx="6" fill="#D1D5DB" stroke="#050505" stroke-width="3"/>
+    <rect x="120" y="426" width="26" height="120" fill="#050505" stroke="#D1D5DB" stroke-width="2"/>
+    <rect x="654" y="426" width="26" height="120" fill="#050505" stroke="#D1D5DB" stroke-width="2"/>
+    <g stroke="#050505" stroke-width="2.4">
+      <rect x="150" y="376" width="86" height="26" fill="#FACC15"/>
+      <rect x="250" y="370" width="86" height="32" fill="#FFFFFF"/>
+      <rect x="350" y="378" width="86" height="24" fill="#22C55E"/>
+      <rect x="450" y="372" width="86" height="30" fill="#D1D5DB"/>
+      <rect x="550" y="378" width="86" height="24" fill="#FFFFFF"/>
+    </g>
+    <g fill="#050505">
+      <rect x="156" y="384" width="60" height="4"/>
+      <rect x="256" y="380" width="52" height="4"/>
+      <rect x="256" y="390" width="70" height="3"/>
+      <rect x="456" y="382" width="60" height="4"/>
+      <rect x="556" y="384" width="48" height="4"/>
+    </g>
+  </g>
+  <g fill="#050505">
+    <circle cx="200" cy="262" r="26"/>
+    <path d="M164 400c0-42 16-84 36-84s36 42 36 84z"/>
+    <circle cx="600" cy="252" r="24"/>
+    <path d="M566 400c0-40 15-80 34-80s34 40 34 80z"/>
+  </g>
+  <g fill="#FFFFFF">
+    <rect x="228" y="330" width="60" height="72" rx="3" stroke="#050505" stroke-width="3" transform="rotate(8 258 366)"/>
+    <rect x="556" y="322" width="60" height="72" rx="3" stroke="#050505" stroke-width="3" transform="rotate(-7 586 358)"/>
+    <rect x="238" y="342" width="40" height="5" fill="#050505" transform="rotate(8 258 366)"/>
+    <rect x="566" y="334" width="40" height="5" fill="#050505" transform="rotate(-7 586 358)"/>
+  </g>
+  <rect x="0" y="546" width="800" height="54" fill="url(#o2Dots)"/>
+  <text x="30" y="582" font-family="'Courier New', monospace" font-size="18" letter-spacing="2" fill="#D1D5DB">arte de rua não é crime</text>
+</svg>

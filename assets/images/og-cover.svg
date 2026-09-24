@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Fanzine — transforme suas ideias em publicações independentes">
+  <defs>
+    <pattern id="ogDots" width="7" height="7" patternUnits="userSpaceOnUse">
+      <circle cx="3.5" cy="3.5" r="1.7" fill="#FFFFFF"/>
+    </pattern>
+    <pattern id="ogRay" width="36" height="36" patternUnits="userSpaceOnUse" patternTransform="rotate(-20)">
+      <rect width="36" height="36" fill="#2563EB"/>
+      <rect width="18" height="36" fill="#FFFFFF"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#050505"/>
+  <rect width="1200" height="630" fill="url(#ogDots)" opacity="0.07"/>
+  <g transform="translate(760 60)">
+    <rect x="0" y="0" width="380" height="510" fill="#FFFFFF" stroke="#050505" stroke-width="6"/>
+    <rect x="0" y="0" width="380" height="150" fill="url(#ogRay)"/>
+    <text x="24" y="200" font-family="'Arial Black', Impact, sans-serif" font-size="34" fill="#050505">MANUAL PRÁTICO</text>
+    <text x="24" y="240" font-family="'Arial Black', Impact, sans-serif" font-size="34" fill="#050505">DE GUERRILHA</text>
+    <rect x="24" y="258" width="200" height="14" fill="#FACC15"/>
+    <text x="24" y="300" font-family="'Courier New', monospace" font-size="19" fill="#050505">para criação de fanzines</text>
+    <g transform="translate(24 330)">
+      <rect x="0" y="0" width="150" height="110" fill="#22C55E"/>
+      <rect x="160" y="0" width="150" height="110" fill="#050505"/>
+      <rect x="0" y="120" width="150" height="40" fill="#050505"/>
+      <rect x="160" y="120" width="150" height="40" fill="#2563EB"/>
+    </g>
+  </g>
+  <g transform="translate(70 90)">
+    <rect x="0" y="0" width="220" height="46" fill="#FACC15"/>
+    <text x="16" y="32" font-family="'Courier New', monospace" font-size="22" fill="#050505">CULTURA INDEPENDENTE</text>
+  </g>
+  <text x="70" y="250" font-family="'Arial Black', Impact, sans-serif" font-size="86" fill="#FFFFFF">FANZINE-SE</text>
+  <text x="70" y="340" font-family="'Arial Black', Impact, sans-serif" font-size="86" fill="#FACC15">OU SERÁ</text>
+  <text x="70" y="430" font-family="'Arial Black', Impact, sans-serif" font-size="86" fill="#22C55E">FANZINADO</text>
+  <text x="70" y="500" font-family="'Courier New', monospace" font-size="24" fill="#D1D5DB">do conceito à publicação · método com mais de 20 anos</text>
+  <rect x="70" y="530" width="620" height="52" fill="#2563EB"/>
+  <text x="92" y="566" font-family="'Arial Black', Impact, sans-serif" font-size="26" fill="#FFFFFF">QUERO MEU MANUAL</text>
+</svg>

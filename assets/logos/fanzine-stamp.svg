@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Carimbo Fanzine">
+  <defs>
+    <path id="spOuter" d="M100 16a84 84 0 1 1 0 168 84 84 0 0 1 0-168z"/>
+    <path id="spInner" d="M100 44a56 56 0 1 1 0 112 56 56 0 0 1 0-112z"/>
+  </defs>
+  <g fill="none" stroke="#FFFFFF" stroke-width="4">
+    <path d="M100 8a92 92 0 1 1 0 184 92 92 0 0 1 0-184z" stroke-dasharray="8 7" opacity="0.85"/>
+    <use href="#spOuter"/>
+    <use href="#spInner" stroke-width="2.5" opacity="0.9"/>
+    <path d="M100 26v10M100 164v10M26 100h10M164 100h10" stroke-width="3"/>
+  </g>
+  <text font-family="'Courier New', monospace" font-size="13" letter-spacing="1.6" fill="#FFFFFF">
+    <textPath href="#spOuter" startOffset="4%">FANZINE · OFICINAS · ZINES · XEROX · SARAU ·</textPath>
+  </text>
+  <rect x="58" y="70" width="84" height="24" fill="#FACC15"/>
+  <text x="100" y="88" font-family="'Arial Black', Impact, sans-serif" font-size="17" fill="#050505" text-anchor="middle">FANZINE</text>
+  <text x="100" y="114" font-family="'Courier New', monospace" font-size="11.5" letter-spacing="1.4" fill="#FFFFFF" text-anchor="middle">DESDE 1998</text>
+  <rect x="60" y="122" width="80" height="22" rx="2" fill="#22C55E"/>
+  <text x="100" y="137" font-family="'Courier New', monospace" font-size="11" letter-spacing="1.2" fill="#050505" text-anchor="middle">FAÇA VOCÊ MESMO</text>
+  <circle cx="100" cy="100" r="2.6" fill="#FFFFFF" opacity="0.9"/>
+</svg>

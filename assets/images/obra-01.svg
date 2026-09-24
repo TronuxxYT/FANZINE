@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Mesa de oficina de fanzine com tesoura, cola, canetas e folhas de rascunho">
+  <defs>
+    <pattern id="o1Dots" width="7" height="7" patternUnits="userSpaceOnUse">
+      <circle cx="3.5" cy="3.5" r="1.7" fill="#050505"/>
+    </pattern>
+    <pattern id="o1Ray" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(30)">
+      <rect width="26" height="26" fill="#2563EB"/>
+      <rect width="13" height="26" fill="#FFFFFF"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="#050505"/>
+  <rect x="10" y="10" width="780" height="580" rx="10" fill="#FFFFFF"/>
+  <g stroke="#D1D5DB" stroke-width="1.2" opacity="0.7">
+    <path d="M10 150h780M10 300h780M10 450h780"/>
+  </g>
+  <g transform="rotate(-6 250 300)">
+    <rect x="60" y="120" width="380" height="360" rx="6" fill="#FFFFFF" stroke="#050505" stroke-width="3"/>
+    <g transform="rotate(-5 250 300)" fill="none" stroke="#050505" stroke-width="2.4" stroke-linecap="round">
+      <path d="M110 200c30-26 68-14 88 6s52 10 74-6"/>
+      <path d="M110 250h180M110 285h140M110 320h200M110 355h120"/>
+      <path d="M320 200c22 12 34 34 30 58"/>
+    </g>
+    <path d="M330 258c18-16 44-10 48 10 4 22-16 38-40 30 22-4 26-26 2-30-8-2-14 2-18 8z" fill="#050505"/>
+    <rect x="96" y="176" width="230" height="14" fill="#FACC15"/>
+    <text x="100" y="412" font-family="'Courier New', monospace" font-size="17" fill="#050505">não tenha medo de errar</text>
+  </g>
+  <g transform="rotate(9 560 200)">
+    <rect x="470" y="90" width="280" height="210" rx="4" fill="#FFFFFF" stroke="#050505" stroke-width="3"/>
+    <rect x="470" y="90" width="280" height="210" fill="url(#o1Dots)" opacity="0.5"/>
+    <circle cx="610" cy="180" r="56" fill="#050505"/>
+    <circle cx="592" cy="170" r="7" fill="#FFFFFF"/>
+    <circle cx="630" cy="170" r="7" fill="#FFFFFF"/>
+    <path d="M588 206c16 12 34 12 50 0" stroke="#FFFFFF" stroke-width="4" fill="none"/>
+    <rect x="486" y="256" width="150" height="18" fill="#22C55E"/>
+  </g>
+  <g transform="rotate(-14 480 470)">
+    <rect x="420" y="410" width="150" height="14" rx="7" fill="#FACC15" stroke="#050505" stroke-width="2.4"/>
+    <path d="M420 417l-46 6 8-20 38 6z" fill="#2563EB" stroke="#050505" stroke-width="2.4"/>
+  </g>
+  <g transform="rotate(24 690 430)">
+    <rect x="640" y="380" width="104" height="104" rx="8" fill="#D1D5DB" stroke="#050505" stroke-width="3"/>
+    <circle cx="692" cy="432" r="30" fill="#050505"/>
+    <circle cx="692" cy="432" r="16" fill="#D1D5DB"/>
+  </g>
+  <g transform="rotate(-3 200 520)">
+    <rect x="120" y="500" width="196" height="22" rx="9" fill="#050505"/>
+    <rect x="300" y="502" width="60" height="18" rx="6" fill="#FACC15" stroke="#050505" stroke-width="2"/>
+    <text x="140" y="516" font-family="'Courier New', monospace" font-size="13" fill="#FFFFFF">COLA TUDO</text>
+  </g>
+  <rect x="520" y="510" width="240" height="70" rx="4" fill="url(#o1Ray)"/>
+  <text x="640" y="552" font-family="'Arial Black', Impact, sans-serif" font-size="26" fill="#FFFFFF" text-anchor="middle">OFICINA</text>
+  <circle cx="60" cy="60" r="18" fill="#22C55E"/>
+  <circle cx="742" cy="556" r="14" fill="#FACC15"/>
+</svg>
