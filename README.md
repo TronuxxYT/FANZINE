@@ -1,202 +1,101 @@
-# Fanzine — Landing Page Premium
+# Fanzine — Arquivo editorial de cultura independente
 
-Landing page monocromática (preto, branco e tons de cinza) para a **Fanzine** — projeto
-dedicado a ensinar qualquer pessoa a transformar ideias em publicações independentes. O
-produto central é o **Manual Prático de Guerrilha para Criação de Fanzines**, método
-desenvolvido ao longo de mais de 20 anos de experimentações. Construída com **HTML5, CSS3 e
-JavaScript Vanilla puros** — sem frameworks, sem bundlers, sem etapa de build.
+Experiência editorial de uma página única sobre **fanzines**, publicações independentes e
+produção DIY. O site reúne história, tipos, método de criação, encadernação, movimento,
+referências visuais e um convite para publicar.
 
----
+Construído com **HTML5, CSS3 e JavaScript Vanilla**. Não há framework, bundler, dependências
+de runtime ou etapa de build.
 
-## 1. Como executar localmente
+## Executar localmente
 
-A página funciona por abertura direta do arquivo, mas o recomendado é servir por um
-servidor local simples.
+A pasta pode ser servida com qualquer servidor estático. A opção mais simples, sem instalar
+dependências no projeto:
 
 ```bash
-# Na raiz do projeto (pasta fanzine-landing)
-
-# Opção 1 — Python 3
+cd fanzine-landing
 python -m http.server 5500
-
-# Opção 2 — Node.js (npx, sem instalar nada)
-npx serve . -l 5500
 ```
 
-Depois abra: <http://localhost:5500>
+Depois abra <http://localhost:5500>.
 
-> Abertura direta: também funciona com duplo clique em `index.html` (o sprite de ícones
-> está embutido no HTML justamente para isso). Não há `npm install`, `npm run build`
-> nem qualquer compilador envolvido.
+Também é possível usar `npx serve . -l 5500`. A pasta `imagens/` contém o acervo bruto usado
+na curadoria e é ignorada pelo Git; a página em execução usa somente a seleção JPG em
+`assets/imagens-fanzine/`.
 
----
+## Estrutura principal
 
-## 2. Estrutura de pastas
-
-```
-/
-├── index.html                  # Página única, semântica e com SEO completo
+```text
+fanzine-landing/
+├── index.html                 # documento semântico, conteúdo e lightbox
 ├── css/
-│   └── style.css               # Design system + layout + animações + responsividade
+│   └── style.css              # tokens, layout, responsividade e motion
 ├── js/
-│   └── script.js               # Todos os comportamentos (Vanilla JS, IIFE)
+│   └── script.js              # interações vanilla em uma IIFE
 ├── assets/
-│   ├── images/                 # Visuais SVG: manual em destaque e 8 itens da galeria
-│   │   ├── manual-hero.svg
-│   │   └── zine-01.svg … zine-08.svg
-│   ├── icons/
-│   │   ├── favicon.svg         # Favicon usado no <head>
-│   │   └── sprite.svg          # Sprite externo reutilizável (24 ícones)
-│   └── logos/
-│       ├── fanzine-mark.svg    # Marca compacta (header/footer)
-│       └── fanzine-logo.svg    # Logo completo com assinatura
+│   ├── imagens-fanzine/       # 28 imagens JPG selecionadas e usadas no site
+│   ├── icons/                 # favicon e ícones
+│   └── logos/                 # marca do Fanzine
+├── imagens/                   # acervo local de curadoria (não é carregado em produção)
 └── README.md
 ```
 
----
+## Narrativa e recursos
 
-## 3. Identidade visual
+A página está organizada como uma revista digital:
 
-| Token | Valor | Uso |
-| --- | --- | --- |
-| Fundo principal | `#000000` | `body`, hero |
-| Fundo secundário | `#0A0A0A` | Rodapé, fundo de mídias |
-| Cards | `#111111` | Cards, painéis, mockups |
-| Card elevado | `#161616` | Estado hover |
-| Bordas | `#222222` | Contornos padrão |
-| Divisórias | `#2A2A2A` | Separações internas |
-| Texto principal | `#FFFFFF` | Títulos e destaques |
-| Texto secundário | `#BDBDBD` | Corpo de texto |
-| Texto de apoio | `#8C8C8C` / `#666666` | Legendas e metadados |
+1. **Hero e manifesto** — apresentação, CTA e imagens em collage.
+2. **O que é um fanzine** — origem, cultura independente, publicações alternativas, DIY e
+   importância cultural.
+3. **Tipos de fanzine** — cards para os formatos de bolso, artístico, literário, educativo,
+   comunitário e experimental.
+4. **Como criar o seu** — timeline visual em seis passos: ideia, rascunho, conteúdo,
+   diagramação, impressão e distribuição.
+5. **Encadernação e produção** — dobras, grampos, costura, encadernação artesanal e impressão
+   doméstica, com imagens de referência.
+6. **Movimento fanzine** — arte urbana, cultura periférica, produção independente, educação
+   cultural e projetos comunitários.
+7. **Galeria** — grade editorial com filtros por categoria, imagens lazy e lightbox acessível.
+8. **Convite e rodapé** — chamada para começar e canais de contato.
 
-Nenhuma cor vibrante é usada: azul, verde, vermelho, roxo, amarelo e neon estão ausentes,
-assim como gradientes coloridos. Os únicos gradientes existentes vão de branco para cinza
-ou de transparência (brilhos, traços de gráfico, barra de progresso).
+### Interações
 
-### Liquid Glass (glassmorphism discreto)
+- `IntersectionObserver` para scroll reveal, split text discreto e motion blur suave nos reveals de zoom.
+- Parallax suave com `requestAnimationFrame`, somente em ponteiro fino.
+- Hover com zoom leve, flutuação mínima, transições de cor e estados de foco visíveis.
+- Filtros da galeria navegáveis por clique, setas, `Home` e `End`.
+- Lightbox com foco gerenciado, `Escape`, bloqueio de scroll e retorno ao card de origem.
+- Menu responsivo com `aria-expanded`, `aria-hidden` e fechamento por `Escape`.
+- Cursor em forma de ponteiro nativo, sem círculos ou sobreposição visual e com `auto` como
+  fallback. Em ponteiro fino, o sistema amostra a cor de fundo sob o ponteiro, compõe
+  transparências e troca a cor para manter contraste; a forma permanece pequena e discreta.
+- `prefers-reduced-motion` desativa transições e revelações pesadas.
 
-Definido pelos tokens `--glass-*` e pela classe utilitária `.glass`, que combina:
+## Identidade visual
 
-- fundo translúcido (`rgba(255,255,255,.045)`);
-- `backdrop-filter: blur(16px) saturate(130%)` com prefixo `-webkit-`;
-- borda de 1px translúcida;
-- reflexo sutil via `::before` com `mask-composite` (linha de luz no canto superior).
+A direção combina papel, preto, amarelo, azul e verde em blocos de alto contraste. Tipografia
+de display (`Anton`), texto editorial (`Space Grotesk`), monoespaçada (`Special Elite`) e
+escrita manual (`Permanent Marker`) criam a combinação entre arquivo, oficina e publicação
+independente. Tokens customizáveis estão no início de `css/style.css`.
 
-Aplicado no header ao rolar, nos cards premium, no painel do menu mobile, nos menus
-flutuantes, no modal da galeria, nos botões de vidro e no painel de CTA final.
-
----
-
-## 4. Seções da página
-
-1. **Header** — logo, navegação em cápsula de vidro, CTAs e menu mobile deslizante.
-2. **Hero** — badge, título "Transforme Suas Ideias em um Fanzine Real", CTAs "Quero Meu
-   Manual" / "Ver Como Funciona" e painel visual com o manual e cards flutuantes.
-3. **Sobre** — história de décadas dedicadas à cultura dos fanzines + pilares (missão, visão, valores).
-4. **Benefícios** — grid de 6 cards com ícones SVG.
-5. **O que você vai aprender** — grade de 8 módulos numerados (do conceito à produção artesanal).
-6. **Diferenciais** — lista de 6 diferenciais + timeline do método.
-7. **Números** — contadores animados e barras de indicadores.
-8. **Galeria** — masonry com protótipos, pockets, páginas internas, diagramação e trabalhos
-   de alunos; filtros por categoria e modal de detalhes.
-9. **Depoimentos** — carrossel com autoplay, navegação manual, dots e suporte a swipe.
-10. **Comunidade** — "Mostre Seu Trabalho ao Mundo" com CTA "Enviar Meu Fanzine" e passos.
-11. **FAQ** — accordion animado (um item aberto por vez).
-12. **CTA final** — "Seu Próximo Fanzine Começa Hoje", painel de vidro com captura de e-mail.
-13. **Footer** — navegação rápida, links do manual, redes sociais e copyright.
-
----
-
-## 5. Funcionalidades JavaScript
-
-Todas implementadas em `js/script.js` (IIFE, sem dependências), organizadas por módulos
-numerados no topo do arquivo:
-
-| Módulo | Responsabilidade |
-| --- | --- |
-| `initScrollProgress` | Barra de progresso de leitura no topo da página |
-| `initHeaderState` | Estado do header com blur ao rolar |
-| `initMobileMenu` | Menu mobile com focus trap, `Esc`, backdrop e bloqueio de scroll |
-| `initSmoothScroll` | Rolagem suave com compensação da altura do header |
-| `initScrollSpy` | Destaque automático do link da seção visível |
-| `initReveal` | Scroll reveal via `IntersectionObserver` com delays por `data-delay` |
-| `initCounters` | Contadores crescentes e barras de indicadores animadas |
-| `initGalleryFilters` | Filtros da galeria por categoria com reanimação dos cards |
-| `initGalleryModal` | Modal acessível com foco gerenciado e conteúdo dinâmico |
-| `initCarousel` | Carrossel: autoplay, dots, setas, teclado, swipe e pausa em hover/foco |
-| `initFaq` | Accordion com animação de altura (`scrollHeight`) |
-| `initLazyLoading` | `loading="lazy"` + `decoding="async"` e fallback para `data-src` |
-| `initContactForm` | Validação do e-mail e feedback acessível (`aria-live`) |
-| `initBackToTop` | Botão "voltar ao topo" exibido após 640px de rolagem |
-| `initCurrentYear` | Ano atual no rodapé |
-
-Acessibilidade: navegação por teclado, `aria-expanded`, `aria-selected`, `aria-current`,
-`aria-hidden` nos slides inativos, foco retornando ao elemento de origem e suporte total a
-`prefers-reduced-motion` (animações e autoplay desativados).
-
----
-
-## 6. SEO e performance
-
-- `<title>`, `description`, `keywords`, `author`, `robots` e `canonical`.
-- Open Graph e Twitter Card completos.
-- Dados estruturados `schema.org` (`Organization` + serviços oferecidos).
-- HTML semântico: `header`, `main`, `section`, `article`, `nav`, `footer`, `figure`,
-  hierarquia única de `h1` → `h2` → `h3`.
-- Imagens SVG (peso mínimo), `loading="lazy"`, `decoding="async"`, `width`/`height`
-  declarados para evitar layout shift; visual do hero com `fetchpriority="high"`.
-- Animações apenas com `opacity`/`transform` (compostas na GPU, alvo de 60 FPS) e
-  listeners de scroll `passive` com throttling via `requestAnimationFrame`.
-- Sem bibliotecas de terceiros; apenas a fonte Inter via Google Fonts (com `preconnect`
-  e `display=swap`) — a página funciona normalmente com as fontes do sistema se estiver
-  offline.
-
----
-
-## 7. Responsividade testada
-
-| Faixa | Comportamento |
-| --- | --- |
-| até 420px | Colunas únicas, card flutuante secundário oculto, marca enxuta |
-| 421–640px | Menu hamburguer, filtros em scroll horizontal, modal em tela cheia |
-| 641–900px | Grids de 1–2 colunas, barras de indicadores empilhadas |
-| 901–1024px | Hero em coluna única, modal empilhado (mídia sobre conteúdo) |
-| 1025–1599px | Layout completo de desktop |
-| 1600px+ | Container expandido para 1440px e respiro extra no hero |
-
----
-
-## 8. Personalização rápida
-
-- **Cores, raios e sombras:** altere os tokens em `:root` no início de `css/style.css`.
-- **Conteúdo:** todo o texto está em `index.html`, em seções comentadas
-  (`<!-- ====== SEÇÃO ====== -->`).
-- **Novos itens na galeria:** copie um `<article class="zine-card">`, ajuste
-  `data-category` (valores usados pelos filtros: `prototipos`, `pocket`, `paginas`,
-  `diagramacao`, `alunos`) e os atributos `data-modal-*` do botão interno. Os resultados
-  do modal são separados por `|`. O botão usa o padrão *stretched* (`::after` com
-  `inset: 0`), então todo o card é clicável sem HTML inválido.
-- **Novos ícones:** adicione um `<symbol>` ao sprite inline do `index.html` e, se quiser
-  reuso externo, também em `assets/icons/sprite.svg`.
-
----
-
-## 9. Verificação rápida
+## Validação rápida
 
 ```bash
-# Sintaxe do JavaScript (requer Node.js — não é build, é apenas validação)
+# Sintaxe do JavaScript
 node --check js/script.js
+
+# Servidor local de verificação (opcional)
+python -m http.server 5500
 ```
 
-Checagens já realizadas neste projeto (após a reescrita completa do conteúdo):
+Também devem ser conferidos:
 
-- `node --check js/script.js` → sem erros de sintaxe (`exit 0`);
-- todas as 104 âncoras (`href="#..."`) resolvem para ids existentes no documento;
-- todas as 16 referências de `assets/**` no HTML existem em disco, incluindo as
-  8 imagens usadas pelo modal da galeria;
-- os 21 ids consultados pelo JavaScript existem no HTML;
-- tags de bloco balanceadas e chaves do CSS balanceadas (420/420);
-- palavras proibidas ausentes da paleta (paleta 100% monocromática) e conteúdo
-  principal presente (hero, manual, CTAs, sobre, comunidade, CTA final, footer);
-- servidor local real (Node `http`) servindo `200` para os 16 arquivos principais
-  da página.
+- todas as âncoras internas apontam para ids existentes;
+- as imagens referenciadas em `index.html` existem em `assets/`;
+- a galeria filtra e abre/fecha o lightbox;
+- o menu mobile abre e fecha;
+- não há overflow horizontal em viewports móveis;
+- não há erros no console durante a navegação.
+
+A pasta `imagens/` não deve ser publicada como dependência da página: ela foi usada para
+selecionar e nomear as imagens professionals que estão em `assets/imagens-fanzine/`.
