@@ -113,6 +113,9 @@
   line-height: 1.02;
   padding: .14em .3em .18em;
   transform: rotate(.9deg) translateX(clamp(0px, 3vw, 44px));
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, .16);
+  text-shadow: 3px 3px 0 var(--blue);
+}
 
 /* --- Coluna visual: retrato do autor em recorte editorial ----- */
 .hero-figure {
@@ -264,10 +267,6 @@
 .hero-scroll:hover { color: var(--yellow); }
 .hero-scroll svg { width: 15px; height: 15px; animation: bob 1.9s var(--ease) infinite; }
 @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
-
-  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, .16);
-  text-shadow: 3px 3px 0 var(--blue);
-}
 .hero-line--g {
   background: transparent;
   color: var(--green);

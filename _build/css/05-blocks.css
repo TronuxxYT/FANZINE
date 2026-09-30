@@ -73,6 +73,15 @@
 .card-list { margin-top: 1rem; display: grid; gap: .5rem; }
 .card-list li { position: relative; padding-left: 1.5rem; font-size: .88rem; color: var(--grey-2); line-height: 1.5; }
 .card-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: .55em;
+  width: 8px;
+  height: 8px;
+  background: var(--yellow);
+  transform: rotate(45deg);
+}
 
 /* Card com imagem no topo */
 .card--media { padding: 0; }
@@ -132,6 +141,21 @@
 }
 .tl-item { position: relative; padding-left: 62px; }
 .tl-dot {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--black);
+  border: 3px solid var(--yellow);
+  font-family: var(--font-mono);
+  font-size: .62rem;
+  color: var(--yellow);
+  transition: transform .45s var(--ease-spring), background .4s var(--ease), color .4s var(--ease);
+}
 
 /* --- Painéis de destaque (imagem lateral) --------------------- */
 .split {
@@ -242,21 +266,6 @@
 .paper .step-text { color: #33333A; }
 .paper .step-num { color: var(--blue); }
 
-  position: absolute;
-  left: 0;
-  top: 2px;
-  width: 36px;
-  height: 36px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--black);
-  border: 3px solid var(--yellow);
-  font-family: var(--font-mono);
-  font-size: .62rem;
-  color: var(--yellow);
-  transition: transform .45s var(--ease-spring), background .4s var(--ease), color .4s var(--ease);
-}
 .tl-item:hover .tl-dot { transform: scale(1.14); background: var(--yellow); color: var(--black); }
 .tl-year { font-family: var(--font-display); font-size: clamp(1.1rem, 1.7vw, 1.45rem); color: var(--yellow); letter-spacing: .04em; }
 .tl-title { font-size: 1.02rem; margin: .3rem 0 .45rem; color: var(--white); }
@@ -267,14 +276,5 @@
 .paper .tl-title { color: var(--black); }
 .paper .tl-text { color: #33333A; }
 
-  content: '';
-  position: absolute;
-  left: 0;
-  top: .55em;
-  width: 8px;
-  height: 8px;
-  background: var(--yellow);
-  transform: rotate(45deg);
-}
 .card-list--blue li::before { background: var(--blue); }
 .card-list--green li::before { background: var(--green); }
