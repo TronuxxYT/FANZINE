@@ -1,0 +1,132 @@
+/* ============================================================
+   Parte 06 · Galeria, lightbox, FAQ, contato e footer
+   ============================================================ */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: clamp(.7rem, 1.4vw, 1.2rem);
+  grid-auto-flow: dense;
+}
+.gal-item {
+  position: relative;
+  overflow: hidden;
+  border: 3px solid var(--black);
+  background: var(--ink-3);
+  aspect-ratio: 4 / 3;
+  transition: transform .5s var(--ease-out), box-shadow .5s var(--ease-out), opacity .45s var(--ease);
+  will-change: transform;
+}
+.gal-item:nth-child(6n+1) { aspect-ratio: 4 / 5; grid-row: span 2; }
+.gal-item:nth-child(6n+4) { aspect-ratio: 1; }
+.gal-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .9s var(--ease-out), filter .6s var(--ease);
+  filter: grayscale(.35) contrast(1.05);
+}
+.gal-item:hover { transform: translateY(-6px); box-shadow: 0 22px 40px -18px rgba(0, 0, 0, .9); z-index: 2; }
+.gal-item:hover img { transform: scale(1.09); filter: grayscale(0) contrast(1.08); }
+.gal-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 48%, rgba(5, 5, 5, .92));
+  opacity: 0;
+  transition: opacity .4s var(--ease);
+  pointer-events: none;
+}
+.gal-item:hover::after { opacity: 1; }
+.gal-cap {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .8rem;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: transform .45s var(--ease-out), opacity .45s var(--ease);
+}
+.gal-item:hover .gal-cap { transform: translateY(0); opacity: 1; }
+.gal-cap-txt { font-family: var(--font-display); font-size: .95rem; text-transform: uppercase; letter-spacing: .03em; }
+.gal-cap-ico {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--yellow);
+  color: var(--black);
+}
+.gal-cap-ico svg { width: 16px; height: 16px; }
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 4vw, 3rem);
+  background: rgba(3, 3, 4, .95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s var(--ease), visibility .35s var(--ease);
+}
+.lightbox.is-open { opacity: 1; visibility: visible; }
+.lightbox-figure {
+  position: relative;
+  max-width: min(1080px, 100%);
+  max-height: 84vh;
+  transform: scale(.94);
+  transition: transform .45s var(--ease-spring);
+}
+.lightbox.is-open .lightbox-figure { transform: scale(1); }
+.lightbox-figure img {
+  max-width: 100%;
+  max-height: 78vh;
+  width: auto;
+  object-fit: contain;
+  border: 4px solid var(--black);
+  box-shadow: 0 30px 70px -24px rgba(0, 0, 0, 1), 12px 12px 0 -2px var(--yellow);
+}
+.lightbox-cap {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--grey-2);
+}
+.lb-btn {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, .28);
+  color: var(--white);
+  background: rgba(255, 255, 255, .06);
+  transition: background .3s var(--ease), color .3s var(--ease), transform .3s var(--ease-spring), border-color .3s var(--ease);
+}
+.lb-btn svg { width: 20px; height: 20px; }
+.lb-btn:hover { background: var(--yellow); color: var(--black); border-color: var(--yellow); transform: scale(1.08); }
+.lb-close { position: absolute; top: clamp(.8rem, 3vw, 2rem); right: clamp(.8rem, 3vw, 2rem); z-index: 2; }
+.lb-prev { position: absolute; left: clamp(.4rem, 2vw, 1.6rem); top: 50%; transform: translateY(-50%); }
+.lb-next { position: absolute; right: clamp(.4rem, 2vw, 1.6rem); top: 50%; transform: translateY(-50%); }
+.lb-prev:hover, .lb-next:hover { transform: translateY(-50%) scale(1.08); }
+.paper .lightbox-cap { color: var(--grey-2); }

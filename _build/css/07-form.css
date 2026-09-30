@@ -1,0 +1,255 @@
+
+/* --- FAQ ------------------------------------------------------- */
+.faq-list { display: grid; gap: .7rem; max-width: 880px; }
+.faq-item {
+  position: relative;
+  background: var(--ink-2);
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  transition: border-color .4s var(--ease), background .4s var(--ease);
+}
+.faq-item.is-open { border-color: var(--yellow); background: var(--ink-3); }
+.paper .faq-item { background: rgba(255, 255, 255, .58); border-color: rgba(5, 5, 5, .16); }
+.paper .faq-item.is-open { border-color: var(--blue); }
+.faq-q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  padding: clamp(1rem, 1.8vw, 1.5rem);
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: clamp(.98rem, 1.3vw, 1.15rem);
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  color: var(--white);
+  transition: color .3s var(--ease);
+}
+.paper .faq-q { color: var(--black); }
+.faq-item.is-open .faq-q { color: var(--yellow); }
+.paper .faq-item.is-open .faq-q { color: var(--blue); }
+.faq-sign {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  flex: none;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+}
+.faq-sign::before, .faq-sign::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 2px;
+  background: currentColor;
+  translate: -50% -50%;
+  transition: transform .38s var(--ease-out), opacity .3s var(--ease);
+}
+.faq-sign::after { transform: translate(-50%, -50%) rotate(90deg); }
+.faq-item.is-open .faq-sign::after { transform: translate(-50%, -50%) rotate(0); opacity: 0; }
+.faq-a {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows .45s var(--ease-out);
+}
+.faq-item.is-open .faq-a { grid-template-rows: 1fr; }
+.faq-a-inner { overflow: hidden; }
+.faq-a p {
+  padding: 0 clamp(1rem, 1.8vw, 1.5rem) clamp(1.1rem, 1.8vw, 1.5rem);
+  color: var(--grey-2);
+  font-size: .95rem;
+  max-width: 72ch;
+}
+.paper .faq-a p { color: #33333A; }
+
+/* --- Contato ---------------------------------------------------- */
+.contact-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: clamp(1.6rem, 4vw, 4rem);
+  align-items: start;
+}
+.form {
+  position: relative;
+  padding: clamp(1.4rem, 2.6vw, 2.4rem);
+  background: var(--ink-2);
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: var(--r-md);
+}
+.paper .form { background: rgba(255, 255, 255, .6); border-color: rgba(5, 5, 5, .16); }
+.field { margin-bottom: 1.1rem; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.field label {
+  display: block;
+  margin-bottom: .45rem;
+  font-family: var(--font-mono);
+  font-size: .64rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--grey-1);
+}
+.paper .field label { color: #55555E; }
+.field input, .field textarea, .field select {
+  width: 100%;
+  padding: .85rem 1rem;
+  background: rgba(255, 255, 255, .04);
+  border: 1px solid rgba(255, 255, 255, .16);
+  border-radius: var(--r-sm);
+  color: var(--white);
+  font-size: .95rem;
+  transition: border-color .3s var(--ease), background .3s var(--ease), box-shadow .3s var(--ease);
+}
+.paper .field input, .paper .field textarea, .paper .field select {
+  background: rgba(255, 255, 255, .75);
+  border-color: rgba(5, 5, 5, .2);
+  color: var(--black);
+}
+.field textarea { resize: vertical; min-height: 130px; }
+.field input:focus, .field textarea:focus, .field select:focus {
+  outline: none;
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 3px rgba(250, 204, 21, .2);
+}
+.paper .field input:focus, .paper .field textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(37, 99, 235, .18); }
+.form-note { margin-top: 1rem; font-size: .78rem; color: var(--grey-1); }
+
+.contact-list { display: grid; gap: .9rem; }
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.1rem;
+  background: var(--ink-2);
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: var(--r-md);
+  transition: transform .35s var(--ease-out), border-color .35s var(--ease), background .35s var(--ease);
+}
+.paper .contact-row { background: rgba(255, 255, 255, .58); border-color: rgba(5, 5, 5, .14); }
+
+/* --- CTA final -------------------------------------------------- */
+.cta-band {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(4rem, 8vw, 7.5rem);
+  background: var(--yellow);
+  color: var(--black);
+  isolation: isolate;
+}
+.cta-band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: .2;
+  background-image: radial-gradient(circle, var(--black) 1.6px, transparent 1.7px);
+  background-size: 9px 9px;
+}
+.cta-title {
+  font-size: var(--fs-mega);
+  line-height: .86;
+  max-width: 15ch;
+}
+.cta-sub { margin-top: 1.2rem; max-width: 52ch; font-size: var(--fs-lead); color: rgba(5, 5, 5, .78); }
+.cta-actions { display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 2rem; }
+.cta-photo {
+  position: absolute;
+  z-index: -1;
+  right: -2%;
+  bottom: -12%;
+  width: min(38%, 420px);
+  border: 5px solid var(--black);
+  transform: rotate(-6deg);
+  box-shadow: var(--shadow-hard);
+  transition: transform .7s var(--ease-out);
+}
+.cta-band:hover .cta-photo { transform: rotate(-2deg) scale(1.03); }
+
+/* --- Footer ----------------------------------------------------- */
+.site-footer {
+  position: relative;
+  padding-top: clamp(3.2rem, 6vw, 5.5rem);
+  background: var(--black);
+  border-top: 3px solid var(--yellow);
+  overflow: hidden;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr));
+  gap: clamp(1.6rem, 3vw, 3rem);
+  padding-bottom: clamp(2.2rem, 4vw, 3.4rem);
+}
+.footer-brand-text { margin-top: 1.2rem; color: var(--grey-2); max-width: 40ch; font-size: .92rem; }
+.footer-h {
+  font-family: var(--font-display);
+  font-size: .95rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 1.1rem;
+}
+.footer-list { display: grid; gap: .6rem; }
+.footer-list a {
+  color: var(--grey-2);
+  font-size: .9rem;
+  transition: color .28s var(--ease), padding-left .28s var(--ease);
+  display: inline-block;
+}
+.footer-list a:hover { color: var(--white); padding-left: 7px; }
+.socials { display: flex; gap: .55rem; margin-top: 1.4rem; }
+.socials a {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, .18);
+  color: var(--grey-2);
+  transition: all .3s var(--ease-spring);
+}
+.socials svg { width: 19px; height: 19px; }
+.socials a:hover { background: var(--yellow); color: var(--black); border-color: var(--yellow); transform: translateY(-4px) rotate(8deg); }
+.socials a:nth-child(2):hover { background: var(--blue); color: var(--white); border-color: var(--blue); }
+.socials a:nth-child(3):hover { background: var(--green); color: var(--black); border-color: var(--green); }
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1.4rem;
+  border-top: 1px solid rgba(255, 255, 255, .1);
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--grey-1);
+}
+.footer-bottom a:hover { color: var(--yellow); }
+.to-top { display: inline-flex; align-items: center; gap: .5rem; transition: color .3s var(--ease); }
+.to-top svg { width: 15px; height: 15px; transition: transform .3s var(--ease-spring); }
+.to-top:hover { color: var(--yellow); }
+.to-top:hover svg { transform: translateY(-4px); }
+
+.contact-row:hover { transform: translateX(8px); border-color: var(--yellow); }
+.paper .contact-row:hover { border-color: var(--blue); }
+.contact-ico {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--yellow);
+  color: var(--black);
+}
+.contact-ico svg { width: 20px; height: 20px; }
+.contact-ico--blue { background: var(--blue); color: var(--white); }
+.contact-ico--green { background: var(--green); }
+.contact-lbl { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .2em; text-transform: uppercase; color: var(--grey-1); }
+.contact-val { font-size: .98rem; font-weight: 500; }
+.paper .contact-val { color: var(--black); }
