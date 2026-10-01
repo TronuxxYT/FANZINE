@@ -1,6 +1,5 @@
 # Dependencies
 node_modules/
-.pnpm-store/
 
 # Local build / cache
 .vercel
@@ -8,17 +7,8 @@ node_modules/
 dist/
 build/
 
-# Local media / external raw dumps
-imagens/
-
-# Ferramentas locais / artefatos de desenvolvimento
-_build/_tools/
-_build/*.txt
-
-# Screenshots de verificacao visual
-shot-*.png
-
 # OS / Editor files
 .DS_Store
 Thumbs.db
 *.log
+
