@@ -62,6 +62,11 @@
 <symbol id="i-crown" viewBox="0 0 24 24"><path d="M3 8l4 3 5-6 5 6 4-3-2 10H5L3 8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" fill="none"/></symbol>
 <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.4" stroke="currentColor" stroke-width="1.7" fill="none"/><path d="m16 16 4.4 4.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" fill="none"/></symbol>
 <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5 19 12 7 19.5z" fill="currentColor"/></symbol>
+<symbol id="i-bulb" viewBox="0 0 24 24"><path d="M12 3.5a5.5 5.5 0 0 0-3.2 10c.5.4.8 1 .8 1.6h4.8c0-.6.3-1.2.8-1.6A5.5 5.5 0 0 0 12 3.5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" fill="none"/><path d="M9.8 18h4.4M10.6 20.3h2.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M4.5 5.2h4.2A3.3 3.3 0 0 1 12 8.5a3.3 3.3 0 0 1 3.3-3.3h4.2v12.6h-4.2A3.3 3.3 0 0 0 12 21a3.3 3.3 0 0 0-3.3-3.2H4.5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" fill="none"/><path d="M12 8.5V21" stroke="currentColor" stroke-width="1.5" fill="none"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 4 8 4-8 4-8-4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" fill="none"/><path d="m4.5 12.5 7.5 3.8 7.5-3.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="m4.5 16.5 7.5 3.8 7.5-3.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+</defs>
+</svg>
 
 
 <!-- ==================== HEADER ==================== -->
@@ -122,27 +127,28 @@
     <img class="hc-6" src="assets/img/manifesto-rua.jpg" alt="" data-tint="green" data-parallax="0.1" loading="lazy" decoding="async">
   </div>
   <div class="hero-xerox" aria-hidden="true"></div>
+  <div class="hero-scrim" aria-hidden="true"></div>
+
+  <span class="hero-scrap" aria-hidden="true">
+    <span>Ideias</span>
+    <span>Papel</span>
+    <span>Arte</span>
+    <span>Liberdade</span>
+  </span>
 
   <div class="wrap hero-inner">
     <div class="hero-copy">
-      <div class="hero-kicker">
-        <span class="tape">Edição independente</span>
-        <span class="chip chip--green"><svg aria-hidden="true" style="width:12px;height:12px"><use href="#i-spark"></use></svg> Sem fins lucrativos</span>
-      </div>
-
       <h1 class="hero-title" id="hero-title">
         <span class="hero-line hero-line--y anim-up">Fanzine-se</span>
         <span class="hero-line hero-line--b anim-up d-2">ou será fanzinado</span>
-        <span class="hero-line hero-line--g anim-up d-3">Papel, tinta e coragem</span>
       </h1>
 
-      <p class="hero-lead">
-        Transforme ideias soltas em <b>publicações independentes</b> através de um método
+      <p class="hero-lead anim-up d-3">
+        Transforme suas ideias em <b>publicações independentes</b> através de um método
         desenvolvido ao longo de décadas de prática, experimentação e cultura editorial.
-        Do rascunho à encadernação, da xerox à distribuição.
       </p>
 
-      <div class="hero-actions">
+      <div class="hero-actions anim-up d-4">
         <a class="btn" href="#contato">
           <svg aria-hidden="true"><use href="#i-zine"></use></svg>
           Quero meu manual
@@ -152,72 +158,66 @@
           Explorar universo fanzine
         </a>
       </div>
-
-      <dl class="hero-meta">
-        <div>
-          <dd class="hero-stat-num" data-count="8">0</dd>
-          <dt class="hero-stat-lbl">Formatos</dt>
-        </div>
-        <div>
-          <dd class="hero-stat-num" data-count="90">0</dd>
-          <dt class="hero-stat-lbl">Anos de cena</dt>
-        </div>
-        <div>
-          <dd class="hero-stat-num" data-count="100">0</dd>
-          <dt class="hero-stat-lbl">% independente</dt>
-        </div>
-        <div>
-          <dd class="hero-stat-num">A4</dd>
-          <dt class="hero-stat-lbl">Formato base</dt>
-        </div>
-      </dl>
     </div>
 
     <div class="hero-figure">
+      <span class="hero-splash" aria-hidden="true"></span>
       <span class="hero-arrow hero-arrow--a" aria-hidden="true">
         <svg viewBox="0 0 80 60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 52C22 46 44 32 62 8"/><path d="M46 8h18v18"/>
+          <path d="M4 52C22 46 44 32 62 8"></path><path d="M46 8h18v18"></path>
         </svg>
       </span>
-      <span class="hero-arrow hero-arrow--b" aria-hidden="true">
-        <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M8 30h40"/><path d="M36 18l12 12-12 12"/>
-        </svg>
-      </span>
-
-      <div class="hero-sticker float-mid">
-        <img src="assets/img/capas-editoriais.jpg" alt="Capa de fanzine colada sobre o retrato" loading="eager" decoding="async">
-      </div>
 
       <div class="hero-photo-frame">
         <img src="assets/img/hero-roger.jpg" alt="Roger, autor do projeto, segurando um fanzine aberto" loading="eager" fetchpriority="high" decoding="async">
       </div>
 
-      <div class="hero-zine float-slow">
-        <img src="assets/img/zine-silencio.jpg" alt="Fanzine de bolso aberto, feito à mão" loading="eager" decoding="async">
-      </div>
-
-      <div class="stamp hero-stamp">feito à mão · sem filtro · desde sempre</div>
-
-      <span class="sticky-note hero-note anim-stamp d-4">Criar também é um gesto político</span>
-    </div>
-  </div>
-
-  <div class="hero-strip">
-    <div class="wrap hero-strip-inner">
-      <a class="hero-scroll" href="#manifesto">
-        <svg aria-hidden="true"><use href="#i-arrow-up"></use></svg>
-        Role para a manifesto
-      </a>
-      <div class="flex-row">
-        <span class="chip">Xerox &amp; laser</span>
-        <span class="chip chip--blue">Encadernação artesanal</span>
-        <span class="chip chip--green">Circulação livre</span>
-        <span class="chip">Colagem &amp; xerox</span>
-      </div>
+      <span class="hero-note anim-stamp d-5">Criar também é uma forma de resistir</span>
     </div>
   </div>
 </section>
+
+<!-- ==================== FAIXA DE BENEFICIOS ==================== -->
+<section class="feat-bar" aria-label="O que voce recebe">
+  <div class="wrap feat-bar-grid" data-stagger>
+    <article class="feat" data-reveal="up">
+      <span class="feat-ico" aria-hidden="true"><svg><use href="#i-bulb"></use></svg></span>
+      <h2 class="feat-title">Transforme ideias em publicações reais</h2>
+      <p class="feat-text">Dê forma aos seus pensamentos e histórias.</p>
+    </article>
+
+    <article class="feat" data-reveal="up">
+      <span class="feat-ico" aria-hidden="true"><svg><use href="#i-book"></use></svg></span>
+      <h2 class="feat-title">Aprenda passo a passo</h2>
+      <p class="feat-text">Do básico ao avançado, de forma simples e prática.</p>
+    </article>
+
+    <article class="feat" data-reveal="up">
+      <span class="feat-ico" aria-hidden="true"><svg><use href="#i-star"></use></svg></span>
+      <h2 class="feat-title">Método testado por décadas</h2>
+      <p class="feat-text">Experiências reais, resultados concretos.</p>
+    </article>
+
+    <article class="feat" data-reveal="up">
+      <span class="feat-ico" aria-hidden="true"><svg><use href="#i-pen"></use></svg></span>
+      <h2 class="feat-title">Desenvolva sua criatividade</h2>
+      <p class="feat-text">Explore novas formas de expressão.</p>
+    </article>
+
+    <article class="feat" data-reveal="up">
+      <span class="feat-ico" aria-hidden="true"><svg><use href="#i-layers"></use></svg></span>
+      <h2 class="feat-title">Produza materiais únicos</h2>
+      <p class="feat-text">Do seu jeito, com sua identidade.</p>
+    </article>
+
+    <article class="feat" data-reveal="up">
+      <span class="feat-ico" aria-hidden="true"><svg><use href="#i-users"></use></svg></span>
+      <h2 class="feat-title">Crie seu próprio estilo editorial</h2>
+      <p class="feat-text">Seja autor. Seja livre. Seja fanzine.</p>
+    </article>
+  </div>
+</section>
+
 
 
 <!-- ==================== MARQUEE ==================== -->
