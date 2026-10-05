@@ -12,3 +12,4 @@ build/
 Thumbs.db
 *.log
 Sem título.png
+.env*
