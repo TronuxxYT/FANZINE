@@ -1,0 +1,34 @@
+MAPA DE FOTOS — site FANZINE
+================================
+As fotos enviadas foram copiadas para nomes simples (foto-01.jpg ... foto-14.jpg)
+e ligadas no index.html. Os SVGs originais foram mantidos no disco como reserva.
+
+Slots COM foto:
+  hero-01  -> foto-01.jpg  (COMO FAZER FANZINE PASSO A PASSO)
+  hero-02  -> foto-02.jpg  (Como fazer Zines na Quebrada)
+  hero-03  -> foto-03.jpg  (Como HACKEAR seu cérebro com PAPEL)
+  pub-01   -> foto-04.jpg  (FANZINE indústria AGROTÓXICO)
+  pub-02   -> foto-05.jpg  (Como FANZINE virou Resistência)
+  pub-03   -> foto-06.jpg  (Como Divulgar Arte em FEIRAS)
+  pub-04   -> foto-07.jpg  (Fanzine se OU ser fanzinad)
+  zine-01  -> foto-08.jpg  (Como fazer Mini Caderno em 20s)
+  zine-02  -> foto-09.jpg  (O que é FANZINE e por que conhecer)
+  zine-03  -> foto-10.jpg  (O que acontece no seu CÉREBRO)
+  comm-01  -> foto-11.jpg  (Como Hackear o Cérebro com Cola e Papel)
+  comm-02  -> foto-12.jpg  (4 Curiosidades BIZARRAS sobre Fanzine)
+  event-01 -> foto-13.jpg  (Disseram que eu ia passar fome / R$100 mil)
+  event-03 -> foto-14.jpg  (Como Vender Fanzine em Feiras)
+  avatar-01..06 (Comunidade) -> reuso de foto-05, foto-10, foto-02,
+                                foto-03, foto-12, foto-04
+
+Slots que CONTINUAM com SVG (sem foto adequada no material enviado):
+  event-02.svg  (Oficina de Zines)
+  event-04.svg  (Mostra Cultural)
+
+AVISO — arquivo com problema:
+  "Como_Fazer_Mini_Caderno_Papel_A4__sem_APP__Anote_s_maxres.jpg"
+  Está corrompido/mini (120x90, imagem cinza de placeholder) e NÃO foi usado.
+  Se quiser, reenvie essa foto em tamanho normal (1280x720) para substituí-la.
+
+Para trocar qualquer foto: salve o novo arquivo como foto-XX.jpg nesta pasta
+(mesmo nome) e recarregue a página — nada mais precisa ser alterado no HTML.

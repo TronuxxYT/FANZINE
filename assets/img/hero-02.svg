@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1100" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" role="img">
+<defs><linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6d4bd8"/><stop offset="1" stop-color="#09093d"/></linearGradient><pattern id="hd1" width="17" height="17" patternUnits="userSpaceOnUse"><circle cx="8.5" cy="8.5" r="3.4" fill="#8ed3f5" fill-opacity="0.85"/></pattern><pattern id="hs1" width="30" height="30" patternUnits="userSpaceOnUse" patternTransform="rotate(-18)"><rect width="9" height="30" fill="#e2ff00" fill-opacity="0.9"/></pattern><pattern id="hm1" width="46" height="46" patternUnits="userSpaceOnUse"><path d="M46 0V46H0" fill="none" stroke="#ffffff" stroke-width="2" stroke-opacity="0.16"/></pattern><filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter></defs>
+  <rect width="1400" height="1100" fill="url(#hg1)"/>
+  <rect width="1400" height="1100" fill="url(#hm1)"/>
+  <circle cx="900" cy="300" r="340" fill="#8ed3f5" opacity=".92"/>
+  <circle cx="900" cy="300" r="340" fill="url(#hd1)" opacity=".3"/>
+  <rect x="-80" y="700" width="1560" height="270" fill="url(#hs1)" transform="rotate(-7 700 835)"/>
+  <path d="M140 150h170v170z" fill="#e2ff00"/>
+  <circle cx="300" cy="900" r="58" fill="none" stroke="#8ed3f5" stroke-width="14"/>
+  <rect x="1160" y="840" width="118" height="118" fill="#8ed3f5" opacity=".9"/>
+  <path d="M1150 90h150v14h-150z" fill="#ffffff" opacity=".7"/>
+  <path d="M1150 128h96v14h-96z" fill="#ffffff" opacity=".4"/>
+  
+  <rect width="100%" height="100%" filter="url(#grain)" opacity="0.16" style="mix-blend-mode:overlay"/>
+</svg>

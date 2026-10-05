@@ -1,0 +1,20 @@
+PASTA DE FOTOS — FANZINE
+=======================
+
+STATUS: as suas fotos JÁ FORAM instaladas no site (ver MAPA-FOTOS.txt).
+
+Como funciona:
+- Salve os arquivos de imagem direto nesta pasta (pode usar qualquer nome:
+  foto1.jpg, fanzine.jpg, capa.png, ...).
+- Depois é só me avisar. Eu abro cada foto, olho com cuidado e coloco no lugar
+  certo do site: carrossel do topo (hero), capas de publicações (pub), zines,
+  comunidade/equipe (avatares), apoio à comunidade e eventos.
+
+Dicas de enquadramento:
+- Fotos em paisagem (largura > altura) ficam melhores no carrossel do topo e
+  nos cartões de publicações, zines, apoio e eventos (recorte automático "cover").
+- Para os avatares da equipe, o ideal é um rosto bem no centro do quadro
+  (o recorte é circular).
+
+Observação: o site já está configurado para exibir fotos nesses espaços com
+"object-fit: cover" — é só colocar os arquivos aqui.
