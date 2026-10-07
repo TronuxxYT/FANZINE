@@ -284,7 +284,12 @@
     var toTop = document.getElementById("toTop");
 
     if (toTop) {
-      function onScroll() { toTop.hidden = window.pageYOffset < 600; }
+      var footer = document.querySelector(".site-footer");
+
+      function onScroll() {
+        var footerVisible = footer && footer.getBoundingClientRect().top < window.innerHeight;
+        toTop.hidden = window.pageYOffset < 600 || footerVisible;
+      }
 
       onScroll();
       window.addEventListener("scroll", onScroll, { passive: true });
