@@ -1,7 +1,7 @@
 /* ==========================================================================
    FANZINE — Revista Independente Colaborativa
    Comportamento da interface · vanilla JS, sem dependências
-   Blocos: cabeçalho · menu mobile · busca · carrossel · revelação ao rolar ·
+  Blocos: cabeçalho · menu mobile · carrossel · revelação ao rolar ·
            contadores · formulários · voltar ao topo · link ativo
    ========================================================================== */
 (function () {
@@ -12,31 +12,6 @@
   function $(selector, scope) { return (scope || document).querySelector(selector); }
   function $$(selector, scope) {
     return Array.prototype.slice.call((scope || document).querySelectorAll(selector));
-  }
-
-  /* Fecha o painel de busca (usado ao abrir o menu mobile) */
-  function closeSearchPanel() {
-    var panel = document.getElementById("searchPanel");
-    var toggle = document.getElementById("searchToggle");
-    if (!panel || panel.hidden) return;
-    panel.hidden = true;
-    if (toggle) {
-      toggle.setAttribute("aria-expanded", "false");
-      toggle.setAttribute("aria-label", "Abrir busca");
-    }
-  }
-
-  /* Fecha o menu mobile (usado ao abrir a busca) */
-  function closeMobileMenu() {
-    var menu = document.getElementById("mobileMenu");
-    var toggle = document.getElementById("menuToggle");
-    if (!menu || menu.hidden) return;
-    menu.hidden = true;
-    document.body.classList.remove("is-locked");
-    if (toggle) {
-      toggle.setAttribute("aria-expanded", "false");
-      toggle.setAttribute("aria-label", "Abrir menu");
-    }
   }
 
   /* ---------- 1. CABEÇALHO FIXO ---------- */
@@ -59,7 +34,6 @@
     if (!toggle || !menu) return;
 
     function setOpen(open) {
-      if (open) closeSearchPanel();
       toggle.setAttribute("aria-expanded", String(open));
       toggle.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
       menu.hidden = !open;
@@ -85,226 +59,7 @@
     });
   }
 
-  /* ---------- 3. PAINEL DE BUSCA ---------- */
-  function initSearch() {
-    var toggle = document.getElementById("searchToggle");
-    var panel = document.getElementById("searchPanel");
-    if (!toggle || !panel) return;
-
-    var input = $("input", panel);
-    var form = $("form", panel);
-
-    function setOpen(open) {
-      if (open) closeMobileMenu();
-      toggle.setAttribute("aria-expanded", String(open));
-      toggle.setAttribute("aria-label", open ? "Fechar busca" : "Abrir busca");
-      panel.hidden = !open;
-      if (open && input && !prefersReduced) input.focus();
-    }
-
-    setOpen(false);
-
-    toggle.addEventListener("click", function () {
-      setOpen(toggle.getAttribute("aria-expanded") !== "true");
-    });
-
-    window.addEventListener("keydown", function (event) {
-      if (event.key === "Escape" && !panel.hidden) {
-        setOpen(false);
-        toggle.focus();
-      }
-    });
-
-    if (!form) return;
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      setOpen(false);
-      var target = document.getElementById("explorar");
-      if (target) {
-        target.scrollIntoView({
-          behavior: prefersReduced ? "auto" : "smooth",
-          block: "start"
-        });
-      }
-    });
-  }
-
-  /* ---------- 3b. MODAIS (LOGIN / CRIAR CONTA) ---------- */
-  function initModals() {
-    var EMAIL = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
-    var current = null;
-    var lastTrigger = null;
-
-    function open(id, trigger) {
-      var modal = document.getElementById(id);
-      if (!modal) return;
-
-      /* Troca direta entre os dois: evita o "piscar" de fechar e reabrir. */
-      if (current && current !== modal) {
-        current.hidden = true;
-        reset(current);
-      }
-
-      closeSearchPanel();
-      closeMobileMenu();
-
-      lastTrigger = trigger || lastTrigger;
-      current = modal;
-      modal.hidden = false;
-      document.body.classList.add("is-locked");
-
-      /* Foca o primeiro campo do formulário (não o botão de fechar). */
-      var first = $("input:not([type='hidden']), select", $(".modal__form", modal));
-      if (first && !prefersReduced) first.focus();
-    }
-
-    function close() {
-      if (!current) return;
-      current.hidden = true;
-      reset(current);
-      current = null;
-      document.body.classList.remove("is-locked");
-      /* Só devolve o foco se o botão de origem continuar visível
-         (ex.: quem abriu o cadastro veio do login, que acabou de fechar). */
-      if (lastTrigger && document.contains(lastTrigger) && lastTrigger.offsetParent !== null) {
-        lastTrigger.focus();
-      }
-      lastTrigger = null;
-    }
-
-    function reset(modal) {
-      var note = $("[data-modal-note]", modal);
-      if (note) { note.textContent = ""; note.className = "modal__note"; }
-      $$(".field.is-error", modal).forEach(function (f) { f.classList.remove("is-error"); });
-    }
-
-    /* Mensagem de erro/sucesso ligada ao campo certo. */
-    function flag(modal, id, message, state) {
-      var field = $("#" + id, modal);
-      if (field && field.closest) {
-        var wrap = field.closest(".field");
-        if (wrap) wrap.classList.toggle("is-error", state === "error");
-      }
-      var note = $("[data-modal-note]", modal);
-      if (!note) return;
-      note.textContent = message;
-      note.className = "modal__note " + (state === "error" ? "is-error" : "is-success");
-    }
-
-    /* ---------- Abrir ---------- */
-    $$("[data-open-modal]").forEach(function (trigger) {
-      trigger.addEventListener("click", function (event) {
-        event.preventDefault();
-        open(trigger.getAttribute("data-open-modal"), trigger);
-      });
-    });
-
-    /* ---------- Fechar ---------- */
-    $$("[data-close-modal]").forEach(function (el) {
-      el.addEventListener("click", function () { close(); });
-    });
-
-    window.addEventListener("keydown", function (event) {
-      if (event.key === "Escape" && current) close();
-    });
-
-    /* ---------- Mostrar/ocultar senha ---------- */
-    $$("[data-toggle-password]").forEach(function (button) {
-      button.addEventListener("click", function () {
-        var input = document.getElementById(button.getAttribute("data-toggle-password"));
-        if (!input) return;
-        var showing = input.type === "text";
-        input.type = showing ? "password" : "text";
-        button.textContent = showing ? "Ver" : "Ocultar";
-        button.setAttribute("aria-label", showing ? "Mostrar senha" : "Ocultar senha");
-        input.focus();
-      });
-    });
-
-    /* ---------- Login ---------- */
-    var login = document.getElementById("loginModal");
-    if (login) {
-      var loginForm = $("#loginForm", login);
-
-      loginForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        var email = loginForm.elements.email;
-        var password = loginForm.elements.password;
-
-        if (!EMAIL.test((email.value || "").trim())) {
-          flag(login, "loginEmail", "Digite um e-mail válido para continuar.", "error");
-          email.focus();
-          return;
-        }
-        if (!password.value) {
-          flag(login, "loginPassword", "Informe sua senha para entrar.", "error");
-          password.focus();
-          return;
-        }
-
-        flag(login, "loginEmail", "Tudo certo! Redirecionando para o seu painel…", "success");
-        loginForm.reset();
-      });
-
-      loginForm.addEventListener("input", function (event) {
-        var wrap = event.target.closest && event.target.closest(".field");
-        if (wrap) wrap.classList.remove("is-error");
-      });
-    }
-
-    /* ---------- Criar conta ---------- */
-    var signup = document.getElementById("signupModal");
-    if (signup) {
-      var signupForm = $("#signupForm", signup);
-
-      signupForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        var name = signupForm.elements.name;
-        var email = signupForm.elements.email;
-        var password = signupForm.elements.password;
-        var confirm = signupForm.elements.confirm;
-        var terms = signupForm.elements.terms;
-
-        if (!(name.value || "").trim()) {
-          flag(signup, "signupName", "Como podemos te chamar?", "error");
-          name.focus();
-          return;
-        }
-        if (!EMAIL.test((email.value || "").trim())) {
-          flag(signup, "signupEmail", "Digite um e-mail válido para continuar.", "error");
-          email.focus();
-          return;
-        }
-        if (password.value.length < 8) {
-          flag(signup, "signupPassword", "A senha precisa de pelo menos 8 caracteres.", "error");
-          password.focus();
-          return;
-        }
-        if (password.value !== confirm.value) {
-          flag(signup, "signupConfirm", "As senhas não são iguais.", "error");
-          confirm.focus();
-          return;
-        }
-        if (!terms.checked) {
-          flag(signup, "signupName", "É preciso aceitar os termos para criar a conta.", "error");
-          terms.focus();
-          return;
-        }
-
-        flag(signup, "signupName", "Conta criada! Enviamos a confirmação para o seu e-mail.", "success");
-        signupForm.reset();
-      });
-
-      signupForm.addEventListener("input", function (event) {
-        var wrap = event.target.closest && event.target.closest(".field");
-        if (wrap) wrap.classList.remove("is-error");
-      });
-    }
-  }
-
-  /* ---------- 4. CARROSSEL DO TOPO ---------- */
+  /* ---------- 3. CARROSSEL DO TOPO ---------- */
   function initSlider() {
     var root = document.getElementById("heroSlider");
     if (!root) return;
@@ -627,8 +382,6 @@
   function init() {
     initHeader();
     initMobileMenu();
-    initSearch();
-    initModals();
     initSlider();
     initReveal();
     initCounters();

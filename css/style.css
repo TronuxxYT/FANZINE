@@ -378,7 +378,7 @@ p { margin: 0 0 1em; }
 .header__navbar--single .main-nav ul {
   gap: clamp(10px, 1.35vw, 20px);
 }
-/* grupo da direita: ⋮ + buscar + entrar/login, encostado no limite direito */
+/* grupo de ações encostado no limite direito */
 .header__navbar--single .header__actions {
   margin-left: 0;
   justify-self: end;
@@ -436,69 +436,8 @@ p { margin: 0 0 1em; }
   white-space: nowrap;
 }
 
-/* flex real (não display:contents): mantém ⋮ + buscar + auth como um bloco
-   único que pode ser encostado no limite direito da janela. */
+/* flex real: mantém as ações do cabeçalho em um único bloco. */
 .header__actions { display: flex; align-items: center; gap: .6rem; }
-.header__actions .btn { border-radius: 2px; }
-.header__actions .btn--outline { border-color: rgba(255, 255, 255, .55); }
-.header__actions .btn--solid-white { background: #fff; }
-
-/* Ações nunca encolhem nem quebram: sem isso o "Login" era cortado
-   pelo overflow:hidden da caixa de autenticação. */
-.header__search,
-.header__auth,
-.header__auth .btn { flex: 0 0 auto; }
-
-.header__search {
-  display: inline-flex;
-  align-items: center;
-  gap: .55rem;
-  height: 42px;
-  padding: 0 1.1rem;
-  border: 1.6px solid rgba(255, 255, 255, .55);
-  border-radius: 2px;
-  background: transparent;
-  color: #fff;
-  white-space: nowrap;
-  transition: border-color var(--dur), background-color var(--dur), color var(--dur);
-}
-.header__search svg { width: 17px; height: 17px; flex: 0 0 17px; }
-.header__search span {
-  font-family: var(--font-body);
-  font-size: .78rem;
-  font-weight: 600;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, .72);
-}
-.header__search:hover { border-color: var(--yellow); color: var(--yellow); }
-.header__search:hover span { color: var(--yellow); }
-.header__search[aria-expanded="true"] { background: var(--yellow); border-color: var(--yellow); color: var(--navy); }
-.header__search[aria-expanded="true"] span { color: var(--navy); }
-
-.header__auth {
-  display: inline-flex;
-  align-items: stretch;
-  border: 1.6px solid rgba(255, 255, 255, .55);
-  border-radius: 2px;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.header__auth .btn {
-  border: 0;
-  border-radius: 0;
-  padding: .62rem .95rem;
-  font-size: .7rem;
-  white-space: nowrap;
-}
-.header__auth .btn:hover { transform: none; }
-.header__auth .btn--outline { color: #fff; }
-.header__auth .btn--outline:hover { background: rgba(255, 255, 255, .12); }
-.header__auth .btn + .btn { border-left: 1.6px solid rgba(255, 255, 255, .55); }
-
-.hdr-icon {
-  display: none;
-}
 
 .hamburger {
   display: none;
@@ -514,276 +453,7 @@ p { margin: 0 0 1em; }
 .hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* ---------- 8. PAINEL DE BUSCA ---------- */
-.search-panel { background: var(--navy-2); border-top: 1px solid var(--line-light); }
-.search-panel__inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1rem 1.6rem;
-  padding-block: 1.4rem;
-}
-.search-form { display: flex; flex: 1 1 420px; gap: .6rem; }
-.search-form input {
-  flex: 1;
-  min-width: 0;
-  padding: .82rem 1rem;
-  background: rgba(255, 255, 255, .06);
-  border: 1.6px solid var(--line-light);
-  border-radius: 4px;
-  color: #fff;
-}
-.search-form input::placeholder { color: rgba(255, 255, 255, .5); }
-.search-form input:focus { border-color: var(--yellow); outline: none; }
-.search-panel__hint { margin: 0; font-size: .82rem; color: rgba(255, 255, 255, .66); }
-.search-panel__hint a { color: var(--yellow); border-bottom: 1px solid transparent; }
-.search-panel__hint a:hover { border-color: currentColor; }
-
-/* ---------- 8b. MODAIS (LOGIN / CRIAR CONTA) ---------- */
-.modal {
-  position: fixed;
-  inset: 0;
-  z-index: 200;
-  display: grid;
-  place-items: center;
-  padding: clamp(14px, 3vw, 32px);
-}
-.modal[hidden] { display: none; }
-
-.modal__backdrop {
-  position: absolute;
-  inset: 0;
-  background: rgba(6, 6, 43, .78);
-  backdrop-filter: blur(4px);
-  animation: fzFade var(--dur) var(--ease);
-}
-
-.modal__dialog {
-  position: relative;
-  z-index: 1;
-  width: min(100%, 720px);
-  max-height: calc(100vh - clamp(28px, 6vw, 64px));
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  background: #fff;
-  border-radius: var(--radius-lg);
-  box-shadow: 0 40px 90px -30px rgba(6, 6, 43, .7);
-  animation: fzPop var(--dur) var(--ease);
-  scrollbar-width: thin;
-}
-.modal__dialog--sm { width: min(100%, 460px); }
-
-@keyframes fzFade { from { opacity: 0; } to { opacity: 1; } }
-@keyframes fzPop {
-  from { opacity: 0; transform: translateY(18px) scale(.97); }
-  to   { opacity: 1; transform: none; }
-}
-
-.modal__close {
-  position: absolute;
-  top: 14px; right: 14px;
-  z-index: 2;
-  display: grid;
-  place-items: center;
-  width: 38px; height: 38px;
-  color: var(--ink);
-  background: rgba(9, 9, 61, .07);
-  border-radius: 50%;
-  transition: background-color var(--dur), color var(--dur);
-}
-.modal__close:hover { background: var(--navy); color: var(--yellow); }
-
-.modal__head {
-  padding: clamp(1.6rem, 3vw, 2.2rem) clamp(1.4rem, 3vw, 2.2rem) 0;
-}
-.modal__title {
-  margin: 0 0 .5rem;
-  font-family: var(--font-head);
-  font-size: clamp(1.6rem, 3.4vw, 2.1rem);
-  line-height: 1.08;
-  letter-spacing: .01em;
-  text-transform: uppercase;
-  color: var(--navy);
-}
-.modal__lead { margin: 0; font-size: .92rem; color: var(--ink-soft); }
-
-.modal__form {
-  display: grid;
-  gap: .95rem;
-  padding: clamp(1.4rem, 3vw, 2.2rem);
-}
-
-.field { position: relative; display: grid; gap: .4rem; }
-.field > label {
-  font-family: var(--font-head);
-  font-size: .72rem;
-  font-weight: 600;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--ink);
-}
-.field input,
-.field select {
-  width: 100%;
-  padding: .82rem .95rem;
-  background: rgba(9, 9, 61, .04);
-  border: 1.6px solid var(--line-dark);
-  border-radius: 4px;
-  font: inherit;
-  color: var(--ink);
-}
-/* Espaço extra à direita onde o botão "Ver" fica sobreposto ao campo. */
-.field:has(.field__reveal) input { padding-right: 4.1rem; }
-.field input::placeholder { color: rgba(9, 9, 61, .42); }
-.field input:focus,
-.field select:focus { border-color: var(--blue); outline: none; }
-.field select { appearance: none; cursor: pointer; padding-right: 2.4rem; }
-.field.is-error input, .field.is-error select { border-color: var(--pink); }
-
-.field__reveal {
-  position: absolute;
-  right: 7px;
-  bottom: 7px;
-  padding: .35rem .6rem;
-  background: transparent;
-  border: 0;
-  border-radius: 3px;
-  font-family: var(--font-head);
-  font-size: .68rem;
-  font-weight: 600;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-}
-.field__reveal:hover { background: rgba(9, 9, 61, .07); color: var(--navy); }
-
-.field-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: .8rem;
-}
-
-.check {
-  display: inline-flex;
-  align-items: flex-start;
-  gap: .55rem;
-  font-size: .82rem;
-  color: var(--ink-soft);
-  cursor: pointer;
-}
-.check input {
-  width: 18px; height: 18px;
-  flex: 0 0 auto;
-  margin-top: .1rem;
-  accent-color: var(--blue);
-  cursor: pointer;
-}
-.check--stack { align-items: flex-start; }
-.check--stack span { line-height: 1.5; }
-
-.modal__row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: .6rem 1rem;
-}
-
-.modal__note {
-  margin: 0;
-  min-height: 1.1em;
-  font-size: .8rem;
-  font-weight: 500;
-}
-.modal__note.is-error { color: #a81150; }
-.modal__note.is-success { color: #0b7a63; }
-
-.modal__link {
-  color: var(--blue);
-  border-bottom: 1px solid currentColor;
-  font-weight: 500;
-}
-
-.modal__foot {
-  padding: 0 clamp(1.4rem, 3vw, 2.2rem) clamp(1.4rem, 3vw, 2rem);
-  text-align: center;
-  font-size: .86rem;
-  color: var(--ink-soft);
-}
-.modal__foot p { margin: 0; }
-
-.modal__switch {
-  padding: 0;
-  background: none;
-  border: 0;
-  border-bottom: 1px solid currentColor;
-  font: inherit;
-  font-weight: 600;
-  color: var(--blue);
-  cursor: pointer;
-}
-.modal__switch:hover { color: var(--navy); }
-
-/* Cadastro: coluna informativa + formulário */
-.signup {
-  display: grid;
-  grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
-}
-
-.signup__about {
-  display: grid;
-  align-content: start;
-  gap: .85rem;
-  padding: clamp(1.6rem, 3vw, 2.2rem);
-  background: var(--navy);
-  color: #fff;
-  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
-}
-.signup__title {
-  margin: 0;
-  font-family: var(--font-head);
-  font-size: clamp(1.45rem, 2.8vw, 1.85rem);
-  line-height: 1.1;
-  letter-spacing: .01em;
-  text-transform: uppercase;
-  color: #fff;
-}
-.signup__text { margin: 0; font-size: .88rem; color: rgba(255, 255, 255, .78); }
-.signup__text b { color: var(--yellow); }
-
-.signup__media { margin: 0; }
-.signup__media img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border: 1.6px solid var(--line-light);
-  border-radius: var(--radius);
-  background: var(--navy-2);
-}
-.signup__media figcaption {
-  margin-top: .5rem;
-  font-size: .72rem;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, .5);
-}
-
-.signup__perks {
-  display: grid;
-  gap: .5rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  font-size: .83rem;
-  color: rgba(255, 255, 255, .84);
-}
-.signup__perks li { display: flex; gap: .55rem; align-items: flex-start; }
-.signup__perks span { color: var(--yellow); font-weight: 700; }
-
-.signup__form { display: grid; align-content: start; }
-
-/* ---------- 9. MENU MOBILE ---------- */
+/* ---------- 8. MENU MOBILE ---------- */
 .mobile-menu {
   position: fixed;
   inset: var(--header-h) 0 0;
@@ -806,7 +476,6 @@ p { margin: 0 0 1em; }
   letter-spacing: .12em;
   text-transform: uppercase;
 }
-.mobile-menu__actions { display: grid; gap: .7rem; }
 .mobile-menu__foot {
   margin: 0;
   font-size: .7rem;
@@ -1659,17 +1328,8 @@ body.is-locked { overflow: hidden; }
   .mobile-menu { display: none !important; }
 }
 
-/* Entre 1181px e 1279px o menu centralizado encosta no grupo da direita
-   (faltam ~25px). Escondemos o botão secundário nessa faixa para os dois
-   lados respirarem; o "Login" e a busca continuam visíveis. */
-@media (max-width: 1279px) {
-  .header__join { display: none; }
-  .header__auth { border: 0; }
-}
-
 @media (max-width: 1180px) {
-  /* Sem o menu principal a coluna do meio fica vazia: o grid volta a 2
-     colunas (logo · ações) para o "Buscar" não invadir o texto do logo. */
+  /* Sem o menu principal, o cabeçalho usa duas colunas: logo e ações. */
   .header__inner { grid-template-columns: minmax(0, 1fr) auto; }
   .main-nav { display: none; }
   .nav__more { display: none; }
@@ -1693,17 +1353,13 @@ body.is-locked { overflow: hidden; }
   .stats__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .contact-grid { grid-template-columns: minmax(0, 1fr); }
   .contact-more__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .signup { grid-template-columns: minmax(0, 1fr); }
-  .signup__about { border-radius: var(--radius-lg) var(--radius-lg) 0 0; }
   .deco--tri, .deco--semi { display: none; }
 }
 
 @media (max-width: 760px) {
   :root { --header-h: 92px; }
 
-  /* Sem o menu principal, o grid volta a 2 colunas: logo à esquerda,
-     ações à direita. Sem isso sobra uma coluna vazia no meio e o
-     "Buscar" invade o texto do logo. */
+  /* Logo à esquerda e ações à direita. */
   .header__inner {
     min-height: 92px;
     gap: 14px;
@@ -1718,9 +1374,6 @@ body.is-locked { overflow: hidden; }
   .brand__word span { display: none; }
   .header__col { gap: 0; padding-block: 10px; }
   .header__navbar--single { justify-content: flex-end; gap: .6rem; }
-  .header__search { height: 38px; padding: 0 .8rem; }
-  .header__search span { display: none; }
-  .header__auth .btn { padding: .5rem .85rem; }
   .hamburger { width: 42px; height: 38px; }
   .hero__title { font-size: clamp(2.2rem, 10vw, 2.9rem); }
   .hero__actions .btn,
@@ -1731,11 +1384,6 @@ body.is-locked { overflow: hidden; }
   .support-grid,
   .event-grid,
   .pillars { grid-template-columns: minmax(0, 1fr); }
-  .search-panel__inner { padding-block: 1.1rem; }
-  .search-form { flex-direction: column; }
-  .search-form .btn { justify-content: center; }
-
-  .field-row { grid-template-columns: minmax(0, 1fr); }
   .contact-more__grid { grid-template-columns: minmax(0, 1fr); }
   .contact-item { grid-template-columns: minmax(0, 1fr); }
   .contact-item__icon { width: 40px; height: 40px; }
