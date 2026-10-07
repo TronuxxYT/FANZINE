@@ -285,10 +285,17 @@
 
     if (toTop) {
       var footer = document.querySelector(".site-footer");
+      var eventActions = $$(".event-card__cta");
 
       function onScroll() {
         var footerVisible = footer && footer.getBoundingClientRect().top < window.innerHeight;
-        toTop.hidden = window.pageYOffset < 600 || footerVisible;
+        var actionNearCorner = eventActions.some(function (action) {
+          var bounds = action.getBoundingClientRect();
+          return bounds.top < window.innerHeight &&
+            bounds.bottom > window.innerHeight - 84 &&
+            bounds.right > window.innerWidth - 100;
+        });
+        toTop.hidden = window.pageYOffset < 600 || footerVisible || actionNearCorner;
       }
 
       onScroll();
