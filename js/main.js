@@ -67,8 +67,6 @@
     var slides = $$(".slide", root);
     if (slides.length < 2) return;
 
-    var hero = document.getElementById("inicio") || document;
-    var dots = $$(".dot", hero);
     var currentLabel = $("[data-slider-current]", root);
     var totalLabel = $("[data-slider-total]", root);
     var prevBtn = $("[data-slider-prev]", root);
@@ -92,16 +90,6 @@
         slide.setAttribute("aria-hidden", active ? "false" : "true");
       });
 
-      dots.forEach(function (dot, i) {
-        var active = i === index;
-        dot.classList.toggle("is-active", active);
-        if (active) {
-          dot.setAttribute("aria-current", "true");
-        } else {
-          dot.removeAttribute("aria-current");
-        }
-      });
-
       if (currentLabel) currentLabel.textContent = pad(index + 1);
     }
 
@@ -119,13 +107,6 @@
 
     if (nextBtn) nextBtn.addEventListener("click", function () { next(); start(); });
     if (prevBtn) prevBtn.addEventListener("click", function () { prev(); start(); });
-
-    dots.forEach(function (dot) {
-      dot.addEventListener("click", function () {
-        goTo(parseInt(dot.getAttribute("data-slider-goto"), 10) || 0);
-        start();
-      });
-    });
 
     root.addEventListener("mouseenter", stop);
     root.addEventListener("mouseleave", start);
