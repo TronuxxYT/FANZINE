@@ -1477,10 +1477,11 @@ body.is-locked { overflow: hidden; }
 }
 .brand--footer { gap: .75rem; margin-bottom: 1.1rem; }
 .brand--footer .brand__tile {
-  width: 56px;
-  height: 56px;
-  flex-basis: 56px;
+  width: 112px;
+  height: 112px;
+  flex-basis: 112px;
   align-self: auto;
+  background: transparent;
 }
 .brand--footer .brand__tile img { width: 100%; height: 100%; }
 .brand--footer .brand__word {
