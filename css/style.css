@@ -407,17 +407,18 @@ p { margin: 0 0 1em; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 42px;
-  padding: .6rem .9rem .5rem;
+  min-height: 44px;
+  padding: .7rem 1.05rem .65rem;
   font-family: var(--font-body);
-  font-size: .96rem;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: .01em;
   text-transform: none;
   color: rgba(0, 48, 192, .9);
+  border: 1px solid rgba(0, 48, 192, .12);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .28), inset 0 -1px 0 rgba(0, 48, 192, .06);
+  background: rgba(255, 255, 255, .08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .35), inset 0 -1px 0 rgba(0, 48, 192, .06);
   transition: all var(--dur) var(--ease);
 }
 .main-nav a::before {
@@ -432,12 +433,17 @@ p { margin: 0 0 1em; }
 .main-nav a:hover,
 .main-nav a.is-active {
   color: var(--cream);
-  background: var(--brand-blue);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.24), inset 0 -1px 0 rgba(0,0,0,.12), 0 10px 18px -16px rgba(0, 48, 192, .9);
+  background: linear-gradient(135deg, rgba(0, 48, 192, .97), rgba(31, 88, 255, .95));
+  border-color: rgba(255,255,255,.22);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.25), inset 0 -1px 0 rgba(0,0,0,.18), 0 14px 24px -18px rgba(0, 48, 192, .9);
 }
 .main-nav a:hover::before,
 .main-nav a.is-active::before {
   opacity: 1;
+}
+
+.main-nav a.is-active {
+  padding-inline: 1.25rem;
 }
 
 .s-history {
@@ -723,13 +729,91 @@ body.is-locked { overflow: hidden; }
   padding-block: var(--section-y);
   color: var(--ink);
 }
-.s-mission { background: var(--cream); }
+.s-mission {
+  background: var(--brand-blue);
+  color: #fff;
+}
 .s-zines { background: var(--mist); }
 .s-support { background: var(--cream); }
-.s-events { background: var(--brand-blue); color: #fff; }
-.s-events .eyebrow--dark { color: var(--yellow); }
-.s-events .h-cond--dark { color: #fff; }
-.s-events .s-sub { color: rgba(255, 255, 255, .8); }
+.s-events {
+  background: var(--cream);
+  color: var(--ink);
+}
+.s-events .eyebrow--dark { color: var(--blue); }
+.s-events .h-cond--dark { color: var(--ink); }
+.s-events .s-sub { color: var(--ink-soft); }
+
+.s-mission .s-mission__text,
+.s-mission .pillar p,
+.s-mission .quicklinks__note,
+.s-mission .quicklinks__label,
+.s-mission .quicklinks ul,
+.s-mission .ql,
+.s-mission .pillar h3,
+.s-mission .h-cond,
+.s-mission .s-sub,
+.s-mission .btn--outline-dark {
+  color: #fff;
+}
+
+.s-mission .quicklinks {
+  background: rgba(255,255,255,.08);
+  border-color: rgba(255,255,255,.18);
+  box-shadow: 0 18px 36px -24px rgba(0,0,0,.35);
+}
+
+.s-mission .pillar {
+  border-top-color: rgba(255,255,255,.26);
+}
+
+.s-mission .pillar__num,
+.s-mission .btn--outline-dark:hover {
+  color: var(--yellow);
+}
+
+.s-mission .btn--outline-dark {
+  border-color: rgba(255,255,255,.42);
+}
+
+.s-community {
+  background: var(--brand-blue);
+  color: #fff;
+}
+
+.s-community .eyebrow,
+.s-community .h-cond,
+.s-community .voice footer strong,
+.s-community .stat b,
+.s-community .stat span,
+.s-community .crew__item strong,
+.s-community .voice p,
+.s-community .s-sub {
+  color: #fff;
+}
+
+.s-community .voice {
+  background: rgba(255,255,255,.07);
+  border-top-color: var(--yellow);
+}
+
+.s-community .voice footer span,
+.s-community .crew__item > span:last-child {
+  color: rgba(255,255,255,.75);
+}
+
+.s-contact {
+  position: relative;
+  overflow: hidden;
+  padding-block: var(--section-y);
+  background: var(--cream);
+  color: var(--ink);
+}
+
+.s-contact .eyebrow--dark { color: var(--blue); }
+
+.site-footer {
+  background: #000;
+}
 
 .s-head {
   position: relative;
@@ -1014,9 +1098,13 @@ body.is-locked { overflow: hidden; }
 .s-community {
   position: relative;
   padding-block: var(--section-y);
-  background: var(--cream);
-  color: var(--ink);
+  background: var(--brand-blue);
+  color: #fff;
 }
+.s-community .block-label { border-bottom-color: rgba(255, 255, 255, .3); color: var(--cream); }
+.s-community .s-head .s-sub { color: rgba(255, 255, 255, .82); }
+.s-community .btn--outline-dark { border-color: rgba(255, 255, 255, .48); color: var(--cream); }
+.s-community .btn--outline-dark:hover { background: var(--cream); border-color: var(--cream); color: var(--brand-blue); }
 .crew, .voices, .stats { margin-top: clamp(34px, 4.4vw, 62px); }
 
 .crew__grid {
