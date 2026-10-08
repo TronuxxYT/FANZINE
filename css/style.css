@@ -607,10 +607,10 @@ body.is-locked { overflow: hidden; }
   padding-block: var(--section-y);
   color: var(--ink);
 }
-.s-mission { background: var(--mist); }
+.s-mission { background: var(--cream); }
 .s-zines { background: var(--mist); }
-.s-support { background: #d9e9f8; }
-.s-events { background: #e4f0fb; }
+.s-support { background: var(--cream); }
+.s-events { background: var(--cream); }
 
 .s-head {
   position: relative;
@@ -1113,7 +1113,7 @@ body.is-locked { overflow: hidden; }
   position: relative;
   overflow: hidden;
   padding-block: var(--section-y);
-  background: #d9e9f8;
+  background: var(--cream);
   color: var(--ink);
 }
 .eyebrow--dark { color: var(--blue); }
@@ -1258,7 +1258,7 @@ body.is-locked { overflow: hidden; }
 
 /* ---------- 22. RODAPÉ ---------- */
 .site-footer {
-  background: var(--navy-3);
+  background: #000;
   color: #fff;
   padding-top: clamp(44px, 5.5vw, 78px);
 }
