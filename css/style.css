@@ -338,7 +338,7 @@ p { margin: 0 0 1em; }
 .brand__word strong {
   font-family: var(--font-body);
   font-weight: 800;
-  font-size: 1.34rem;
+  font-size: 1.5rem;
   letter-spacing: .02em;
   text-transform: none;
 }
@@ -353,14 +353,13 @@ p { margin: 0 0 1em; }
 .brand--block .brand__word strong,
 .brand--block .brand__word span { color: var(--brand-blue); }
 .brand--block .brand__word {
-  flex-direction: row;
-  align-items: baseline;
-  gap: .45rem;
-  white-space: nowrap;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .08rem;
 }
 .brand--block .brand__word span {
   max-width: none;
-  font-size: .76rem;
+  font-size: .9rem;
   font-weight: 700;
   letter-spacing: .04em;
   text-transform: none;
@@ -1624,8 +1623,8 @@ body.is-locked { overflow: hidden; }
   .brand--block { padding: 0 14px 0 0; min-width: 0; }
   .brand__word { min-width: 0; }
   .brand__tile { width: 78px; height: 78px; flex-basis: 78px; align-self: center; }
-  .brand__word strong { font-size: 1.1rem; }
-  .brand__word span { display: block; max-width: 14ch; font-size: .5rem; letter-spacing: .08em; }
+  .brand__word strong { font-size: 1.2rem; }
+  .brand--block .brand__word span { display: block; max-width: 14ch; font-size: .78rem; letter-spacing: .04em; }
   .header__col { gap: 0; padding-block: 10px; }
   .header__navbar--single { justify-content: flex-end; gap: .6rem; }
   .hamburger { width: 42px; height: 38px; }
