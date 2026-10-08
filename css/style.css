@@ -400,8 +400,10 @@ p { margin: 0 0 1em; }
 .main-nav li { display: flex; }
 .main-nav a {
   position: relative;
-  display: inline-block;
-  padding: .2rem 0 .3rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .55rem .1rem .45rem;
   font-family: var(--font-body);
   font-size: .92rem;
   font-weight: 600;
@@ -410,18 +412,28 @@ p { margin: 0 0 1em; }
   color: rgba(0, 48, 192, .92);
   transition: color var(--dur);
 }
-.main-nav a::after {
+.main-nav a::before {
   content: "";
-  position: absolute;
-  left: 0; right: 0; bottom: -1px;
-  width: auto; height: 2px;
-  background: var(--yellow);
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform var(--dur) var(--ease);
+  width: 9px;
+  height: 9px;
+  flex: 0 0 9px;
+  border-radius: 50%;
+  background: var(--brand-blue);
+  opacity: 0;
+  transform: scale(.35);
+  box-shadow: 0 0 0 4px rgba(0, 48, 192, .12);
+  transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
 }
-.main-nav a:hover, .main-nav a.is-active { color: var(--brand-blue); }
-.main-nav a:hover::after, .main-nav a.is-active::after { transform: scaleX(1); }
+.main-nav a:hover,
+.main-nav a.is-active {
+  color: var(--brand-blue);
+}
+.main-nav a:hover::before,
+.main-nav a.is-active::before {
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 0 0 0 rgba(0, 48, 192, 0);
+}
 
 /* Etiqueta discreta no último item, para sinalizar que "Sobre"
    leva ao bloco de contato no fim da página. */
