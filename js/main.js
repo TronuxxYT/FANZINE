@@ -232,7 +232,6 @@
   /* ---------- 7. FORMULÁRIOS DE NEWSLETTER ---------- */
   function initForms() {
     var forms = [
-      document.getElementById("newsletterForm"),
       document.getElementById("footerForm")
     ].filter(Boolean);
 
@@ -277,6 +276,55 @@
     }
 
     forms.forEach(handle);
+  }
+
+  function initRegistration() {
+    var dialog = document.getElementById("registrationDialog");
+    var openButton = document.getElementById("openRegistration");
+    var form = document.getElementById("registrationForm");
+    if (!dialog || !openButton || !form) return;
+
+    openButton.addEventListener("click", function () {
+      if (typeof dialog.showModal === "function") dialog.showModal();
+      else dialog.setAttribute("open", "");
+      $("#registrationName", dialog).focus();
+    });
+
+    $$('[data-close-registration]', dialog).forEach(function (button) {
+      button.addEventListener("click", function () {
+        if (typeof dialog.close === "function") dialog.close();
+        else dialog.removeAttribute("open");
+      });
+    });
+
+    dialog.addEventListener("click", function (event) {
+      if (event.target !== dialog) return;
+      if (typeof dialog.close === "function") dialog.close();
+      else dialog.removeAttribute("open");
+    });
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      var values = new FormData(form);
+      var name = String(values.get("name") || "").trim();
+      var body = [
+        "Cadastro de participante FANZINE",
+        "",
+        "Nome: " + name,
+        "E-mail: " + String(values.get("email") || "").trim(),
+        "WhatsApp: " + (String(values.get("phone") || "").trim() || "Não informado"),
+        "Cidade: " + String(values.get("city") || "").trim(),
+        "Área de participação: " + String(values.get("role") || ""),
+        "",
+        "Sobre a pessoa:",
+        String(values.get("message") || "").trim()
+      ].join("\n");
+      var subject = "Cadastro FANZINE - " + name;
+      var mailto = "mailto:contato@fanzine.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+
+      $("#registrationStatus", dialog).textContent = "Confira os dados no aplicativo de e-mail e envie a mensagem para concluir o cadastro.";
+      window.location.href = mailto;
+    });
   }
 
   /* ---------- 8. VOLTAR AO TOPO + ANO DO RODAPÉ ---------- */
@@ -398,6 +446,7 @@
     initReveal();
     initCounters();
     initForms();
+    initRegistration();
     initMisc();
     initActiveNav();
   }

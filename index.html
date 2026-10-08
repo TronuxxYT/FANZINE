@@ -171,6 +171,22 @@
           </ul>
           <p class="quicklinks__note">Tudo publicado sob licença <b>Creative Commons</b> · uso livre com crédito</p>
         </aside>
+
+        <div class="mission-doodles" aria-hidden="true">
+          <svg class="mission-doodles__brush" viewBox="0 0 220 145" fill="none">
+            <path d="M10 101C43 72 87 48 166 20l31 9c-55 42-111 76-167 99l-19-5z" fill="#e2ff00"/>
+            <path d="M21 87c42-27 88-45 154-67l9 8C130 56 83 77 30 101z" fill="#0030c0" opacity=".88"/>
+            <path d="m31 111 13-12m8 20 11-16m102-69 13-10m-4 25 15-8" stroke="#09093d" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="21" cy="65" r="4" fill="#0030c0"/>
+            <circle cx="43" cy="48" r="3" fill="#e2ff00"/>
+            <circle cx="188" cy="72" r="4" fill="#e2ff00"/>
+            <circle cx="205" cy="56" r="2.5" fill="#0030c0"/>
+            <path d="m59 114 12 12 77-78-12-12z" fill="#09093d"/>
+            <path d="m136 36 12 12 15-15-12-12z" fill="#8ed3f5" stroke="#09093d" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M151 21c12-14 29-18 49-16-8 7-12 20-20 28l-20 15-12-12z" fill="#e2ff00" stroke="#09093d" stroke-width="3" stroke-linejoin="round"/>
+            <path d="m69 112 61-62" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+          </svg>
+        </div>
       </div>
     </section>
     <!-- ============ EVENTOS E ENCONTROS ============ -->
@@ -320,19 +336,14 @@
     <section class="s-newsletter" id="newsletter">
       <div class="container s-newsletter__grid">
         <div class="s-newsletter__text">
-          <p class="eyebrow reveal">Newsletter mensal</p>
-          <h2 class="h-cond reveal" data-reveal-delay="60">Novidades independentes, direto no seu e-mail</h2>
-          <p class="s-newsletter__lead reveal" data-reveal-delay="120">Um e-mail por mês com a edição em PDF, o mapa das feiras e as chamadas abertas para colaborar. Sem spam, sem algoritmo.</p>
+          <p class="eyebrow reveal">Comunidade aberta</p>
+          <h2 class="h-cond reveal" data-reveal-delay="60">Participe da comunidade FANZINE</h2>
+          <p class="s-newsletter__lead reveal" data-reveal-delay="120">Conte pra gente quem você é e como quer colaborar com a revista.</p>
         </div>
 
-        <form class="newsletter-form reveal reveal--right" id="newsletterForm" novalidate>
-          <label class="sr-only" for="newsletterEmail">Seu e-mail</label>
-          <div class="newsletter-form__row">
-            <input id="newsletterEmail" name="email" type="email" placeholder="seu@email.com" required>
-            <button class="btn btn--yellow" type="submit">Participar <span aria-hidden="true">→</span></button>
-          </div>
-          <p class="newsletter-form__note" data-form-note>Ao assinar, você concorda em receber a newsletter do FANZINE. Cancele quando quiser.</p>
-        </form>
+        <button class="btn btn--yellow newsletter-cta reveal reveal--right" id="openRegistration" type="button">
+          Participar <span aria-hidden="true">→</span>
+        </button>
       </div>
     </section>
   <!-- ============ SEÇÃO 08 — CONTATO E SUPORTE ============ -->
@@ -496,6 +507,64 @@
       </div>
     </div>
   </footer>
+
+  <dialog class="signup-dialog" id="registrationDialog" aria-labelledby="registrationTitle">
+    <header class="signup-dialog__head">
+      <div>
+        <p class="eyebrow">Cadastro de participante</p>
+        <h2 class="signup-dialog__title" id="registrationTitle">Vamos fazer junto</h2>
+      </div>
+      <button class="signup-dialog__close" type="button" data-close-registration aria-label="Fechar cadastro">Fechar</button>
+    </header>
+    <div class="signup-dialog__content">
+      <p class="signup-dialog__notice" id="registrationNotice">Preencha seus dados. Ao continuar, seu aplicativo de e-mail abrirá uma mensagem para contato@fanzine.com.</p>
+      <form class="registration-form" id="registrationForm">
+        <div class="registration-form__grid">
+          <div class="registration-field">
+            <label for="registrationName">Nome completo</label>
+            <input id="registrationName" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="registration-field">
+            <label for="registrationEmail">E-mail</label>
+            <input id="registrationEmail" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="registration-field">
+            <label for="registrationPhone">WhatsApp <span>(opcional)</span></label>
+            <input id="registrationPhone" name="phone" type="tel" autocomplete="tel">
+          </div>
+          <div class="registration-field">
+            <label for="registrationCity">Cidade</label>
+            <input id="registrationCity" name="city" type="text" autocomplete="address-level2" required>
+          </div>
+          <div class="registration-field registration-field--wide">
+            <label for="registrationRole">Como quer participar?</label>
+            <select id="registrationRole" name="role" required>
+              <option value="" selected disabled>Selecione uma área</option>
+              <option>Escrita e edição</option>
+              <option>Ilustração e artes visuais</option>
+              <option>Fotografia</option>
+              <option>Música e áudio</option>
+              <option>Impressão e produção</option>
+              <option>Quero conhecer a comunidade</option>
+              <option>Outra área</option>
+            </select>
+          </div>
+          <div class="registration-field registration-field--wide">
+            <label for="registrationMessage">Conte um pouco sobre você</label>
+            <textarea id="registrationMessage" name="message" rows="4" maxlength="1200" required></textarea>
+          </div>
+        </div>
+        <label class="registration-consent">
+          <input name="consent" type="checkbox" required>
+          <span>Autorizo o envio destes dados para contato@fanzine.com para receber retorno sobre minha participação.</span>
+        </label>
+        <div class="registration-form__actions">
+          <button class="btn btn--yellow" type="submit">Preparar e-mail <span aria-hidden="true">→</span></button>
+          <p class="registration-form__status" id="registrationStatus" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+  </dialog>
 
   <button class="to-top" id="toTop" type="button" aria-label="Voltar ao topo" hidden>
     <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5"></path><path d="M6 11l6-6 6 6"></path></svg>

@@ -6,10 +6,11 @@
 
 /* ---------- 1. TOKENS ---------- */
 :root {
-  --navy: #09093d;
-  --navy-2: #151560;
-  --navy-3: #06062b;
-  --blue: #3b30ef;
+  --brand-blue: #0030c0;
+  --navy: var(--brand-blue);
+  --navy-2: var(--brand-blue);
+  --navy-3: var(--brand-blue);
+  --blue: var(--brand-blue);
   --yellow: #e2ff00;
   --cyan: #8ed3f5;
   --orange: #ff8a1e;
@@ -43,12 +44,12 @@
   --header-h: 104px;
 
   /* ---------- SCROLLBAR PERSONALIZADA ---------- */
-  --scroll-track: #06062b;
-  --scroll-track-2: #101048;
-  --scroll-thumb: #3b30ef;
-  --scroll-thumb-hover: #e2ff00;
-  --scroll-size: 12px;
-  --scroll-size-sm: 8px;
+  --scroll-track: var(--brand-blue);
+  --scroll-track-2: var(--brand-blue);
+  --scroll-thumb: var(--yellow);
+  --scroll-thumb-hover: #fff;
+  --scroll-size: 14px;
+  --scroll-size-sm: 9px;
 }
 
 /* ---------- 2. BASE ---------- */
@@ -281,13 +282,13 @@ p { margin: 0 0 1em; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(9, 9, 61, .93);
+  background: rgba(0, 48, 192, .93);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line-light);
   transition: box-shadow var(--dur) var(--ease), background-color var(--dur);
 }
 .site-header.is-stuck {
-  background: rgba(6, 6, 43, .98);
+  background: rgba(0, 48, 192, .98);
   box-shadow: 0 16px 34px -24px rgba(0, 0, 0, .95);
 }
 
@@ -679,6 +680,17 @@ body.is-locked { overflow: hidden; }
 .pillar p { margin: 0; font-size: .92rem; color: var(--ink-soft); }
 
 .s-mission__actions { display: flex; flex-wrap: wrap; gap: .7rem; }
+.mission-doodles {
+  position: absolute;
+  right: 24px;
+  bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  opacity: .8;
+  pointer-events: none;
+}
+.mission-doodles__brush { width: 156px; height: 103px; transform: rotate(-5deg); }
 
 /* ---------- 14. ACESSO RÁPIDO ---------- */
 .quicklinks {
@@ -1018,7 +1030,7 @@ body.is-locked { overflow: hidden; }
   overflow: hidden;
   padding-block: var(--section-y);
   background:
-    radial-gradient(920px 520px at 10% -10%, rgba(59, 48, 239, .55), transparent 62%),
+    radial-gradient(920px 520px at 10% -10%, rgba(0, 48, 192, .55), transparent 62%),
     var(--navy);
 }
 .s-newsletter__grid {
@@ -1031,15 +1043,7 @@ body.is-locked { overflow: hidden; }
 .s-newsletter h2 { font-size: clamp(1.7rem, 3.4vw, 2.65rem); text-transform: uppercase; color: #fff; }
 .s-newsletter__lead { max-width: 52ch; margin: 0; color: rgba(255, 255, 255, .78); }
 
-.newsletter-form {
-  padding: clamp(20px, 2.6vw, 32px);
-  background: rgba(255, 255, 255, .06);
-  border: 1.6px solid var(--line-light);
-  border-radius: var(--radius);
-}
-.newsletter-form__row { display: flex; flex-wrap: wrap; gap: .7rem; }
-
-.newsletter-form input, .footer-form input {
+.footer-form input {
   flex: 1 1 200px;
   min-width: 0;
   padding: .84rem 1rem;
@@ -1048,12 +1052,80 @@ body.is-locked { overflow: hidden; }
   border-radius: 4px;
   color: #fff;
 }
-.newsletter-form input::placeholder, .footer-form input::placeholder { color: rgba(255, 255, 255, .5); }
-.newsletter-form input:focus, .footer-form input:focus { border-color: var(--yellow); outline: none; }
-.newsletter-form__note { margin: .9rem 0 0; font-size: .76rem; color: rgba(255, 255, 255, .6); }
-.newsletter-form.is-error input, .footer-form.is-error input { border-color: var(--pink); }
-.newsletter-form.is-success .newsletter-form__note,
+.footer-form input::placeholder { color: rgba(255, 255, 255, .5); }
+.footer-form input:focus { border-color: var(--yellow); outline: none; }
+.footer-form.is-error input { border-color: var(--pink); }
 .footer-form.is-success .footer-form__note { color: var(--yellow); }
+
+.newsletter-cta {
+  width: 100%;
+  min-height: 88px;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.08rem;
+}
+.newsletter-cta span { font-size: 1.4rem; }
+
+.signup-dialog {
+  width: min(calc(100% - 28px), 700px);
+  max-height: min(90dvh, 860px);
+  padding: 0;
+  overflow: auto;
+  color: var(--ink);
+  background: var(--cream);
+  border: 1px solid rgba(255, 255, 255, .32);
+  border-radius: 5px;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, .42);
+}
+.signup-dialog::backdrop { background: rgba(6, 6, 43, .78); backdrop-filter: blur(4px); }
+.signup-dialog__head {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.4rem clamp(1.2rem, 4vw, 2rem);
+  background: var(--navy);
+  color: #fff;
+}
+.signup-dialog__head .eyebrow { margin: 0 0 .35rem; color: var(--yellow); }
+.signup-dialog__title { margin: 0; font-family: var(--font-head); font-size: clamp(1.4rem, 4vw, 2rem); text-transform: uppercase; }
+.signup-dialog__close { padding: .55rem .75rem; border: 1px solid var(--line-light); color: #fff; font-size: .78rem; }
+.signup-dialog__content { padding: clamp(1.2rem, 4vw, 2rem); }
+.signup-dialog__notice { margin: 0 0 1.2rem; color: var(--ink-soft); font-size: .9rem; }
+.registration-form { display: grid; gap: 1.1rem; }
+.registration-form__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .9rem; }
+.registration-field { display: grid; gap: .38rem; min-width: 0; }
+.registration-field--wide { grid-column: 1 / -1; }
+.registration-field label { color: var(--ink); font-family: var(--font-head); font-size: .72rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+.registration-field label span { color: var(--ink-soft); font-family: var(--font-body); font-size: .7rem; font-weight: 400; letter-spacing: 0; text-transform: none; }
+.registration-field input,
+.registration-field select,
+.registration-field textarea {
+  width: 100%;
+  min-width: 0;
+  padding: .78rem .85rem;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line-dark);
+  border-radius: 3px;
+}
+.registration-field textarea { min-height: 108px; resize: vertical; }
+.registration-field input:focus,
+.registration-field select:focus,
+.registration-field textarea:focus { outline: 2px solid var(--blue); outline-offset: 1px; }
+.registration-consent { display: flex; align-items: flex-start; gap: .6rem; color: var(--ink-soft); font-size: .8rem; line-height: 1.45; }
+.registration-consent input { flex: 0 0 auto; width: 18px; height: 18px; margin: .1rem 0 0; accent-color: var(--blue); }
+.registration-form__actions { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem 1rem; }
+.registration-form__status { flex: 1 1 220px; margin: 0; color: var(--ink-soft); font-size: .8rem; }
+
+@media (max-width: 560px) {
+  .registration-form__grid { grid-template-columns: minmax(0, 1fr); }
+  .registration-field--wide { grid-column: auto; }
+  .newsletter-cta { min-height: 68px; }
+}
 
 /* ---------- 21. SEÇÃO 08 — CONTATO E SUPORTE ---------- */
 .s-contact {
@@ -1335,6 +1407,7 @@ body.is-locked { overflow: hidden; }
   .stats__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .contact-grid { grid-template-columns: minmax(0, 1fr); }
   .deco--tri, .deco--semi { display: none; }
+  .mission-doodles { display: none; }
 }
 
 @media (max-width: 760px) {
@@ -1381,7 +1454,7 @@ body.is-locked { overflow: hidden; }
 .hero__text, .hero__media,
 .s-mission__main, .quicklinks,
 .zine-stack, .support-card, .event-card,
-.s-newsletter__text, .newsletter-form,
+.s-newsletter__text,
 .site-footer__brand, .site-footer__col { min-width: 0; }
 
 .slide__frame {
@@ -1456,7 +1529,6 @@ body.is-locked { overflow: hidden; }
 .voice,
 .contact-card,
 .contact-item,
-.newsletter-form,
 .stat { border-radius: 3px; }
 
 .event-card,
