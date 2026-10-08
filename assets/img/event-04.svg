@@ -7,7 +7,7 @@
   
   <path d="M80 480h300v22H80z" fill="#ffffff" opacity=".85"/>
   <path d="M80 532h190v22H80z" fill="#ffffff" opacity=".5"/>
-  <path transform="translate(1090 170)" d="M0 -88L19.36 -19.36L88 0L19.36 19.36L0 88L-19.36 19.36L-88 0L-19.36 -19.36Z" fill="#e2ff00" fill-opacity="0.95"/>
+  <path transform="translate(1090 170)" d="M0 -88L19.36 -19.36L88 0L19.36 19.36L0 88L-19.36 19.36L-88 0L-19.36 -19.36Z" fill="#fcd500" fill-opacity="0.95"/>
   <circle cx="150" cy="700" r="46" fill="#09093d"/>
   <rect width="100%" height="100%" filter="url(#grain)" opacity="0.16" style="mix-blend-mode:overlay"/>
 </svg>
