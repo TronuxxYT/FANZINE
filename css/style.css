@@ -352,7 +352,20 @@ p { margin: 0 0 1em; }
 }
 .brand--block .brand__word strong,
 .brand--block .brand__word span { color: var(--brand-blue); }
-.brand--block .brand__word span { opacity: .76; }
+.brand--block .brand__word {
+  flex-direction: row;
+  align-items: baseline;
+  gap: .45rem;
+  white-space: nowrap;
+}
+.brand--block .brand__word span {
+  max-width: none;
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: none;
+  opacity: .76;
+}
 
 /* display:contents faz .main-nav e .header__actions virarem itens diretos
    do grid de 3 colunas, sem alterar o HTML nem a ordem de leitura. */
