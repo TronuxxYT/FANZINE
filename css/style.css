@@ -610,7 +610,7 @@ body.is-locked { overflow: hidden; }
 .s-mission { background: var(--cream); }
 .s-zines { background: var(--mist); }
 .s-support { background: var(--cream); }
-.s-events { background: var(--cream); }
+.s-events { background: var(--brand-blue); }
 
 .s-head {
   position: relative;
