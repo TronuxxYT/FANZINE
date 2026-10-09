@@ -622,6 +622,173 @@ p { margin: 0 0 1em; }
 }
 body.is-locked { overflow: hidden; }
 
+/* ---------- 9. FALE CONOSCO ---------- */
+.talkback {
+  display: grid;
+  grid-template-columns: minmax(0, .78fr) minmax(0, 1.22fr);
+  gap: clamp(28px, 4.4vw, 64px);
+  margin-top: clamp(40px, 5vw, 72px);
+  padding: clamp(26px, 3.4vw, 48px);
+  border: 1px solid rgba(9, 9, 61, .13);
+  background: #fff;
+}
+
+.talkback__title {
+  margin-bottom: .7rem;
+  font-family: var(--font-cond);
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.05;
+  color: var(--navy);
+}
+.talkback__text {
+  max-width: 34ch;
+  color: rgba(9, 9, 61, .72);
+}
+.talkback__points {
+  margin-top: 1.6rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(9, 9, 61, .13);
+  display: grid;
+  gap: .7rem;
+}
+.talkback__points li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: .92rem;
+  color: rgba(9, 9, 61, .78);
+}
+.talkback__points li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: .48em;
+  width: 8px; height: 8px;
+  background: var(--yellow);
+}
+
+.talkback__form { display: grid; gap: 1.1rem; }
+.talkback__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+}
+.talkback__field { display: grid; gap: .42rem; }
+.talkback__field label {
+  font-size: .74rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+.talkback__field label span {
+  font-weight: 500;
+  letter-spacing: .04em;
+  text-transform: none;
+  color: rgba(9, 9, 61, .5);
+}
+.talkback__field input,
+.talkback__field select,
+.talkback__field textarea {
+  width: 100%;
+  padding: .82rem .95rem;
+  border: 1px solid rgba(9, 9, 61, .22);
+  border-radius: 2px;
+  background: #fff;
+  font: inherit;
+  font-size: .95rem;
+  color: var(--navy);
+  transition: border-color .18s, box-shadow .18s;
+}
+.talkback__field textarea { resize: vertical; min-height: 130px; line-height: 1.55; }
+.talkback__field input::placeholder,
+.talkback__field textarea::placeholder { color: rgba(9, 9, 61, .38); }
+.talkback__field input:focus,
+.talkback__field select:focus,
+.talkback__field textarea:focus {
+  outline: none;
+  border-color: var(--purple);
+  box-shadow: 0 0 0 3px rgba(59, 48, 239, .14);
+}
+/* estado de erro de validação */
+.talkback__field.has-error input,
+.talkback__field.has-error select,
+.talkback__field.has-error textarea {
+  border-color: #d3204b;
+  box-shadow: 0 0 0 3px rgba(211, 32, 75, .12);
+}
+.talkback__field__error {
+  font-size: .8rem;
+  font-weight: 600;
+  color: #d3204b;
+}
+
+.talkback__counter {
+  font-size: .76rem;
+  color: rgba(9, 9, 61, .45);
+  text-align: right;
+}
+
+/* isca de spam: some da tela e do leitor de tela */
+.talkback__trap {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px; height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.talkback__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-top: .3rem;
+}
+.talkback__submit {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 210px;
+  padding: 1rem 1.8rem;
+  border-radius: 2px;
+  font-family: var(--font-body);
+  font-weight: 800;
+  cursor: pointer;
+}
+.talkback__spinner {
+  display: none;
+  width: 15px; height: 15px;
+  margin-left: .6rem;
+  border: 2px solid rgba(9, 9, 61, .28);
+  border-top-color: var(--navy);
+  border-radius: 50%;
+  animation: talkback-spin .7s linear infinite;
+}
+@keyframes talkback-spin { to { transform: rotate(360deg); } }
+
+.talkback__submit.is-sending { pointer-events: none; opacity: .82; }
+.talkback__submit.is-sending .talkback__spinner { display: inline-block; }
+.talkback__submit.is-sent { background: #0f8a4d; color: #fff; }
+
+.talkback__status {
+  flex: 1 1 200px;
+  min-width: 200px;
+  font-size: .9rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+.talkback__status.is-error { color: #d3204b; }
+.talkback__status.is-success { color: #0f8a4d; }
+
+@media (max-width: 980px) {
+  .talkback { grid-template-columns: 1fr; }
+}
+@media (max-width: 620px) {
+  .talkback__row { grid-template-columns: 1fr; }
+  .talkback__submit { width: 100%; }
+}
+
 /* ---------- 10. HERO ---------- */
 .hero {
   position: relative;

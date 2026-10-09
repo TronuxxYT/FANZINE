@@ -451,6 +451,70 @@
           </ul>
         </div>
 
+        <!-- ============ FORMULÁRIO FALE CONOSCO ============ -->
+        <div class="talkback reveal">
+          <div class="talkback__intro">
+            <h3 class="talkback__title">Prefere escrever?</h3>
+            <p class="talkback__text">Mande sua mensagem por aqui. Chega direto na caixa da curadoria e a gente responde — normalmente em até dois dias úteis.</p>
+            <ul class="talkback__points">
+              <li>Colaboração, parceria ou proposta de publicação</li>
+              <li>Dúvida sobre uma edição ou sobre o acervo</li>
+              <li>Correção, sugestão ou reclamação</li>
+            </ul>
+          </div>
+
+          <form class="talkback__form" id="contactForm" novalidate>
+            <input type="hidden" name="access_key" value="COLE_AQUI_SUA_CHAVE">
+            <input type="hidden" name="subject" value="Nova mensagem pelo site FANZINE">
+            <input type="hidden" name="from_name" value="Site FANZINE">
+            <!-- anti-spam: bots preenchem, humanos não veem -->
+            <input class="talkback__trap" type="checkbox" name="botcheck" tabindex="-1" aria-hidden="true">
+
+            <div class="talkback__row">
+              <div class="talkback__field">
+                <label for="contactName">Seu nome</label>
+                <input id="contactName" name="name" type="text" autocomplete="name" placeholder="Como podemos te chamar" required>
+              </div>
+              <div class="talkback__field">
+                <label for="contactEmail">Seu e-mail</label>
+                <input id="contactEmail" name="email" type="email" autocomplete="email" placeholder="voce@email.com" required>
+              </div>
+            </div>
+
+            <div class="talkback__row">
+              <div class="talkback__field">
+                <label for="contactTopic">Assunto</label>
+                <select id="contactTopic" name="topic" required>
+                  <option value="" selected disabled>Escolha um assunto</option>
+                  <option>Quero publicar meu zine</option>
+                  <option>Colaboração ou parceria</option>
+                  <option>Dúvida sobre uma edição</option>
+                  <option>Imprensa</option>
+                  <option>Suporte e acesso</option>
+                  <option>Outro assunto</option>
+                </select>
+              </div>
+              <div class="talkback__field">
+                <label for="contactPhone">WhatsApp <span>(opcional)</span></label>
+                <input id="contactPhone" name="phone" type="tel" autocomplete="tel" placeholder="(00) 00000-0000">
+              </div>
+            </div>
+
+            <div class="talkback__field">
+              <label for="contactMessage">Mensagem</label>
+              <textarea id="contactMessage" name="message" rows="5" maxlength="1500" placeholder="Escreva com calma. Conta o que você faz, o que precisa e como podemos ajudar." required></textarea>
+              <p class="talkback__counter"><span id="contactCount">0</span> / 1500</p>
+            </div>
+
+            <div class="talkback__actions">
+              <button class="btn btn--yellow talkback__submit" type="submit" id="contactSubmit">
+                <span class="talkback__submit-label">Enviar mensagem</span>
+                <span class="talkback__spinner" aria-hidden="true"></span>
+              </button>
+              <p class="talkback__status" id="contactStatus" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   </main>
@@ -465,17 +529,17 @@
         <p class="site-footer__about">Revista independente colaborativa feita por quem publica sem pedir licença. Circula em PDF, em papel e de mão em mão desde 2016.</p>
         <ul class="socials">
           <li>
-            <a href="#inicio" aria-label="Instagram do FANZINE">
+            <a href="https://www.instagram.com/rogerbeatjesus" target="_blank" rel="noopener noreferrer" aria-label="Instagram do Roger Beat Jesus">
               <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"></circle></svg>
             </a>
           </li>
           <li>
-            <a href="#inicio" aria-label="YouTube do FANZINE">
+            <a href="https://www.youtube.com/@RogerBeatJesus" target="_blank" rel="noopener noreferrer" aria-label="YouTube do Roger Beat Jesus">
               <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="5" width="19" height="14" rx="4"></rect><path d="M10.5 9.5l5 2.5-5 2.5z" fill="currentColor" stroke="none"></path></svg>
             </a>
           </li>
           <li>
-            <a href="#inicio" aria-label="WhatsApp do FANZINE">
+            <a href="https://wa.me/553132984470" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp do FANZINE">
               <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
             </a>
           </li>

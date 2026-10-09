@@ -291,6 +291,150 @@
     });
   }
 
+  /* ---------- 8. FORMULÁRIO "FALE CONOSCO" ----------
+     Envio real por AJAX para o Web3Forms (sem backend próprio).
+     A chave de acesso fica no campo hidden "access_key" do HTML —
+     troque 'COLE_AQUI_SUA_CHAVE' pela sua chave e o e-mail de destino
+     é o que estiver cadastrado nela.                                      */
+  function initContactForm() {
+    var form = document.getElementById("contactForm");
+    if (!form) return;
+
+    var status = document.getElementById("contactStatus");
+    var submit = document.getElementById("contactSubmit");
+    var counter = document.getElementById("contactCount");
+    var message = document.getElementById("contactMessage");
+    var ENDPOINT = "https://api.web3forms.com/submit";
+
+    function setStatus(text, kind) {
+      if (!status) return;
+      status.textContent = text;
+      status.className = "talkback__status" + (kind ? " is-" + kind : "");
+    }
+
+    /* Erro pontual em cada campo */
+    function fail(field, text) {
+      var box = field.closest(".talkback__field");
+      if (!box) return;
+      box.classList.add("has-error");
+      var old = box.querySelector(".talkback__field__error");
+      if (old) old.remove();
+      var note = document.createElement("p");
+      note.className = "talkback__field__error";
+      note.textContent = text;
+      box.appendChild(note);
+    }
+
+    function clearErrors() {
+      $$(".talkback__field", form).forEach(function (box) {
+        box.classList.remove("has-error");
+        var note = box.querySelector(".talkback__field__error");
+        if (note) note.remove();
+      });
+    }
+
+    /* limpa o erro do campo assim que a pessoa volta a digitar */
+    $$("input, select, textarea", form).forEach(function (field) {
+      field.addEventListener("input", function () {
+        var box = field.closest(".talkback__field");
+        if (box) box.classList.remove("has-error");
+      });
+      field.addEventListener("change", function () {
+        var box = field.closest(".talkback__field");
+        if (box) box.classList.remove("has-error");
+      });
+    });
+
+    if (counter && message) {
+      message.addEventListener("input", function () {
+        counter.textContent = String(message.value.length);
+      });
+    }
+
+    function validate() {
+      clearErrors();
+      var ok = true;
+
+      var name = document.getElementById("contactName");
+      var email = document.getElementById("contactEmail");
+      var topic = document.getElementById("contactTopic");
+      var body = document.getElementById("contactMessage");
+
+      if (!name.value.trim()) { fail(name, "Diga como podemos te chamar."); ok = false; }
+
+      if (!email.value.trim()) { fail(email, "Precisamos de um e-mail para responder."); ok = false; }
+      else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.value.trim())) {
+        fail(email, "Esse e-mail parece incompleto."); ok = false;
+      }
+
+      if (!topic.value) { fail(topic, "Escolha um assunto."); ok = false; }
+
+      if (body.value.trim().length < 10) {
+        fail(body, "Escreva ao menos 10 caracteres."); ok = false;
+      }
+
+      if (!ok) {
+        var first = form.querySelector(".has-error input, .has-error select, .has-error textarea");
+        if (first) first.focus();
+      }
+      return ok;
+    }
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      /* isca de spam marcada = bot, descarta em silêncio */
+      var trap = form.querySelector('[name="botcheck"]');
+      if (trap && trap.checked) return;
+
+      if (!validate()) { setStatus("Confira os campos destacados acima.", "error"); return; }
+
+      if (submit) {
+        submit.classList.add("is-sending");
+        submit.classList.remove("is-sent");
+      }
+      setStatus("Enviando sua mensagem...", "");
+
+      var data = new FormData(form);
+      if (!data.get("topic")) data.set("topic", "Outro assunto");
+      if (!data.get("replyto")) data.set("replyto", data.get("email") || "");
+
+      fetch(ENDPOINT, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: data
+      })
+        .then(function (response) { return response.json(); })
+        .then(function (result) {
+          if (submit) submit.classList.remove("is-sending");
+
+          if (result && result.success) {
+            setStatus("Mensagem enviada! Obrigado por escrever — respondemos por e-mail em breve.", "success");
+            form.reset();
+            if (counter) counter.textContent = "0";
+            if (submit) {
+              submit.classList.add("is-sent");
+              var label = submit.querySelector(".talkback__submit-label");
+              if (label) label.textContent = "Mensagem enviada";
+            }
+            clearErrors();
+          } else {
+            setStatus(
+              "Não conseguimos enviar agora. Tente de novo ou escreva direto para contato@fanzine.com.",
+              "error"
+            );
+          }
+        })
+        .catch(function () {
+          if (submit) submit.classList.remove("is-sending");
+          setStatus(
+            "Falha de conexão. Confira sua internet ou escreva para contato@fanzine.com.",
+            "error"
+          );
+        });
+    });
+  }
+
   /* ---------- 9. LINK ATIVO CONFORME A ROLAGEM ---------- */
   /* Scrollspy determinístico: usa a ordem real das seções no documento
      (a ordem do menu é diferente da ordem da página) e mantém o
@@ -378,6 +522,7 @@
     initReveal();
     initCounters();
     initRegistration();
+    initContactForm();
     initMisc();
     initActiveNav();
   }
