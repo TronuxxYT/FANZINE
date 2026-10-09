@@ -678,25 +678,6 @@ body.is-locked { overflow: hidden; }
   font-weight: 800;
 }
 
-.hero__rail {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: .45rem;
-  transform: translateY(-58%);
-}
-.hero__rail i {
-  width: 9px; height: 9px;
-  border-radius: 50%;
-  background: var(--yellow);
-}
-.hero__rail i.is-hollow {
-  background: transparent;
-  border: 1.6px solid rgba(255, 255, 255, .65);
-}
-
 /* ---------- 11. CARROSSEL ---------- */
 .hero__media { position: relative; }
 .slider {
@@ -1067,6 +1048,7 @@ body.is-locked { overflow: hidden; }
 .event-card--pink { border-left-color: var(--pink); }
 
 .event-card__media { aspect-ratio: 16 / 9; overflow: hidden; background: var(--navy-2); }
+a.event-card__media { display: block; }
 .event-card__media img {
   width: 100%; height: 100%;
   object-fit: cover;
@@ -1242,20 +1224,6 @@ body.is-locked { overflow: hidden; }
 .s-newsletter .eyebrow { color: var(--cyan); }
 .s-newsletter h2 { font-size: clamp(1.7rem, 3.4vw, 2.65rem); text-transform: uppercase; color: #fff; }
 .s-newsletter__lead { max-width: 52ch; margin: 0; color: rgba(255, 255, 255, .78); }
-
-.footer-form input {
-  flex: 1 1 200px;
-  min-width: 0;
-  padding: .84rem 1rem;
-  background: rgba(255, 255, 255, .08);
-  border: 1.6px solid var(--line-light);
-  border-radius: 4px;
-  color: #fff;
-}
-.footer-form input::placeholder { color: rgba(255, 255, 255, .5); }
-.footer-form input:focus { border-color: var(--yellow); outline: none; }
-.footer-form.is-error input { border-color: var(--pink); }
-.footer-form.is-success .footer-form__note { color: var(--yellow); }
 
 .newsletter-cta {
   width: 100%;
@@ -1537,14 +1505,31 @@ body.is-locked { overflow: hidden; }
 }
 .site-footer__col li a:hover { color: var(--yellow); padding-left: 4px; }
 
-.footer-form {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: .6rem;
+.footer-qr {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .7rem;
   margin-top: .4rem;
+  transition: transform var(--dur) var(--ease);
 }
-.footer-form input { width: 100%; min-width: 0; }
-.footer-form__note { grid-column: 1 / -1; margin: 0; font-size: .74rem; color: rgba(255, 255, 255, .6); }
+.footer-qr:hover { transform: translateY(-3px); }
+.footer-qr img {
+  width: clamp(150px, 14vw, 180px);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  padding: 10px;
+  background: #fff;
+  border-radius: 10px;
+}
+.footer-qr span {
+  font-family: var(--font-head);
+  font-size: .95rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: lowercase;
+  color: var(--yellow);
+}
 
 .site-footer__bottom { border-top: 1px solid var(--line-light); }
 .site-footer__bottom-inner {
@@ -1674,8 +1659,6 @@ body.is-locked { overflow: hidden; }
 
 /* títulos de seção: navy nas seções claras (redundante, mas explícito) */
 .h-cond--dark { color: var(--ink); }
-
-.site-footer__col--form { align-self: start; }
 
 /* ---------- 25. ACABAMENTO GRAFFITI / FANZINE ---------- */
 .site-header { border-bottom-color: var(--yellow); }

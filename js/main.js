@@ -210,55 +210,6 @@
     numbers.forEach(function (element) { observer.observe(element); });
   }
 
-  /* ---------- 7. FORMULÁRIOS DE NEWSLETTER ---------- */
-  function initForms() {
-    var forms = [
-      document.getElementById("footerForm")
-    ].filter(Boolean);
-
-    if (!forms.length) return;
-
-    var EMAIL = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
-
-    function handle(form) {
-      var input = $("input[type='email']", form);
-      if (!input) return;
-
-      var note = $("[data-form-note]", form);
-      var original = note ? note.textContent : "";
-
-      form.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        var value = (input.value || "").trim();
-        var valid = EMAIL.test(value);
-
-        form.classList.toggle("is-error", !valid);
-        form.classList.toggle("is-success", valid);
-
-        if (!valid) {
-          if (note) note.textContent = "Digite um e-mail válido para continuar.";
-          input.focus();
-          return;
-        }
-
-        if (note) note.textContent = "Pronto! Confirme sua inscrição no e-mail que acabou de chegar.";
-        form.reset();
-
-        window.setTimeout(function () {
-          form.classList.remove("is-success");
-          if (note) note.textContent = original;
-        }, 6000);
-      });
-
-      input.addEventListener("input", function () {
-        form.classList.remove("is-error");
-      });
-    }
-
-    forms.forEach(handle);
-  }
-
   function initRegistration() {
     var dialog = document.getElementById("registrationDialog");
     var openButton = document.getElementById("openRegistration");
@@ -426,7 +377,6 @@
     initSlider();
     initReveal();
     initCounters();
-    initForms();
     initRegistration();
     initMisc();
     initActiveNav();
